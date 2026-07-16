@@ -2,6 +2,18 @@
 
 모든 주목할 만한 변경사항을 이 파일에 기록한다. [Semantic Versioning](https://semver.org/lang/ko/)을 따른다.
 
+## v0.5.0 - 2026-07-17
+
+### Added
+- `Dockerfile`(prod): 3-스테이지 빌드 — `node:20-alpine`(notion-sync) → `ghcr.io/hahwul/hwaro:latest`(hwaro build --minify, 공식 문서의 멀티스테이지 예시 기반) → `nginx:alpine`(정적 서빙).
+- `NOTION_TOKEN`/`NOTION_DB_ID`는 sync 스테이지에서만 ARG/ENV로 존재하고 이후 스테이지엔 `content/` 결과물만 전달되어 최종 이미지 레이어에 남지 않음.
+- `nginx.conf`: gzip, 정적 자산 장기 캐싱, HTML no-cache, 404 처리.
+- `docker-compose.yml`: `PROD_PORT`(기본 1729)로 호스트 포트 매핑, `.env`의 Notion 시크릿을 빌드 인자로 주입.
+- `.dockerignore` 추가.
+
+### Verified
+- `hwaro build --minify` + nginx 서빙을 실제 컨테이너로 빌드·실행해 홈페이지 200, CSS 캐시 헤더, 커스텀 404를 직접 확인.
+
 ## v0.4.0 - 2026-07-17
 
 ### Added
