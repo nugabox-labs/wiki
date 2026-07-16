@@ -2,6 +2,20 @@
 
 모든 주목할 만한 변경사항을 이 파일에 기록한다. [Semantic Versioning](https://semver.org/lang/ko/)을 따른다.
 
+## v0.7.0 - 2026-07-17
+
+### Added
+- `compose.sh`: `[--dev] up|down` 인자 파싱(순서 무관), 잘못된 조합/중복 액션은 사용법 출력 후 종료. `.env` 부재 시 경고, `docker` 미설치 시 안내.
+- 운영은 `docker-compose.yml`, 개발은 `docker-compose.dev.yml`을 각각 `up -d --build`/`down`으로 제어.
+
+### Verified
+- 실제 `.env`(NOTION_TOKEN/NOTION_DB_ID)로 네 가지 시나리오를 모두 실행 확인:
+  - `--dev up`: 실제 Notion 데이터소스 인증·조회 성공(현재 배포 체크된 페이지 0건), `hwaro serve` 정상 기동.
+  - `--dev down`: 컨테이너·네트워크 정리 확인.
+  - `up`: notion-sync -> hwaro build -> nginx 3-스테이지 빌드 성공, `curl localhost:1729` 200 확인.
+  - `down`: 컨테이너·네트워크 정리 확인.
+  - 인자 오류(없음/미지정 조합/알 수 없는 인자)는 모두 exit 1과 사용법 안내로 처리됨을 확인.
+
 ## v0.6.0 - 2026-07-17
 
 ### Added
