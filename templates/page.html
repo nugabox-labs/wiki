@@ -1,0 +1,10 @@
+{% include "header.html" %}
+{% include "partials/nav.html" %}
+{% include "partials/search.html" %}
+<div class="docs-container">
+{% include "partials/sidebar.html" %}
+  <main id="main" class="docs-main">
+    {% if page.title is present %}<h1>{{ page.title | e }}</h1>{% endif %}
+    {% if toc %}<nav class="docs-toc" aria-label="On this page"><p class="docs-toc-title">On this page</p>{{ toc }}</nav>{% endif %}
+    {{ content }}
+{% include "footer.html" %}
