@@ -2,6 +2,14 @@
 
 모든 주목할 만한 변경사항을 이 파일에 기록한다. [Semantic Versioning](https://semver.org/lang/ko/)을 따른다.
 
+## v0.11.3 - 2026-07-17
+
+### Fixed
+- 운영 접속 포트 기본값을 1731에서 **1729로 통일**(개발/운영 동일). 리버스 프록시가 1729를 바라보고 있었는데 컨테이너가 1731에 떠서 wiki.nugabox.com이 502를 반환하던 문제를 해결.
+
+### CI/CD
+- self-hosted 러너(marrifin과 동일한 `nugacloud`) 기반 배포 워크플로우(`.github/workflows/deploy.yml`)를 추가하고 실제 push로 검증. 이 과정에서 두 가지 버그를 실전에서 발견·수정: (1) Debian `apt nodejs/npm`이 수천 개의 무관한 패키지를 끌어와 저사양 호스트에서 사실상 멈춘 것처럼 보이던 문제, (2) 첫 배포 시 불필요한 nginx reload 시도가 pid 파일 부재로 실패해 배포 전체가 실패 처리되던 문제.
+
 ## v0.11.2 - 2026-07-17
 
 ### Fixed

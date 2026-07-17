@@ -60,17 +60,17 @@ cp .env.example .env
 ### 3. 운영 모드
 
 ```bash
-./compose.sh up      # 빌드 + 기동, http://localhost:1731
+./compose.sh up      # 빌드 + 기동, http://localhost:1729
 ./compose.sh down    # 정지 + 제거
 ```
 
 `builder` 컨테이너가 `notion-sync` → `hwaro build --minify`를 **기본 15분마다 반복 실행**해 결과물을 공유 볼륨(`public_data`)에 쓰고, `wiki`(nginx) 컨테이너는 그 볼륨을 그대로 서빙합니다. 즉 Notion에서 `배포`를 체크하면 이미지 재빌드 없이 다음 주기 안에 자동으로 사이트에 반영됩니다. 반면 **템플릿/코드(templates, static, config.toml, scripts)를 바꾼 뒤에는 여전히 재빌드가 필요**합니다(`./compose.sh down && ./compose.sh up`) — `builder` 이미지 자체에 그 파일들이 빌드 시점에 고정되기 때문입니다. `NOTION_TOKEN`/`NOTION_DB_ID`는 `builder` 컨테이너의 런타임 환경변수로만 존재하고 어떤 이미지 레이어에도 기록되지 않으며, `wiki`(nginx) 컨테이너에는 아예 전달되지 않습니다.
 
-동기화 주기는 `.env`의 `SYNC_INTERVAL_SECONDS`(기본 900초 = 15분)로 조정합니다. 포트는 `.env`의 `DEV_PORT`(기본 1729), `PROD_PORT`(기본 1731)로 조정할 수 있습니다.
+동기화 주기는 `.env`의 `SYNC_INTERVAL_SECONDS`(기본 900초 = 15분)로 조정합니다. 접속 포트는 개발/운영 상관없이 **1729로 통일**되어 있습니다(`.env`의 `DEV_PORT`/`PROD_PORT`로 조정 가능하지만, 같은 머신에서 개발·운영을 동시에 띄우면 포트가 충돌하니 하나씩만 띄우세요).
 
 ## 배포
 
-운영 서버에서는 위 "운영 모드"로 컨테이너를 띄운 뒤, 서버의 리버스 프록시(nginx)가 `wiki.nugabox.com` → `127.0.0.1:${PROD_PORT:-1731}`로 연결합니다. `config.toml`의 `base_url`이 `https://wiki.nugabox.com`으로 고정되어 있으므로, 로컬에서 운영 이미지를 직접 열어보면 정적 자산 링크가 실제 도메인을 가리켜 그대로는 동작하지 않습니다(개발 확인은 `--dev up`을 사용하세요).
+운영 서버에서는 위 "운영 모드"로 컨테이너를 띄운 뒤, 서버의 리버스 프록시(nginx)가 `wiki.nugabox.com` → `127.0.0.1:${PROD_PORT:-1729}`로 연결합니다. `config.toml`의 `base_url`이 `https://wiki.nugabox.com`으로 고정되어 있으므로, 로컬에서 운영 이미지를 직접 열어보면 정적 자산 링크가 실제 도메인을 가리켜 그대로는 동작하지 않습니다(개발 확인은 `--dev up`을 사용하세요).
 
 ## 참고 문서
 
