@@ -2,6 +2,12 @@
 
 모든 주목할 만한 변경사항을 이 파일에 기록한다. [Semantic Versioning](https://semver.org/lang/ko/)을 따른다.
 
+## v0.10.1 - 2026-07-17
+
+### Changed
+- 홈 화면 타이틀을 "NUGAWIKI"(전체 대문자)에서 "About nugawiki"(alder의 상세 페이지 타이틀 스타일)로 변경, `hero-title--home`으로 크기를 살짝 축소.
+- 홈 화면에 `./about` 브레드크럼과 "SINCE 2019 · N개 카테고리 · N개 문서" 메타 정보 줄을 추가(카테고리/문서 수는 `sum(attribute="pages_count")`로 동적 계산).
+
 ## v0.10.0 - 2026-07-17
 
 ### Changed

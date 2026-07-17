@@ -1,7 +1,14 @@
 {% include "header.html" %}
       <main id="main" class="docs-main docs-main--home">
-        <h1 class="hero-title">{{ page.title }}</h1>
+        <p class="topic-path">./about</p>
+        <h1 class="hero-title hero-title--home">{{ page.title }}</h1>
         {% if page.description %}<p class="hero-lede">{{ page.description }}</p>{% endif %}
+
+        <div class="doc-meta">
+          <span>SINCE 2019</span>
+          <span>{{ site.sections | length }}개 카테고리</span>
+          <span>{{ site.sections | sum(attribute="pages_count") }}개 문서</span>
+        </div>
 
         <div class="prose prose--home">
           {{ content | safe }}

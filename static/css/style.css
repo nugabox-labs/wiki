@@ -521,6 +521,11 @@ pre code {
   letter-spacing: -0.02em;
   margin-bottom: var(--space-3);
 }
+
+.hero-title--home {
+  font-size: clamp(1.75rem, 1.4rem + 1.8vw, 2.7rem);
+  margin-bottom: var(--space-2);
+}
 .hero-lede { font-size: var(--text-lg); color: var(--muted); max-width: 58ch; margin-bottom: var(--space-5); }
 .prose--home { max-width: 68ch; }
 
