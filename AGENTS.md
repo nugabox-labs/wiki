@@ -86,7 +86,7 @@ hwaro tool agents-md --local --write
 
 ### Docker Compose 원칙
 - 운영/개발 모드를 별도 브랜치나 분기 로직 없이 compose 파일 두 개(`docker-compose.yml`, `docker-compose.dev.yml`) + `compose.sh` 하나로 통일한다.
-- `./compose.sh up` / `down` = 운영(prod). 빌드된 이미지 기반이며, 변경 사항을 반영하려면 재빌드가 필요하다.
+- `./compose.sh up` / `down` = 운영(prod). `builder` 컨테이너가 notion-sync + hwaro build를 주기적으로(기본 15분) 반복해 공유 볼륨을 갱신하고, `wiki`(nginx)는 그 볼륨을 서빙한다. Notion 콘텐츠 변경은 다음 주기에 자동 반영되지만, templates/static/config.toml/scripts 같은 코드 변경은 `builder` 이미지 자체를 재빌드해야 반영된다.
 - `./compose.sh --dev up` / `down` = 개발(dev). 바인드 마운트 + 라이브 리로드로 즉시 반영된다.
 - 개발 모드에서도 실수로 운영 데이터/도메인에 영향을 주지 않도록 포트·네트워크를 분리한다.
 

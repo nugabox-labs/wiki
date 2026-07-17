@@ -13,7 +13,7 @@ Notion(DEV-WIKI) --notion-sync.mjs--> content/*.md --hwaro build--> public/ --ng
 - **콘텐츠 원본**: Notion `DEV-WIKI` 데이터베이스. `배포` 체크박스가 true인 페이지만 사이트에 노출됩니다.
 - **동기화**: [scripts/notion-sync.mjs](scripts/notion-sync.mjs) — `@notionhq/client`로 Notion 블록을 직접 Markdown으로 변환합니다(별도 변환 라이브러리 미사용). `이름/카테고리/태그/PublishDate/ModifyDate/버전 정보/관련 URL`을 front matter(`title`/`categories`/`tags`/`date`/`updated`/`extra.version`/`extra.external_url`)로 매핑하고, `extra.source = "notion"` 마커를 기준으로 더 이상 대상이 아닌 기존 산출물을 정리(reconciliation)합니다. 마커가 없는 수기 문서는 건드리지 않습니다. Notion에 업로드된 이미지(만료되는 서명 URL)는 `static/notion-assets/`로 다운로드해 고정 경로로 대체합니다.
 - **사이트 생성**: `hwaro init --scaffold github:hahwul/hwaro-examples/examples/alder`(Hwaro 공식 원격 스캐폴드 기능)로 [alder 예시](https://examples.hwaro.hahwul.com/alder/)의 CSS/JS/페이지 셸을 그대로 임포트했습니다. alder 원본은 홈랩 랙(노드/스위치) 인벤토리에 특화된 데모라, 사이드바·홈·목록 템플릿의 콘텐츠 로직만 Notion 기반 카테고리/태그 데이터 모델에 맞게 새로 짰습니다(디자인 토큰·컴포넌트 CSS는 그대로).
-- **배포**: 운영은 빌드된 정적 파일만 서빙하는 nginx 컨테이너, 개발은 소스를 바인드 마운트한 `hwaro serve` 라이브 리로드 컨테이너로 분리되어 있습니다.
+- **배포**: 운영은 `builder`(notion-sync + hwaro build를 주기적으로 반복해 공유 볼륨에 쓰는 컨테이너) + `wiki`(그 볼륨을 그대로 서빙하는 nginx 컨테이너) 2개 서비스로 구성됩니다. Notion 콘텐츠는 이미지 재빌드 없이 다음 주기(기본 15분)에 자동 반영되고, 템플릿/코드 변경은 여전히 `./compose.sh down && up` 재빌드가 필요합니다. 개발은 소스를 바인드 마운트한 `hwaro serve` 라이브 리로드 컨테이너입니다.
 
 ## 디렉터리 구조
 
@@ -21,17 +21,18 @@ Notion(DEV-WIKI) --notion-sync.mjs--> content/*.md --hwaro build--> public/ --ng
 wiki/
 ├── scripts/notion-sync.mjs   # Notion -> content/*.md 동기화
 ├── scripts/dev-entrypoint.sh # 개발 컨테이너 진입점(sync 1회 + hwaro serve)
+├── scripts/build-loop.sh     # 운영 builder 진입점(sync + build 반복)
 ├── content/                  # 동기화 산출물 + 수기 문서
 ├── templates/                # Hwaro 템플릿(alder 임포트 + 카테고리/태그 대응, AdSense 자리 포함)
 ├── static/                   # CSS/JS/favicon + notion-assets(동기화된 이미지)
 ├── config.toml                # Hwaro 사이트 설정
-├── Dockerfile                 # 운영: notion-sync -> hwaro build -> nginx
-├── Dockerfile.dev              # 개발: hwaro serve 라이브 리로드
-├── docker-compose.yml          # 운영
+├── Dockerfile.builder           # 운영 builder: notion-sync -> hwaro build 반복
+├── Dockerfile.dev               # 개발: hwaro serve 라이브 리로드
+├── docker-compose.yml          # 운영(builder + nginx, 공유 볼륨)
 ├── docker-compose.dev.yml      # 개발(바인드 마운트)
 ├── compose.sh                  # 운영/개발 기동·정지 스크립트
 ├── nginx.conf                  # 운영 정적 서빙 설정
-├── .env.example                 # NOTION_TOKEN, NOTION_DB_ID
+├── .env.example                 # NOTION_TOKEN, NOTION_DB_ID, SYNC_INTERVAL_SECONDS
 ├── AGENTS.md                    # 프로젝트 규칙(버전관리/커밋/동기화 원칙 등)
 └── CHANGELOG.md
 ```
@@ -63,9 +64,9 @@ cp .env.example .env
 ./compose.sh down    # 정지 + 제거
 ```
 
-이미지 빌드 시점에 `notion-sync` → `hwaro build --minify`가 실행되고, 컨테이너는 완성된 정적 파일만 nginx로 서빙합니다. **코드/콘텐츠를 변경한 뒤에는 반드시 재빌드**해야 반영됩니다(`./compose.sh down && ./compose.sh up`). `NOTION_TOKEN`/`NOTION_DB_ID`는 빌드 인자로만 전달되며, notion-sync를 실행하는 중간 스테이지에서만 존재하고 최종 nginx 이미지 레이어에는 남지 않습니다.
+`builder` 컨테이너가 `notion-sync` → `hwaro build --minify`를 **기본 15분마다 반복 실행**해 결과물을 공유 볼륨(`public_data`)에 쓰고, `wiki`(nginx) 컨테이너는 그 볼륨을 그대로 서빙합니다. 즉 Notion에서 `배포`를 체크하면 이미지 재빌드 없이 다음 주기 안에 자동으로 사이트에 반영됩니다. 반면 **템플릿/코드(templates, static, config.toml, scripts)를 바꾼 뒤에는 여전히 재빌드가 필요**합니다(`./compose.sh down && ./compose.sh up`) — `builder` 이미지 자체에 그 파일들이 빌드 시점에 고정되기 때문입니다. `NOTION_TOKEN`/`NOTION_DB_ID`는 `builder` 컨테이너의 런타임 환경변수로만 존재하고 어떤 이미지 레이어에도 기록되지 않으며, `wiki`(nginx) 컨테이너에는 아예 전달되지 않습니다.
 
-포트는 `.env`의 `DEV_PORT`(기본 1729), `PROD_PORT`(기본 1731)로 조정할 수 있습니다.
+동기화 주기는 `.env`의 `SYNC_INTERVAL_SECONDS`(기본 900초 = 15분)로 조정합니다. 포트는 `.env`의 `DEV_PORT`(기본 1729), `PROD_PORT`(기본 1731)로 조정할 수 있습니다.
 
 ## 배포
 

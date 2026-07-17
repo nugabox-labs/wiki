@@ -2,6 +2,20 @@
 
 모든 주목할 만한 변경사항을 이 파일에 기록한다. [Semantic Versioning](https://semver.org/lang/ko/)을 따른다.
 
+## v0.11.0 - 2026-07-17
+
+### Added
+- 운영 모드에 콘텐츠 자동 갱신 도입: `builder` 컨테이너(`Dockerfile.builder` + `scripts/build-loop.sh`)가 notion-sync + hwaro build를 `SYNC_INTERVAL_SECONDS`(기본 900초) 주기로 반복 실행해 공유 볼륨(`public_data`)에 쓴다.
+- `wiki`(nginx) 컨테이너는 그 볼륨을 읽기 전용으로 마운트해 서빙만 한다 — Docker 소켓을 마운트하는 방식 대신 공유 볼륨 방식을 택해 컨테이너에 호스트 제어권을 주지 않는다.
+- Notion에서 `배포`를 체크하면 이미지 재빌드 없이 다음 주기 안에 자동 반영된다. templates/static/config.toml/scripts 변경은 기존처럼 `./compose.sh down && up` 재빌드가 필요(원칙 유지).
+- `NOTION_TOKEN`/`NOTION_DB_ID`는 `builder`의 런타임 환경변수로만 존재하고 이미지 레이어에 전혀 기록되지 않으며, `wiki` 컨테이너에는 전달되지 않는다.
+
+### Removed
+- 단일 빌드 시점 동기화만 지원하던 기존 `Dockerfile`을 제거(`Dockerfile.builder`로 대체).
+
+### Verified
+- 실제 `.env`로 `./compose.sh up` 실행, builder 첫 주기에서 46건 동기화 + hwaro build + nginx 200 확인. `SYNC_INTERVAL_SECONDS=20`으로 재실행해 두 번째 주기까지 정상 반복(reconciliation 0건, 에러 없음)되는 것도 확인.
+
 ## v0.10.1 - 2026-07-17
 
 ### Changed
