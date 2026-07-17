@@ -2,6 +2,14 @@
 
 모든 주목할 만한 변경사항을 이 파일에 기록한다. [Semantic Versioning](https://semver.org/lang/ko/)을 따른다.
 
+## v0.11.2 - 2026-07-17
+
+### Fixed
+- `Dockerfile.dev`/`Dockerfile.builder`에서 `apt-get install nodejs npm`을 제거. Debian trixie에서 이 패키지들이 eslint/webpack 등 수천 개의 무관한 `node-*` 패키지를 함께 끌어와 저사양 호스트(NAS 등)에서 빌드가 사실상 멈춘 것처럼 보일 만큼 느려지는 문제가 있었다. 대신 공식 `node:20-slim`(Debian 기반, glibc 호환) 이미지에서 `node`/`npm` 바이너리만 멀티스테이지 `COPY`로 가져온다.
+
+### Verified
+- 로컬에서 `Dockerfile.builder` 재빌드 시간이 극적으로 단축됨을 확인(수십 초 내), node/npm/hwaro 바이너리 정상 동작, 전체 `./compose.sh up` 사이클(46건 동기화 + build)도 정상 완료 확인.
+
 ## v0.11.1 - 2026-07-17
 
 ### Changed
