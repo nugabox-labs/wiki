@@ -11,7 +11,7 @@
         <section class="inventory-grid" aria-label="카테고리">
           <p class="section-kicker">./categories &mdash; {{ site.sections | length }} entries</p>
           <div class="inv-cards">
-            {% for sec in site.sections | sort_by("title") %}
+            {% for sec in site.sections | sort_by("weight") %}
             {% if sec.name != "" %}
             <a class="inv-card" href="{{ base_url }}{{ sec.url }}">
               <span class="inv-card-top">

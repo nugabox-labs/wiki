@@ -71,7 +71,7 @@
           <p class="sidebar-heading">./categories</p>
           <div class="sidebar-group">
             <ul class="sidebar-links">
-              {% for sec in site.sections | sort_by("title") %}
+              {% for sec in site.sections | sort_by("weight") %}
               {% if sec.name != "" %}
               <li><a href="{{ base_url }}{{ sec.url }}"{% if page.url == sec.url %} aria-current="page"{% endif %}><span class="sidebar-dot" aria-hidden="true"></span>{{ sec.title }}</a></li>
               {% endif %}

@@ -23,7 +23,6 @@ const ASSET_DIR = path.join(ROOT_DIR, "static", "notion-assets");
 
 const PROP = {
   title: "이름",
-  category: "카테고리",
   tags: "태그",
   publish: "배포",
   publishDate: "PublishDate",
@@ -34,6 +33,43 @@ const PROP = {
 };
 
 const notion = new Client({ auth: NOTION_TOKEN });
+
+// ── Fixed category taxonomy ───────────────────────────────
+// 카테고리는 Notion의 "카테고리" 속성이 아니라, 태그를 이 고정된
+// 6개 카테고리로 분류해서 결정한다(사이트 구조를 고정하기 위함).
+// weight는 홈/사이드바에 노출되는 순서.
+
+const FIXED_CATEGORIES = [
+  { name: "OS", slug: "os", description: "운영체제 관련 문서", weight: 1 },
+  { name: "SERVER", slug: "server", description: "서버 인프라 관련 문서", weight: 2 },
+  { name: "BACK-END", slug: "back-end", description: "백엔드 개발 관련 문서", weight: 3 },
+  { name: "TECH", slug: "tech", description: "기술 전반에 대한 문서", weight: 4 },
+  { name: "DEV-OPS", slug: "dev-ops", description: "데브옵스/배포 관련 문서", weight: 5 },
+  { name: "FRONT-END", slug: "front-end", description: "프론트엔드 개발 관련 문서", weight: 6 },
+];
+const CATEGORY_BY_NAME = new Map(FIXED_CATEGORIES.map((c) => [c.name, c]));
+const CATEGORY_ORDER = FIXED_CATEGORIES.map((c) => c.name);
+
+const TAG_TO_CATEGORY = {
+  LINUX: "OS", MACOS: "OS", WINDOWS: "OS", SYNOLOGY: "OS",
+  WEB: "SERVER", WAS: "SERVER", DB: "SERVER", NETWORK: "SERVER",
+  SQL: "SERVER", MySQL: "SERVER", Oracle: "SERVER", Tibero: "SERVER", MongoDB: "SERVER",
+  JAVA: "BACK-END", PHP: "BACK-END", PYTHON: "BACK-END", GO: "BACK-END",
+  "Node.js": "BACK-END", SWIFT: "BACK-END",
+  HTML: "FRONT-END", CSS: "FRONT-END", JS: "FRONT-END", REACTJS: "FRONT-END",
+  MSA: "DEV-OPS", "GIT/SVN": "DEV-OPS", BASH: "DEV-OPS",
+  TIP: "TECH", BLOCKCHAIN: "TECH", ISSUE: "TECH", ETC: "TECH", TIL: "TECH", DID: "TECH",
+};
+
+function deriveCategories(tags) {
+  const matched = new Set();
+  for (const tag of tags) {
+    const category = TAG_TO_CATEGORY[tag];
+    if (category) matched.add(category);
+  }
+  if (matched.size === 0) matched.add("TECH");
+  return CATEGORY_ORDER.filter((name) => matched.has(name));
+}
 
 // ── Utilities ──────────────────────────────────────────────
 
@@ -75,10 +111,6 @@ function getTitle(props) {
 
 function getMultiSelect(props, key) {
   return (props[key]?.multi_select ?? []).map((o) => o.name);
-}
-
-function getCheckbox(props, key) {
-  return props[key]?.checkbox === true;
 }
 
 function getDateStart(props, key) {
@@ -352,6 +384,14 @@ async function main() {
     process.exit(1);
   }
 
+  console.log("[notion-sync] 고정 카테고리 섹션을 갱신합니다...");
+  for (const cat of FIXED_CATEGORIES) {
+    const indexPath = path.join(CONTENT_DIR, cat.slug, "_index.md");
+    await mkdir(path.dirname(indexPath), { recursive: true });
+    const indexMd = `+++\ntitle = ${tomlString(cat.name)}\ndescription = ${tomlString(cat.description)}\nsort_by = "date"\nweight = ${cat.weight}\n\n[extra]\nsource = "fixed-category"\n+++\n`;
+    await writeFile(indexPath, indexMd, "utf8");
+  }
+
   console.log("[notion-sync] '배포' == true 페이지를 조회합니다...");
   const pages = [];
   let cursor;
@@ -372,8 +412,8 @@ async function main() {
   for (const page of pages) {
     const props = page.properties;
     const title = getTitle(props) || "(제목 없음)";
-    const categories = getMultiSelect(props, PROP.category);
     const tags = getMultiSelect(props, PROP.tags);
+    const categories = deriveCategories(tags);
     const date =
       getDateStart(props, PROP.publishDate) ??
       props[PROP.createDate]?.created_time ??
@@ -382,7 +422,7 @@ async function main() {
     const version = getPlainText(props, PROP.version);
     const externalUrl = getUrl(props, PROP.externalUrl);
 
-    const categoryDir = slugify(categories[0], "uncategorized");
+    const categoryDir = CATEGORY_BY_NAME.get(categories[0]).slug;
     let slug = slugify(title, page.id.slice(0, 8));
     let relPath = path.join(categoryDir, `${slug}.md`);
     if (usedPaths.has(relPath)) {
@@ -446,12 +486,6 @@ async function main() {
     const absPath = path.join(CONTENT_DIR, page.relPath);
     await mkdir(path.dirname(absPath), { recursive: true });
     await writeFile(absPath, md, "utf8");
-
-    const indexPath = path.join(CONTENT_DIR, page.categoryDir, "_index.md");
-    if (!(await pathExists(indexPath))) {
-      const indexMd = `+++\ntitle = ${tomlString(page.categories[0] || page.categoryDir)}\nsort_by = "date"\n\n[extra]\nsource = "notion-sync-section"\n+++\n`;
-      await writeFile(indexPath, indexMd, "utf8");
-    }
     written++;
   }
 

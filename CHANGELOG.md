@@ -2,6 +2,21 @@
 
 모든 주목할 만한 변경사항을 이 파일에 기록한다. [Semantic Versioning](https://semver.org/lang/ko/)을 따른다.
 
+## v0.10.0 - 2026-07-17
+
+### Changed
+- 카테고리 분류를 Notion의 "카테고리" 속성 대신 고정된 6개 카테고리(OS/SERVER/BACK-END/FRONT-END/DEV-OPS/TECH)와 태그→카테고리 매핑으로 결정하도록 변경. Notion 스키마는 건드리지 않고 `scripts/notion-sync.mjs`의 `TAG_TO_CATEGORY` 테이블로만 처리한다.
+- 매칭되는 태그가 없는 페이지는 TECH로 폴백.
+- notion-sync가 매 실행마다 6개 고정 카테고리의 `_index.md`를 갱신해, 문서가 아직 없는 카테고리도 항상 사이드바/홈에 노출되도록 함(`extra.source = "fixed-category"`).
+- `site.sections` 정렬 기준을 `title`에서 Section의 `weight`로 변경해 카테고리 노출 순서를 고정(OS→SERVER→BACK-END→TECH→DEV-OPS→FRONT-END).
+- 사용하지 않던 `getCheckbox` 헬퍼 제거.
+
+### Notion
+- DEV-WIKI에서 "정리 완료"가 체크된 47개 페이지의 "배포"를 MCP로 일괄 체크(스키마 변경 없음).
+
+### Verified
+- 실제 `.env`로 `--dev up` 재실행, 46개 문서가 고정 카테고리로 정확히 분류되어 동기화됨(OS 23 · SERVER 12 · BACK-END 1 · TECH 2 · DEV-OPS 4 · FRONT-END 4). Notion 이미지 다운로드(20개, 3.1MB), 다중 카테고리 배지, 태그, TOC까지 실제 문서로 확인.
+
 ## v0.9.0 - 2026-07-17
 
 ### Changed
