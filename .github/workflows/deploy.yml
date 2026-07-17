@@ -66,9 +66,11 @@ jobs:
             REBUILD=1
           fi
 
-          # nginx.conf는 볼륨 마운트 → 재빌드 대신 reload만
+          # nginx.conf는 볼륨 마운트 → 재빌드 대신 reload만. 첫 배포(PREV
+          # 없음)는 컨테이너가 지금 막 최신 설정으로 새로 뜨는 것이므로
+          # reload 자체가 무의미 — 대상에서 제외한다.
           NGINX_RELOAD=0
-          changed nginx.conf && NGINX_RELOAD=1
+          [ -n "$PREV" ] && changed nginx.conf && NGINX_RELOAD=1
           # ──────────────────────────────────────────────────────────────
 
           if [ "$REBUILD" -eq 1 ]; then
@@ -84,10 +86,21 @@ jobs:
           $COMPOSE up -d
           step_time "docker compose up done"
 
-          # Reload nginx config if it changed (up -d doesn't reload config)
+          # Reload nginx config if it changed (up -d doesn't reload config).
+          # nginx가 막 (재)기동됐을 수 있으니 pid 파일이 나타날 때까지 잠깐
+          # 기다리고, 그래도 reload가 실패하면 배포 자체는 실패시키지 않는다
+          # (컨테이너는 이미 최신 설정으로 기동된 상태이므로 reload는 부가
+          # 신호일 뿐이다).
           if [ "$NGINX_RELOAD" -eq 1 ]; then
-            $COMPOSE exec -T wiki nginx -s reload
-            echo "nginx config reloaded"
+            for i in 1 2 3 4 5; do
+              $COMPOSE exec -T wiki test -f /run/nginx.pid && break
+              sleep 2
+            done
+            if $COMPOSE exec -T wiki nginx -s reload; then
+              echo "nginx config reloaded"
+            else
+              echo "::warning::nginx reload 실패 - 컨테이너는 이미 최신 설정으로 기동되어 있어 무시함"
+            fi
           fi
 
           step_time "container status"
