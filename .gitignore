@@ -2,5 +2,6 @@
 /node_modules/
 .env
 .hwaro_cache.json
+.deploy-last-sha
 .DS_Store
 *.log
