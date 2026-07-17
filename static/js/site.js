@@ -27,3 +27,9 @@
     if (event.key === "Escape") close();
   });
 })();
+
+(function () {
+  "use strict";
+  var yearEl = document.getElementById("copyright-year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+})();

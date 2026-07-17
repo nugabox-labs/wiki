@@ -609,6 +609,17 @@ pre code {
 .site-footer p { margin: .3em 0; color: var(--muted); font-family: var(--font-mono); }
 .site-footer a { color: inherit; }
 .site-footer-meta { font-size: var(--text-xs); }
+.site-footer-meta a:hover { color: var(--accent); }
+
+.footer-icon-link {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-left: .4rem;
+  color: var(--muted);
+  transition: color .15s ease-out;
+}
+.footer-icon-link:hover { color: var(--accent); }
+.footer-icon { width: 15px; height: 15px; fill: currentColor; }
 
 /* ---- Command palette --------------------------------------------------------------------------- */
 

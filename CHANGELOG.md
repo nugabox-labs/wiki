@@ -2,6 +2,13 @@
 
 모든 주목할 만한 변경사항을 이 파일에 기록한다. [Semantic Versioning](https://semver.org/lang/ko/)을 따른다.
 
+## v0.11.1 - 2026-07-17
+
+### Changed
+- 홈 화면 타이틀 위 `./about` 브레드크럼 제거.
+- 푸터를 `$ whoami - Nuga Jang` + GitHub 아이콘(https://github.com/nugaBox 링크)으로 변경.
+- 저작권 줄을 `© <연도> NUGABOX`(nugabox.io 링크) · built with Hwaro로 변경. 연도는 Hwaro의 `current_year` 대신 `static/js/site.js`에서 `new Date().getFullYear()`로 클라이언트에서 채운다.
+
 ## v0.11.0 - 2026-07-17
 
 ### Added
