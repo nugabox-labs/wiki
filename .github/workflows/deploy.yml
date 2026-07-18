@@ -10,7 +10,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  DEPLOY_DIR: /volume1/Develop/Sites/wiki
+  DEPLOY_DIR: /volume1/Develop/Sites/nugawiki
   DOCKER_BUILDKIT: "1"
   COMPOSE_DOCKER_CLI_BUILD: "1"
 

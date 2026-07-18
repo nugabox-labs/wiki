@@ -18,7 +18,7 @@ Notion(DEV-WIKI) --notion-sync.mjs--> content/*.md --hwaro build--> public/ --ng
 ## 디렉터리 구조
 
 ```
-wiki/
+nugawiki/
 ├── scripts/notion-sync.mjs   # Notion -> content/*.md 동기화
 ├── scripts/dev-entrypoint.sh # 개발 컨테이너 진입점(sync 1회 + hwaro serve)
 ├── scripts/build-loop.sh     # 운영 builder 진입점(sync + build 반복)
