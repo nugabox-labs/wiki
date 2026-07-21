@@ -48,7 +48,9 @@
             </nav>
             {% endif %}
 
+            {% if page.section %}
             {% include "partials/giscus.html" %}
+            {% endif %}
           </article>
 
           {% if toc %}
