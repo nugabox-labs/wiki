@@ -1,7 +1,7 @@
 +++
 title = "WebtoB SSL·URLRewrite"
 date = 2019-09-18T01:21:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["WEB"]
 toc = true
@@ -16,7 +16,7 @@ notion_url = "https://app.notion.com/p/WebtoB-SSL-URLRewrite-f4646d6413c94e5e9d2
 
 ## http.m (SSL VHOST)
 
-```javascript
+```
 *VHOST
 v_app
     DOCROOT = "/home/app/webapps",
@@ -48,7 +48,7 @@ u_app Uri = "/", Svrtype = JSV, GotoEXT=Y, VhostName = "v_app, v_app_ssl"
 
 ## rewrite.cfg (80→443)
 
-```javascript
+```
 RewriteCond %{HTTP_HOST} ^www\.example\.com$
 RewriteCond %{SERVER_PORT} 80
 RewriteRule .* https://www.example.com:443$0 [R]

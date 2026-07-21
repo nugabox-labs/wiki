@@ -1,7 +1,7 @@
 +++
 title = "JSP Session 정보 조회 및 IP 기반 접근제한"
 date = 2020-04-02T09:59:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["BACK-END"]
 tags = ["JAVA"]
 toc = true

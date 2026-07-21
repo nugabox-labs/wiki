@@ -1,7 +1,7 @@
 +++
 title = "Linux Swap 메모리 설정"
 date = 2024-01-15T05:47:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true
@@ -10,11 +10,10 @@ toc = true
 source = "notion"
 notion_id = "aac85d4f-12ce-4b80-9d30-b4a3bdfa4caf"
 notion_url = "https://app.notion.com/p/Linux-Swap-aac85d4f12ce4b809d30b4a3bdfa4caf"
+external_url = "https://access.redhat.com/documentation/ko-kr/red_hat_enterprise_linux/7/html/storage_administration_guide/ch-swapspace"
 +++
 
 ### Swap Memory 권장 용량
-
-출처 : [RedHat Documents](https://access.redhat.com/documentation/ko-kr/red_hat_enterprise_linux/7/html/storage_administration_guide/ch-swapspace)
 
 | 물리 RAM 용량 | 권장 SWAP 용량 |
 | --- | --- |
@@ -64,10 +63,10 @@ swapon /swapfile
 echo '/swapfile none swap sw 0 0' | tee -a /etc/fstab
 ```
 
-### Swap Memeory 파일 삭제
+### Swap Memory 파일 삭제
 
 ```bash
-swapoff swapfile
+swapoff /swapfile
 rm /swapfile
 # /etc/fstab에도 추가되어 있으면 삭제
 ```

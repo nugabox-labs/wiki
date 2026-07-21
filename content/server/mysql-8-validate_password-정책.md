@@ -1,7 +1,7 @@
 +++
 title = "MySQL 8 validate_password 정책"
 date = 2021-03-16T01:23:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "SSH 포트 변경"
 date = 2020-03-09T17:32:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true
@@ -13,10 +13,9 @@ notion_url = "https://app.notion.com/p/SSH-20b3767c76614552b9776787d0af1b32"
 external_url = "https://www.lesstif.com/pages/viewpage.action?pageId=20776114"
 +++
 
-## SSH 포트 변경
+## `/etc/ssh/sshd_config`
 
-```javascript
-# /etc/ssh/sshd_config
+```
 # Port 22
 Port 10022
 ```

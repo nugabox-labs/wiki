@@ -1,7 +1,7 @@
 +++
 title = "jQuery Select Option 선택값 가져오기"
 date = 2019-10-24T19:34:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["FRONT-END"]
 tags = ["JS"]
 toc = true
@@ -30,5 +30,3 @@ $("#셀렉트박스ID option:eq(1)").replaceWith("<option value='1'>1차</option
 $("#셀렉트ID option:eq(1)").attr("selected", "selected");  // index로 선택 지정
 $("#셀렉트ID").val("1번").attr("selected", "selected");    // text 값으로 선택 지정
 ```
-
-원문: [https://oingbong.tistory.com/175](https://oingbong.tistory.com/175)

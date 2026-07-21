@@ -1,7 +1,7 @@
 +++
 title = "Apache mod_proxy vs mod_jk"
 date = 2020-11-19T12:52:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["WEB", "WAS"]
 toc = true
@@ -13,9 +13,9 @@ notion_url = "https://app.notion.com/p/Apache-mod_proxy-vs-mod_jk-6b0f7599601445
 external_url = "https://jfrom.tistory.com/entry/modjk-%EB%8C%80%EC%8B%A0-modproxy%EC%82%AC%EC%9A%A9"
 +++
 
-mod\_jk가 잘 동작 중이면 굳이 바꿀 필요 없음. mod\_proxy는 **별도 모듈 빌드·workers 파일 없이** 사용 가능(Apache 2.2+).
+mod\_jk가 정상이면 교체 불필요. mod\_proxy는 별도 모듈 빌드·workers 파일 없이 사용(Apache 2.2+).
 
-> `mod_proxy_ajp`는 8KB 이상 바디에서 이슈 보고 있음 → 그때는 mod\_jk 또는 `mod_proxy_http`.
+> `mod_proxy_ajp`는 8KB 이상 바디 이슈 보고 → 그때는 mod\_jk 또는 `mod_proxy_http`.
 
 ## AJP
 
@@ -40,7 +40,7 @@ ProxyPass / http://backend.example.com/
 ProxyPassMatch ^/(.*\.gif)$ http://backend.example.com/$1
 ```
 
-## 전체 VirtualHost 예
+## VirtualHost 예
 
 ```javascript
 <VirtualHost *:80>
@@ -55,5 +55,5 @@ ProxyPassMatch ^/(.*\.gif)$ http://backend.example.com/$1
 
 ## 참고
 
-- [https://stackoverflow.com/questions/1081918/apache-to-tomcat-mod-jk-vs-mod-proxy](https://stackoverflow.com/questions/1081918/apache-to-tomcat-mod-jk-vs-mod-proxy)
-- [https://httpd.apache.org/docs/2.2/mod/mod\_proxy.html#proxypass](https://httpd.apache.org/docs/2.2/mod/mod_proxy.html#proxypass)
+- [mod\_jk vs mod\_proxy](https://stackoverflow.com/questions/1081918/apache-to-tomcat-mod-jk-vs-mod-proxy)
+- [ProxyPass](https://httpd.apache.org/docs/2.2/mod/mod_proxy.html#proxypass)

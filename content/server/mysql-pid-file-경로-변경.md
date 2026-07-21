@@ -1,7 +1,7 @@
 +++
 title = "MySQL pid-file 경로 변경"
 date = 2020-06-25T09:08:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true
@@ -15,7 +15,7 @@ external_url = "https://systemv.tistory.com/40"
 
 ## pid-file 경로 변경
 
-mysql.server로 기동 시 **`[mysqld]`****와 ****`[mysqld_safe]`**** 둘 다** 동일 설정:
+mysql.server 기동 시 `[mysqld]`와 `[mysqld_safe]` 둘 다 동일 설정:
 
 ```
 [mysqld]

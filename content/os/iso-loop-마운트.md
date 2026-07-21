@@ -1,7 +1,7 @@
 +++
 title = "ISO loop 마운트"
 date = 2020-03-02T19:18:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

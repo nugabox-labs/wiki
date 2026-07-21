@@ -1,7 +1,7 @@
 +++
 title = "HTML 샘플"
 date = 2021-05-12T00:48:00Z
-updated = 2022-06-25T18:56:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["FRONT-END"]
 tags = ["HTML"]
 toc = true

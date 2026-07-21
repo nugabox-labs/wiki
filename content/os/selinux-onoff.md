@@ -1,7 +1,7 @@
 +++
 title = "SELinux on/off"
 date = 2019-04-11T08:25:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true
@@ -16,7 +16,7 @@ notion_url = "https://app.notion.com/p/SELinux-on-off-9e989cc0be1940e2951712dd5a
 
 설정: `/etc/sysconfig/selinux` (또는 `/etc/selinux/config`)
 
-```javascript
+```
 SELINUX=enforcing   # / permissive / disabled
 ```
 

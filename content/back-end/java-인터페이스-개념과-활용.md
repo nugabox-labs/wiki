@@ -1,7 +1,7 @@
 +++
 title = "Java 인터페이스 개념과 활용"
 date = 2019-09-26T08:56:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["BACK-END"]
 tags = ["JAVA"]
 toc = true
@@ -53,5 +53,3 @@ class Calculator implements Calculatable { ... }
 
 - 인터페이스: 다중 구현 가능, 구체적 로직/상태를 가질 수 없음
 - 추상 클래스: 일반 클래스라 다중 상속 불가, 구체적 로직/상태를 가질 수 있음
-
-원문: [https://opentutorials.org/module/2495/14142](https://opentutorials.org/module/2495/14142)

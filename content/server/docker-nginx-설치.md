@@ -1,7 +1,7 @@
 +++
 title = "Docker Nginx 설치"
 date = 2022-05-15T16:27:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER", "DEV-OPS"]
 tags = ["WEB", "MSA"]
 toc = true
@@ -10,7 +10,7 @@ toc = true
 source = "notion"
 notion_id = "0d7e0652-f591-41f1-bce4-46f8745a4dc6"
 notion_url = "https://app.notion.com/p/Docker-Nginx-0d7e0652f59141f1bce446f8745a4dc6"
-external_url = "https://velog.io/@latte_h/Docker%EC%97%90%EC%84%9C-NginX-%EC%84%A4%EC%B9%98"
+external_url = "https://app.notion.com/p/e860da48fcf741ee859a9012d7d3468e"
 +++
 
 ## 이미지 pull·실행
@@ -47,7 +47,7 @@ nginx/
   conf/nginx.conf
 ```
 
-`conf/nginx.conf` 예시 (핵심):
+`conf/nginx.conf` 예시:
 
 ```
 user  nginx;

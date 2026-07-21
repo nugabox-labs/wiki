@@ -1,7 +1,7 @@
 +++
 title = "맥에서 포트 점유 프로세스(Tomcat 등) 강제종료"
 date = 2019-10-04T06:45:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["BACK-END"]
 tags = ["JAVA"]
 toc = true

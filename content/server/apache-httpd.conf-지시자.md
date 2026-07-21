@@ -1,7 +1,7 @@
 +++
 title = "Apache httpd.conf 지시자"
 date = 2019-03-14T07:38:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["WEB"]
 toc = true
@@ -10,32 +10,33 @@ toc = true
 source = "notion"
 notion_id = "0b16d2db-55c2-440d-9346-b7791cd18169"
 notion_url = "https://app.notion.com/p/Apache-httpd-conf-0b16d2db55c2440d9346b7791cd18169"
+external_url = "https://httpd.apache.org/docs/2.2/mod/core.html"
 +++
 
-> CentOS 6.4 / Apache 2.2.15 yum 설치 기준. 경로: `/etc/httpd/conf/httpd.conf`
+> CentOS 6.4 / Apache 2.2.15 yum 기준. 경로: `/etc/httpd/conf/httpd.conf`
 
 ## 핵심 지시자
 
-| 지시자 | 설명 |  |  |
-| --- | --- | --- | --- |
-| `ServerTokens Prod` | 응답 헤더 최소화 (`Server: Apache`) |  |  |
-| `ServerRoot "/etc/httpd"` | Apache 홈, 이후 상대경로 기준 |  |  |
-| `PidFile run/httpd.pid` | PID 파일 |  |  |
-| `Timeout 300` | 무응답 시 연결 종료(초) |  |  |
-| `KeepAlive On` | 지속 연결 |  |  |
-| `MaxKeepAliveRequests 100` | 연결당 최대 요청 (0=무제한) |  |  |
-| `KeepAliveTimeout 2` | 다음 요청 대기(초) |  |  |
-| `Listen 80` | 리슨 포트 |  |  |
-| `User`/`Group nobody` | 자식 프로세스 소유자 |  |  |
-| `ServerName` | Canonical 호스트명 |  |  |
-| `UseCanonicalName Off` | 클라이언트가 보낸 Host 사용 |  |  |
-| `DocumentRoot "/var/www/html"` | 문서 루트 (`/` 끝 X) |  |  |
-| `DirectoryIndex` | 기본 문서 목록 |  |  |
-| `AccessFileName .htaccess` | 디렉터리별 접근 제어 파일 |  |  |
-| `HostnameLookups Off` | 로그에 IP만 (DNS 질의 부하 방지) |  |  |
-| `ErrorLog` / `LogLevel warn` | 에러 로그 |  |  |
-| `CustomLog ... combined` | 액세스 로그 |  |  |
-| \`ServerSignature On\\ | Off\\ | EMail\` | 에러 페이지 서명 |
+| 지시자 | 설명 |
+| --- | --- |
+| `ServerTokens Prod` | 응답 헤더 최소화 (`Server: Apache`) |
+| `ServerRoot "/etc/httpd"` | Apache 홈, 이후 상대경로 기준 |
+| `PidFile run/httpd.pid` | PID 파일 |
+| `Timeout 300` | 무응답 시 연결 종료(초) |
+| `KeepAlive On` | 지속 연결 |
+| `MaxKeepAliveRequests 100` | 연결당 최대 요청 (0=무제한) |
+| `KeepAliveTimeout 2` | 다음 요청 대기(초) |
+| `Listen 80` | 리슨 포트 |
+| `User`/`Group nobody` | 자식 프로세스 소유자 |
+| `ServerName` | Canonical 호스트명 |
+| `UseCanonicalName Off` | 클라이언트가 보낸 Host 사용 |
+| `DocumentRoot "/var/www/html"` | 문서 루트 (`/` 끝 X) |
+| `DirectoryIndex` | 기본 문서 목록 |
+| `AccessFileName .htaccess` | 디렉터리별 접근 제어 파일 |
+| `HostnameLookups Off` | 로그에 IP만 (DNS 질의 부하 방지) |
+| `ErrorLog` / `LogLevel warn` | 에러 로그 |
+| `CustomLog ... combined` | 액세스 로그 |
+| `ServerSignature On|Off|EMail` | 에러 페이지 서명 |
 
 ## MPM (prefork / worker)
 
@@ -75,27 +76,23 @@ notion_url = "https://app.notion.com/p/Apache-httpd-conf-0b16d2db55c2440d9346b77
 </Directory>
 ```
 
-- **Options**: `None`, `Indexes`, `Includes`, `FollowSymLinks`, `ExecCGI`, `MultiViews` 등
+- **Options**: `None`, `Indexes`, `Includes`, `FollowSymLinks`, `ExecCGI`, `MultiViews`
 - **AllowOverride**: `None`, `All`, `AuthConfig`, `FileInfo`, `Indexes`, `Options`, `Limit`
 - **Order**: `allow,deny` / `deny,allow`
 
-## .ht\* 파일 차단
+## .ht\* 차단 / Alias
 
 ```javascript
 <Files ~ "^\.ht">
     Order allow,deny
     Deny from all
 </Files>
-```
 
-## Alias / ScriptAlias
-
-```javascript
 Alias /icons/ "/var/www/icons/"
 ScriptAlias /cgi-bin/ "/var/www/cgi-bin/"
 ```
 
-## server-status / server-info (로컬만)
+## server-status (로컬망만)
 
 ```javascript
 <Location /server-status>
@@ -106,12 +103,11 @@ ScriptAlias /cgi-bin/ "/var/www/cgi-bin/"
 </Location>
 ```
 
-`ExtendedStatus On` 권장.
+`ExtendedStatus On` 권장. 점검: `httpd -S`
 
 ## 가상호스트
 
 ```javascript
-#NameVirtualHost *:80
 <VirtualHost *:80>
     ServerAdmin webmaster@example.com
     DocumentRoot /www/docs/example.com
@@ -120,8 +116,6 @@ ScriptAlias /cgi-bin/ "/var/www/cgi-bin/"
     CustomLog logs/example.com-access_log common
 </VirtualHost>
 ```
-
-점검: `httpd -S`
 
 ## php.conf (`/etc/httpd/conf.d/php.conf`)
 

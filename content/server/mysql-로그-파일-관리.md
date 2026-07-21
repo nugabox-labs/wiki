@@ -1,7 +1,7 @@
 +++
 title = "MySQL 로그 파일 관리"
 date = 2020-04-07T14:42:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

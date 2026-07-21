@@ -1,7 +1,7 @@
 +++
 title = "CentOS Python 환경 구축"
 date = 2021-05-20T07:31:00Z
-updated = 2026-07-20T01:06:00Z
+updated = 2026-07-21T05:33:00Z
 categories = ["OS", "BACK-END"]
 tags = ["LINUX", "PYTHON"]
 toc = true
@@ -10,153 +10,80 @@ toc = true
 source = "notion"
 notion_id = "0bd10266-fec2-4be2-a232-a39b6c8446f5"
 notion_url = "https://app.notion.com/p/CentOS-Python-0bd10266fec24be2a232a39b6c8446f5"
+external_url = "https://www.python.org/ftp/python/"
 +++
 
-# 설치
+CentOS 6.x는 repo 지원 종료 → 소스 컴파일 설치.
 
-CentOS 6.x에서는 repo 지원이 끊겼으므로 곧바로 컴파일 설치를 해야 한다.
+## 필수 패키지
 
-### 설치 전 필수 패키지
-
-```sql
-yum -y install gcc gcc-c++ openssl openssl-dev zlib zlib-devel libffi-devel
+```bash
+yum -y install gcc gcc-c++ openssl openssl-devel zlib zlib-devel libffi-devel
 ```
 
-## 컴파일 설치
+## 컴파일 설치 (3.6.9 예)
 
----
-
-### 다운로드 및 압축 해제
-
-- Python 다운로드 URL : [https://www.python.org/ftp/python/](https://www.python.org/ftp/python/)
+다운로드: [python.org/ftp/python](https://www.python.org/ftp/python/)
 
 ```bash
 wget https://www.python.org/ftp/python/3.6.9/Python-3.6.9.tgz
 tar zxvf Python-3.6.9.tgz
 ```
 
-### (선택) OpenSSL이 컴파일로 설치된 경우
+### (선택) OpenSSL 컴파일 설치 시
 
-- Configure 하기 전에 `Modules/Setup.dist` 파일을 수정해준다.
+`Modules/Setup.dist`에서 `_socket`/`_ssl` 주석 해제, `SSL=/usr/local/openssl` 경로 맞추기.
 
-```bash
-cd Python-3.6.9/Modules
-vim Setup.dist
-
-# 아래와 같이 주석을 풀어준다.
-	_socket socketmodule.c
-	
-	# Socket module helper for SSL support; you must comment out the other
-	# socket line above, and possibly edit the SSL variable:
-	SSL=/usr/local/openssl
-	_ssl _ssl.c \
-	-DUSE_SSL -I$(SSL)/include -I$(SSL)/include/openssl \
-	-L$(SSL)/lib -lssl -lcrypto
-```
-
-### 환경 구성
+### configure · make
 
 ```bash
 cd Python-3.6.9
-./configure --enable-optimizations --prefix=/usr/local/python3.6 
-# 위의 SSL 설정했을 시 아래 내용 추가
---with-ensurepip=yes CFLAGS="-I/usr/local/ssl/include" LDFLAGS="-L/usr/local/ssl/lib"
-```
+./configure --enable-optimizations --prefix=/usr/local/python3.6 \
+  --with-ensurepip=yes \
+  CFLAGS="-I/usr/local/ssl/include" LDFLAGS="-L/usr/local/ssl/lib"
 
-### 설치
-
-```bash
-### CPU 코어 수 확인
-grep -c processor /proc/cpuinfo
-
-make -j [코어 수]
+grep -c processor /proc/cpuinfo   # 코어 수
+make -j $(nproc)
 make altinstall
-```
-
-### 버전 확인
-
-```bash
 /usr/local/python3.6/bin/python3.6 -V
 ```
 
-### 링크 수정
+### 링크 (필요 시)
 
 ```bash
-### 설치된 위치 확인
 which python3.6
-
-### 기존 Python 링크 확인 및 수정
 cd /usr/bin
-ls -al | grep python
-ln -s /usr/local/bin/python3.6 python
+ln -s /usr/local/python3.6/bin/python3.6 python3.6
 ```
 
-## yum 설치
+## yum 설치 (CentOS 7)
 
----
-
-CentOS 7.9의 Repository에서 지원하는 버전은 Python 3.6이 마지막임.
-
-### Repository 추가
-
-- Repository URL : [https://repo.ius.io/](https://repo.ius.io/)
+IUS: [repo.ius.io](https://repo.ius.io/)
 
 ```bash
 yum install -y https://repo.ius.io/ius-release-el7.rpm
-```
-
-### 패키지 설치
-
-```bash
 yum install -y python36u python36u-libs python36u-devel python36u-pip
-```
-
-### 버전 확인
-
-```bash
 python3 -V
 ```
 
-## 가상환경 구성
+> CentOS 7.9 repo 기본 상한 ≈ Python 3.6.
 
-pip는 root 디렉토리를 디폴트로 설정되어 있으므로, root 또는 sudo로 사용하는 것은 위험하다. 가상환경 라이브러리인 Virutalenv를 사용하여 가상 사용자의 Home 디렉토리에서 패키지를 관리하는 것이 바람직하다.
+## 가상환경 (virtualenv)
 
----
-
-### 가상환경 라이브러리 설치
+root/sudo로 전역 pip 설치는 지양. 사용자 Home에서 관리.
 
 ```bash
-pip install virtualenv
-# 또는
 pip3 install virtualenv
-```
-
-### 가상환경 활성화
-
-```bash
-# 
-virtualenv [사용자명]
-source [사용자명]/bin/activate
-```
-
-### 가상환경에서 원하는 패키지 설치
-
-```bash
-(사용자명)# pip install 서비스
-# 패키지 설치 디렉토리 : [사용자홈]/lib/python3.6/
-# 패키지 실행 디렉토리 : [사용자홈]/bin/python3.6/
-```
-
-### 가상환경 비활성화
-
-```bash
+virtualenv myenv
+source myenv/bin/activate
+pip install 패키지
 deactivate
 ```
 
-## Trouble Shooting
+## Troubleshooting
 
-### 세그멘테이션 오류 : Segmentaion Fault
+### Segmentation Fault
 
-```go
+```bash
 python3 -m pip install sentencepiece
 ```

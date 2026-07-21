@@ -1,7 +1,7 @@
 +++
 title = "xrdp 설치"
 date = 2020-10-27T13:44:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

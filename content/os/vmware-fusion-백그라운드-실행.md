@@ -1,7 +1,7 @@
 +++
 title = "VMware Fusion 백그라운드 실행"
 date = 2024-09-13T01:42:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS"]
 tags = ["MACOS"]
 toc = true

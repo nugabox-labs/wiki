@@ -1,7 +1,7 @@
 +++
 title = "APM 백업·재설치 (레거시)"
 date = 2019-03-28T09:07:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true
@@ -33,5 +33,3 @@ rm -rf /usr/local/apache /usr/local/php /usr/local/mysql
 MySQL/Apache/PHP를 `/usr/local/{mysql,apache,php}`에 `./configure && make && make install` 후 init 링크.
 
 복구: `tar xvfp`로 홈·DB 디렉터리 복원.
-
-상세 원문: [https://www.xpressengine.com/qna/1571665](https://www.xpressengine.com/qna/1571665)

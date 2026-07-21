@@ -1,7 +1,7 @@
 +++
 title = "errno 150 foreign key incorrectly formed"
 date = 2020-09-24T00:18:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true
@@ -22,4 +22,4 @@ CREATE DATABASE db_name DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
 mysql -u root -p db_name < dump.sql
 ```
 
-부모 행 삭제 FK 이슈는 [FK 제약으로 부모 행 삭제 실패](https://app.notion.com/p/584a0f94fb794b13b0348fa137dea358) 참고.
+부모 행 삭제 FK 이슈는 FK 제약으로 부모 행 삭제 실패 참고.

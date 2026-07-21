@@ -1,7 +1,7 @@
 +++
 title = "이클립스 Marketplace 수동 설치"
 date = 2019-10-04T09:05:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["BACK-END"]
 tags = ["JAVA"]
 toc = true
@@ -19,7 +19,3 @@ external_url = "https://ggari.tistory.com/219"
 1. Name 임의 입력, Location: `http://download.eclipse.org/releases/juno` (버전에 맞는 릴리즈 URL로 대체)
 1. General Purpose Tools > Marketplace Client 체크 > Next > 라이선스 동의 > Finish
 1. 설치 완료 후 재시작
-
-참고(SVN 설치): [http://ggari.tistory.com/86](http://ggari.tistory.com/86)
-
-원문: [https://ggari.tistory.com/219](https://ggari.tistory.com/219)

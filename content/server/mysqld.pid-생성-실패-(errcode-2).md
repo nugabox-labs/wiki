@@ -1,7 +1,7 @@
 +++
 title = "mysqld.pid 생성 실패 (Errcode 2)"
 date = 2020-05-12T18:26:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "OpenOffice RPM 설치"
 date = 2019-10-23T16:13:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true
@@ -20,5 +20,3 @@ tar xvf Apache_OpenOffice_*_install-rpm_*.tar.gz
 cd */RPMS && rpm -Uvh *.rpm
 cd desktop-integration && rpm -Uvh *.rpm
 ```
-
-원문: [https://www.youtube.com/watch?v=7d2CItt5axE](https://www.youtube.com/watch?v=7d2CItt5axE)

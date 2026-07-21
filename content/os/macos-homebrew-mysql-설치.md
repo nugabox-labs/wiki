@@ -1,7 +1,7 @@
 +++
 title = "macOS Homebrew MySQL 설치"
 date = 2019-10-31T16:51:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS", "SERVER"]
 tags = ["DB", "MySQL", "MACOS"]
 toc = true
@@ -22,9 +22,9 @@ mysql -u root
 mysql_secure_installation
 ```
 
-Workbench: `brew install --cask mysql-workbench` (구: `brew cask install`)
+Workbench: `brew install --cask mysql-workbench`
 
-### Workbench + MySQL 8 `caching_sha2_password`
+### MySQL 8 `caching_sha2_password`
 
 ```sql
 ALTER USER 'root'@'localhost'

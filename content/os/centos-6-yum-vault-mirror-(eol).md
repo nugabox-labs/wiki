@@ -1,7 +1,7 @@
 +++
 title = "CentOS 6 yum vault mirror (EOL)"
 date = 2020-12-22T14:38:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

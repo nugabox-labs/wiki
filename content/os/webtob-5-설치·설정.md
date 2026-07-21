@@ -1,7 +1,7 @@
 +++
 title = "WebtoB 5 설치·설정"
 date = 2020-10-27T00:45:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS", "SERVER"]
 tags = ["WEB", "LINUX"]
 toc = true
@@ -14,5 +14,3 @@ external_url = "https://onestone-note.tistory.com/42"
 +++
 
 > WebtoB 5. 상세 절차는 원문 참고.
-
-관련: [https://onestone-note.tistory.com/42](https://onestone-note.tistory.com/42)

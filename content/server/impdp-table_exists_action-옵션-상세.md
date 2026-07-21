@@ -1,7 +1,7 @@
 +++
 title = "impdp TABLE_EXISTS_ACTION 옵션 상세"
 date = 2020-02-18T16:58:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["DB", "Oracle"]
 toc = true
@@ -15,7 +15,7 @@ external_url = "https://dbaclass.com/article/table_exists_action-option-impdp/"
 
 ## impdp TABLE\_EXISTS\_ACTION 옵션 상세
 
-가져올 테이블이 이미 DB에 있을 때 동작 지정. 기본 가이드는 [Oracle Data Pump 종합 가이드](https://app.notion.com/p/0128fa610be848308e9bdb3bd8ec7e14) 참고, 여기는 옵션별 상세
+가져올 테이블이 이미 DB에 있을 때 동작 지정. 기본 가이드는 Oracle Data Pump 종합 가이드 참고, 여기는 옵션별 상세
 
 **APPEND**: 기존 데이터에 새 데이터를 추가(메타데이터는 스킵)
 
@@ -43,5 +43,3 @@ impdp dumpfile=emp_tab.dmp logfile=emp_tab.log directory=VEN table_exists_action
 # ORA-39151: Table "DBATEST"."EMP_TAB" exists. All dependent metadata and data
 # will be skipped due to table_exists_action of skip
 ```
-
-원문: [https://dbaclass.com/article/table\_exists\_action-option-impdp/](https://dbaclass.com/article/table_exists_action-option-impdp/)

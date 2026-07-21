@@ -1,7 +1,7 @@
 +++
 title = "iptables 개념·명령어 요약"
 date = 2021-05-10T02:49:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS", "SERVER"]
 tags = ["LINUX", "NETWORK"]
 toc = true
@@ -13,9 +13,7 @@ notion_url = "https://app.notion.com/p/iptables-903d8c1564814611a787bc615ee83190
 external_url = "https://linuxstory1.tistory.com/entry/iptables-기본-명령어-및-옵션-명령어"
 +++
 
-> 출처: [https://linuxstory1.tistory.com/entry/iptables-기본-명령어-및-옵션-명령어](https://linuxstory1.tistory.com/entry/iptables-기본-명령어-및-옵션-명령어)
-
-> 실무 포트 조작 → [iptables 포트 열기/닫기](https://app.notion.com/p/4ba8bf0ff1314f9ca55928d397ca5499) · [CentOS 방화벽](https://app.notion.com/p/b8ca9b5f541a46e396936e7e4d393a60)
+실무 포트 조작 → iptables 포트 열기/닫기 · CentOS 방화벽
 
 ## Chain
 

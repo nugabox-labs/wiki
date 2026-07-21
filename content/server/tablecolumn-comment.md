@@ -1,7 +1,7 @@
 +++
 title = "TABLE/COLUMN COMMENT"
 date = 2019-11-21T15:34:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

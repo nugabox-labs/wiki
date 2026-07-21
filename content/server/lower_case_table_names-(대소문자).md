@@ -1,7 +1,7 @@
 +++
 title = "lower_case_table_names (대소문자)"
 date = 2021-09-06T07:04:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

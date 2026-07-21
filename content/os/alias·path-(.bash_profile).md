@@ -1,7 +1,7 @@
 +++
 title = "alias·PATH (.bash_profile)"
 date = 2019-09-30T02:45:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

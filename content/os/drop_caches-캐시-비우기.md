@@ -1,7 +1,7 @@
 +++
 title = "drop_caches 캐시 비우기"
 date = 2019-10-18T08:58:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

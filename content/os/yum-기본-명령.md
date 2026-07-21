@@ -1,7 +1,7 @@
 +++
 title = "yum 기본 명령"
 date = 2020-11-18T09:12:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true
@@ -32,4 +32,4 @@ yum list installed
 
 repo: `/etc/yum.conf`, `/etc/yum.repos.d/`
 
-EOL vault → [yum vault·lock·timeout](https://app.notion.com/p/09de93b21f57459f96f482e616eaa5bc)
+EOL vault → yum vault·lock·timeout

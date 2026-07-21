@@ -1,7 +1,7 @@
 +++
 title = "Bitnami Apache SSL 설정"
 date = 2020-06-23T10:48:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER", "TECH"]
 tags = ["WEB", "TIL"]
 toc = true
@@ -10,7 +10,7 @@ toc = true
 source = "notion"
 notion_id = "b01443fb-53db-4075-af3a-a271af160e93"
 notion_url = "https://app.notion.com/p/Bitnami-Apache-SSL-b01443fb53db4075af3aa271af160e93"
-external_url = "https://luckyyowu.tistory.com/364"
+external_url = "https://app.notion.com/p/8dc3900ca6704fbdb260f5f62eb64260"
 +++
 
 > Bitnami AMI: APT Apache(`/usr/sbin/apache2`, `/etc/apache2/`)와 Bitnami(`/opt/bitnami/apache2/`)가 공존할 수 있음. `ps -ef | grep httpd`로 **실제 기동 바이너리** 확인.

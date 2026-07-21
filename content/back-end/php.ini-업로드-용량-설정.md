@@ -1,7 +1,7 @@
 +++
 title = "php.ini 업로드 용량 설정"
 date = 2019-11-26T11:20:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["BACK-END"]
 tags = ["PHP"]
 toc = true
@@ -34,5 +34,3 @@ memory_limit = 128M          ; PHP 메모리 사용량, 업로드 파일은 먼�
 ```bash
 systemctl restart php-fpm
 ```
-
-원문: [https://conory.com/blog/44009](https://conory.com/blog/44009)

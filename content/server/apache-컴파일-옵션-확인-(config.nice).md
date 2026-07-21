@@ -1,7 +1,7 @@
 +++
 title = "Apache 컴파일 옵션 확인 (config.nice)"
 date = 2020-12-21T17:46:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["WEB"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "AUTO_INCREMENT 추가·초기화"
 date = 2019-10-14T11:04:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true
@@ -15,7 +15,7 @@ external_url = "https://hammer.tistory.com/entry/MYSQL-%EC%BB%AC%EB%9F%BC-%EC%9E
 
 ## AUTO\_INCREMENT 추가·초기화
 
-초기화만 → [AUTO\_INCREMENT 초기화](https://app.notion.com/p/2f9942a1395d494495b4476d3c6c348b)
+초기화만 → AUTO\_INCREMENT 초기화
 
 ```sql
 -- 기존 컬럼에 AI + PK

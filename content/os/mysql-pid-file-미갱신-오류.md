@@ -1,7 +1,7 @@
 +++
 title = "MySQL PID file 미갱신 오류"
 date = 2019-09-30T11:37:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS", "SERVER"]
 tags = ["DB", "MySQL", "MACOS"]
 toc = true

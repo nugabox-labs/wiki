@@ -1,7 +1,7 @@
 +++
 title = "CentOS 6 MySQL 소스 컴파일 설치"
 date = 2019-11-18T15:56:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS", "SERVER"]
 tags = ["DB", "MySQL", "LINUX"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "IPv4/IPv6 주소 검증 정규식"
 date = 2019-09-26T08:54:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["DB", "Oracle"]
 toc = true

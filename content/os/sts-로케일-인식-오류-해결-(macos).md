@@ -1,7 +1,7 @@
 +++
 title = "STS 로케일 인식 오류 해결 (macOS)"
 date = 2023-03-11T14:04:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS"]
 tags = ["MACOS"]
 toc = true
@@ -18,5 +18,3 @@ external_url = "https://gigas-blog.tistory.com/120"
 - Oracle JDBC 설정 후, macOS 업데이트 이후 종종 발생
 1. 시스템 환경설정 > 언어 및 지역
 1. 지역을 타국으로 변경했다가 다시 대한민국으로 변경 → 재실행하면 해결
-
-원문: [https://gigas-blog.tistory.com/120](https://gigas-blog.tistory.com/120)

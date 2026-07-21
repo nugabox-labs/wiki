@@ -1,7 +1,7 @@
 +++
 title = "Apache JMeter"
 date = 2021-08-02T06:48:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["WEB"]
 toc = true

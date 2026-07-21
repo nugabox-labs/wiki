@@ -1,7 +1,7 @@
 +++
 title = "HTTPS·www 리다이렉트 (mod_rewrite)"
 date = 2020-12-11T14:52:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["WEB"]
 toc = true

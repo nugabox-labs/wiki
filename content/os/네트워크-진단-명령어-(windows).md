@@ -1,7 +1,7 @@
 +++
 title = "네트워크 진단 명령어 (Windows)"
 date = 2021-04-12T01:11:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS", "SERVER"]
 tags = ["WINDOWS", "NETWORK"]
 toc = true
@@ -39,5 +39,3 @@ pathping IP주소또는DNS주소     # ping + tracert 결합
 
 nslookup IP주소또는DNS주소     # 호스트명↔IP 상호 조회
 ```
-
-원문: [https://developer-ankiwoong.tistory.com/302?category=795676](https://developer-ankiwoong.tistory.com/302?category=795676)

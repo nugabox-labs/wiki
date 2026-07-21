@@ -1,7 +1,7 @@
 +++
 title = "PHP 쿠키와 세션 개념"
 date = 2019-03-14T07:45:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["BACK-END"]
 tags = ["PHP"]
 toc = true

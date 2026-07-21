@@ -1,7 +1,7 @@
 +++
 title = "FK 제약으로 부모 행 삭제 실패"
 date = 2020-05-31T02:46:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "virbr0 인터페이스 삭제"
 date = 2020-08-28T11:07:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

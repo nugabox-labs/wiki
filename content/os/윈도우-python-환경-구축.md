@@ -1,7 +1,7 @@
 +++
 title = "윈도우 Python 환경 구축"
 date = 2021-04-13T04:56:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS", "BACK-END"]
 tags = ["PYTHON", "WINDOWS"]
 toc = true

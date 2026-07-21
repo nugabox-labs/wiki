@@ -1,7 +1,7 @@
 +++
 title = "Apache 부하 시 KeepAlive·Timeout 조정"
 date = 2021-03-18T08:57:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["WEB"]
 toc = true
@@ -10,6 +10,7 @@ toc = true
 source = "notion"
 notion_id = "0ecab5a7-eb6a-488c-afeb-fac7817eae2b"
 notion_url = "https://app.notion.com/p/Apache-KeepAlive-Timeout-0ecab5a7eb6a488cafebfac7817eae2b"
+external_url = "https://app.notion.com/p/03861aea4b004e258d7d124a0d596882"
 +++
 
 ## 부하 시 빠른 조정 (`httpd.conf`)
@@ -24,12 +25,7 @@ Timeout 8
 ## 동시접속·메모리 확인
 
 ```bash
-# 실시간 ESTABLISHED 수
 watch 'netstat -an | grep EST | wc -l'
-
-# :80 동시 접속
 netstat -nap | grep :80 | grep ESTABLISHED | wc -l
-
-# Apache 메모리(MB)
 ps aux | grep apache | awk '{print $6}' | awk '{total+=$1} END {print total/1024}'
 ```

@@ -1,7 +1,7 @@
 +++
 title = "Backspace가 ^?로 입력될 때 (stty erase)"
 date = 2021-02-18T18:05:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true
@@ -12,8 +12,6 @@ notion_id = "b1fef8c0-25f9-49f8-a5b5-cbe3356df230"
 notion_url = "https://app.notion.com/p/Backspace-stty-erase-b1fef8c025f949f8a5b5cbe3356df230"
 external_url = "https://keefojifo.tistory.com/31"
 +++
-
-> 출처: [https://keefojifo.tistory.com/31](https://keefojifo.tistory.com/31) — Backspace가 `^?`로 입력될 때.
 
 ## 임시
 

@@ -1,7 +1,7 @@
 +++
 title = "PowerShell 스크립트 실행 오류"
 date = 2022-08-18T14:10:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS"]
 tags = ["WINDOWS"]
 toc = true
@@ -13,13 +13,13 @@ notion_url = "https://app.notion.com/p/PowerShell-b19a2c0ab0084d4a8e4604d4f5383b
 external_url = "https://www.leafcats.com/317"
 +++
 
-## PowerShell "이 시스템에서 스크립트를 실행할 수 없으므로..." 에러
+## PowerShell 스크립트 실행 정책
 
-- 원인: 스크립트 실행 정책(ExecutionPolicy)이 막혀 있음
+증상: "이 시스템에서 스크립트를 실행할 수 없으므로..."
+
+원인: ExecutionPolicy 제한.
 
 ```powershell
-# 관리자 권한 PowerShell에서
+# 관리자 PowerShell
 Set-ExecutionPolicy RemoteSigned
 ```
-
-원문: [https://www.leafcats.com/317](https://www.leafcats.com/317)

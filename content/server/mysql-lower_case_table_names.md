@@ -1,7 +1,7 @@
 +++
 title = "MySQL lower_case_table_names"
 date = 2020-03-26T10:32:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true
@@ -37,4 +37,4 @@ WHERE table_schema = 'your_schema';
 
 1. **dump → 초기화 → restore**
 
-참고: [https://stackoverflow.com/questions/1262258/mysql-case-sensitive-tables-conversion](https://stackoverflow.com/questions/1262258/mysql-case-sensitive-tables-conversion)
+참고: [Stack Overflow](https://stackoverflow.com/questions/1262258/mysql-case-sensitive-tables-conversion)

@@ -1,7 +1,7 @@
 +++
 title = "Oracle 테이블/컴럼/코멘트 조회 모음"
 date = 2020-11-04T11:20:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["DB", "Oracle"]
 toc = true
@@ -50,5 +50,3 @@ select * from user_tab_columns;
 select * from all_col_comments;
 select * from user_col_comments;
 ```
-
-원문: [https://coding-factory.tistory.com/415](https://coding-factory.tistory.com/415)

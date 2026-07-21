@@ -1,7 +1,7 @@
 +++
 title = "MySQL 비밀번호 변경"
 date = 2019-09-26T09:12:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true
@@ -29,4 +29,6 @@ FLUSH PRIVILEGES;
 mysqladmin -uuser -poldpassword password newpassword
 ```
 
-분실 재설정 → [root 패스워드 분실 재설정](https://app.notion.com/p/edf47ff37f13423b8b9d8b57dda99904)
+분실 재설정 → MariaDB/MySQL root 비밀번호 재설정
+
+유저·권한 생성 → MySQL DB·유저·권한 생성

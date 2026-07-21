@@ -1,7 +1,7 @@
 +++
 title = "netstat 명령어"
 date = 2019-09-26T08:56:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["NETWORK"]
 toc = true
@@ -15,7 +15,7 @@ external_url = "https://blog.cafe24.com/1456"
 
 ## netstat 옵션
 
-```javascript
+```
 -n   호스트/포트명을 조회하지 않고 숫자로 표시
 -a   모든 네트워크 상태 표시
 -t   TCP만 표시
@@ -46,5 +46,3 @@ netstat -nap | grep :80 | grep ESTABLISHED    # 80포트 동시 접속자 수
 netstat -nltp                                 # LISTEN 중인 포트 정보
 netstat -r                                    # 라우팅 테이블
 ```
-
-원문: [https://blog.cafe24.com/1456](https://blog.cafe24.com/1456)

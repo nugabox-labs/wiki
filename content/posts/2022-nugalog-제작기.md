@@ -3,7 +3,7 @@ title = "2022 NUGALOG 제작기"
 date = 2026-07-17T23:51:00Z
 updated = 2026-07-20T01:05:00Z
 categories = ["posts"]
-tags = []
+tags = ["TIP", "WEB"]
 toc = true
 
 [extra]

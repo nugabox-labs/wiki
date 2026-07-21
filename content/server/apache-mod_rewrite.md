@@ -1,7 +1,7 @@
 +++
 title = "Apache mod_rewrite"
 date = 2020-06-23T13:33:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["WEB"]
 toc = true
@@ -35,7 +35,7 @@ RewriteCond %{REQUEST_URI} !^/uc/
 RewriteRule ^.+$ /uc/index.html [L]
 ```
 
-## 자주 쓰는 플래그
+## 플래그
 
 - `L` last / `R=301` redirect / `F` 403 / `C` chain
 
@@ -46,6 +46,6 @@ RewriteRule ^.+$ /uc/index.html [L]
 RewriteCond %{REQUEST_URI} !^/admin$
 RewriteRule ^/([a-zA-Z0-9]+)$ /blog/main.php?id=$1
 
-# 외부 도메인
-RewriteRule ^/daum$ http://www.daum.net/ [R,L]
+# 외부 리다이렉트
+RewriteRule ^/external$ http://www.example.com/ [R,L]
 ```

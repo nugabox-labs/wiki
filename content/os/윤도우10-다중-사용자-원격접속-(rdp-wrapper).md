@@ -1,7 +1,7 @@
 +++
 title = "윤도우10 다중 사용자 원격접속 (RDP Wrapper)"
 date = 2023-03-11T13:57:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS"]
 tags = ["WINDOWS"]
 toc = true
@@ -34,5 +34,3 @@ net start termservice
 
 1. 재부팅 권장. `RDPConf.exe`에서 `fully supported`로 바뀌면 정상 작동
 1. 작업 관리자 > 사용자 탭에서 접속자 목록/리소스 확인, 원치 않는 사용자는 메시지 전송 또는 강제 연결 끊기 가능
-
-원문: [https://syki66.github.io/blog/2020/04/08/rdp-wapper.html](https://syki66.github.io/blog/2020/04/08/rdp-wapper.html)

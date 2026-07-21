@@ -1,7 +1,7 @@
 +++
 title = "Apache HTTP→HTTPS 리다이렉트 (vhosts)"
 date = 2019-12-23T08:32:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["WEB"]
 toc = true
@@ -27,5 +27,3 @@ RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule .* https://www.example.com/ [R,L]
 ```
-
-관련: [HTTPS·www 리다이렉트](https://app.notion.com/p/a95d4e7df9c94e3091eeece131a7c750)

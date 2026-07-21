@@ -1,7 +1,7 @@
 +++
 title = "WebtoB VHOST 가상호스트"
 date = 2019-09-17T07:07:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["WEB"]
 toc = true
@@ -16,7 +16,7 @@ notion_url = "https://app.notion.com/p/WebtoB-VHOST-fd4c96bf1ff14056a22426181cab
 
 ## VHOST 절 예 (`http.m`)
 
-```javascript
+```
 *VHOST
 v_app
     DOCROOT = "/home/app/webapps",

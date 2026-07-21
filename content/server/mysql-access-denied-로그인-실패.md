@@ -1,7 +1,7 @@
 +++
 title = "MySQL Access denied 로그인 실패"
 date = 2019-11-18T17:21:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true
@@ -23,4 +23,4 @@ UPDATE mysql.user SET authentication_string=PASSWORD('새비번') WHERE user='ro
 FLUSH PRIVILEGES;
 ```
 
-1. 비번 분실 → [root 패스워드 재설정](https://app.notion.com/p/edf47ff37f13423b8b9d8b57dda99904)
+1. 비번 분실 → root 패스워드 재설정

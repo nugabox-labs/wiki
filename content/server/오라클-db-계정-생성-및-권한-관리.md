@@ -1,7 +1,7 @@
 +++
 title = "오라클 DB 계정 생성 및 권한 관리"
 date = 2020-02-18T19:26:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["DB", "Oracle"]
 toc = true
@@ -59,5 +59,3 @@ REVOKE 권한명 ON 테이블명 FROM 계정;
 | CREATE TABLE/VIEW/SEQUENCE | 각각 테이블/뷰/시퀀스 생성 |
 | CREATE PROCEDURE | 프로시저 생성 |
 | SYSDBA / SYSOPER | DB 관리 최고 권한 / 관리 권한 |
-
-원문: [https://aileen93.tistory.com/17](https://aileen93.tistory.com/17)

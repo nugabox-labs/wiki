@@ -1,9 +1,9 @@
 +++
 title = "PhpStorm 맥 단축키"
 date = 2019-04-09T06:54:00Z
-updated = 2026-07-21T02:37:00Z
-categories = ["BACK-END"]
-tags = ["PHP"]
+updated = 2026-07-21T06:47:00Z
+categories = ["BACK-END", "TECH"]
+tags = ["PHP", "TIP"]
 toc = true
 
 [extra]

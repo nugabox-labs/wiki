@@ -1,7 +1,7 @@
 +++
 title = "Jeus 모니터링"
 date = 2019-09-18T06:21:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["WAS"]
 toc = true

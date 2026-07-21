@@ -1,7 +1,7 @@
 +++
 title = "systemd unit 등록"
 date = 2019-11-18T17:22:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

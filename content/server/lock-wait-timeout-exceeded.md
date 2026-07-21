@@ -1,7 +1,7 @@
 +++
 title = "Lock wait timeout exceeded"
 date = 2021-03-16T07:32:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

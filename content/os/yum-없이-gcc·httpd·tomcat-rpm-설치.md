@@ -1,7 +1,7 @@
 +++
 title = "yum 없이 gcc·httpd·Tomcat RPM 설치"
 date = 2020-03-02T09:55:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS", "SERVER"]
 tags = ["WEB", "LINUX", "WAS"]
 toc = true

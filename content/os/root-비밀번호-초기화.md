@@ -1,7 +1,7 @@
 +++
 title = "root 비밀번호 초기화"
 date = 2019-03-18T01:12:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true
@@ -22,7 +22,7 @@ notion_url = "https://app.notion.com/p/root-217c7cd5c8b74e688248299c0f126dd7"
 
 ### CentOS 7 — rd.break (권장)
 
-```javascript
+```bash
 # GRUB e → linux16 줄 끝에
 rd.break
 # Ctrl+X
@@ -46,4 +46,4 @@ mount -o remount,rw /
 passwd root
 ```
 
-상세 스크린샷 클리핑 → [rd.break 상세](https://app.notion.com/p/ea078ddf73814ee2a32b49a22a04f04d)
+상세 스크린샷 클리핑 → rd.break 상세(중복)

@@ -1,7 +1,7 @@
 +++
 title = "GitHub Pages 이미지 로딩 속도 개선"
 date = 2021-04-08T02:31:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["DEV-OPS"]
 tags = ["GIT/SVN"]
 toc = true
@@ -23,5 +23,3 @@ https://cdn.jsdelivr.net/gh/{계정명}/{레파지토리명}/{파일경로}
 
 - GitHub storage가 Public이면 별도 설정 없이 바로 사용 가능
 - 해당 경로에 파일이 없으면 최초 1회 GitHub에서 가져온 뒤 캐시, 이후 빠르게 서빙됨
-
-원문: [https://derek-mun.com/contents/Contents-Github-page-image-loading-speed.html](https://derek-mun.com/contents/Contents-Github-page-image-loading-speed.html)

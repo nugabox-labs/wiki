@@ -1,7 +1,7 @@
 +++
 title = "반디집 네이트메일 ZIP 파일명 깨짐 해결"
 date = 2023-03-11T13:58:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS"]
 tags = ["WINDOWS"]
 toc = true
@@ -21,5 +21,3 @@ external_url = "https://kr.bandisoft.com/bandizip/help/kr.nate-mail-problem/"
 
 - 반디집 7.x: UTF-8 자동 인식 지원 — 별도 설정 불필요
 - 반디집 5.x/6.x: 환경설정 > 압축 풀기 > "유닉스에서 압축한 ZIP 파일의 코드페이지를 UTF8로 처리" 옵션 끄고 재실행
-
-원문: [https://kr.bandisoft.com/bandizip/help/kr.nate-mail-problem/](https://kr.bandisoft.com/bandizip/help/kr.nate-mail-problem/)

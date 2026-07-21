@@ -1,7 +1,7 @@
 +++
 title = "맥 Parallels ENG 언어 삭제"
 date = 2023-11-10T05:54:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS", "TECH"]
 tags = ["ISSUE", "MACOS"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "PHP ssh2 확장 설치"
 date = 2019-03-26T01:19:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS", "BACK-END"]
 tags = ["LINUX", "PHP"]
 toc = true
@@ -13,7 +13,7 @@ notion_url = "https://app.notion.com/p/PHP-ssh2-78370915e6424ada82ee4675aef98af5
 external_url = "http://blog.sw4u.kr/2018/09/centos7-ssh2-extension-for-php-7.html"
 +++
 
-## PHP ssh2 확장 (PHP 7 / CentOS7)
+## PHP ssh2 확장 (PHP 7 / CentOS 7)
 
 ```bash
 yum install gcc php-devel libssh2 libssh2-devel   # php71w-devel 등 버전에 맞게

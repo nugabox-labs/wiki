@@ -1,7 +1,7 @@
 +++
 title = "HTTPS 환경에서 IE11 FontAwesome 미표시 문제"
 date = 2023-03-11T13:58:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS"]
 tags = ["WINDOWS"]
 toc = true
@@ -45,5 +45,3 @@ LoadModule headers_module modules/mod_headers.so
   <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
 </head>
 ```
-
-원문: [https://nakanara.tistory.com/227](https://nakanara.tistory.com/227)

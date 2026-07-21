@@ -1,7 +1,7 @@
 +++
 title = "NFS 서버·클라이언트 설정"
 date = 2023-03-20T06:24:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["OS", "SERVER"]
 tags = ["LINUX", "NETWORK"]
 toc = true
@@ -12,8 +12,6 @@ notion_id = "95b52328-a1d5-448e-ad10-2ad0af20f41a"
 notion_url = "https://app.notion.com/p/NFS-95b52328a1d5448ead102ad0af20f41a"
 external_url = "https://m.blog.naver.com/PostView.naver?blogId=songariq&logNo=80033573576"
 +++
-
-> 출처: [https://m.blog.naver.com/PostView.naver?blogId=songariq&logNo=80033573576](https://m.blog.naver.com/PostView.naver?blogId=songariq&logNo=80033573576)
 
 ## 서버 (`/etc/exports`)
 

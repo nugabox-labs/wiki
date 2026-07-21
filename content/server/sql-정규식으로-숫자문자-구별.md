@@ -1,7 +1,7 @@
 +++
 title = "SQL 정규식으로 숫자/문자 구별"
 date = 2019-06-24T14:58:00Z
-updated = 2026-07-21T02:37:00Z
+updated = 2026-07-21T06:47:00Z
 categories = ["SERVER"]
 tags = ["DB", "Oracle"]
 toc = true
@@ -26,5 +26,3 @@ SELECT * FROM 테이블 WHERE 컬럼 REGEXP '^[a-zA-Z]*$';
 ```
 
 - Oracle에서는 `REGEXP_LIKE(컬럼, '패턴')` 함수 사용
-
-원문: [https://highcode.tistory.com/6](https://highcode.tistory.com/6)
