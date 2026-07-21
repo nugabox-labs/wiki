@@ -1,7 +1,7 @@
 {% include "header.html" %}
       <main id="main" class="docs-main">
         <article class="doc-article doc-article--section">
-          <p class="topic-path">./{% if section.name == "posts" %}posts{% else %}categories{% endif %}</p>
+          <p class="topic-path">./{% if section.title == "posts" or page.url == "/posts/" or page.url == "/posts" %}posts{% else %}categories{% endif %}</p>
           <h1>{{ page.title }}<span class="brand-cursor" aria-hidden="true">_</span></h1>
           {% if page.description %}<p class="doc-dek">{{ page.description }}</p>{% endif %}
 

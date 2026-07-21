@@ -2,6 +2,23 @@
 
 모든 주목할 만한 변경사항을 이 파일에 기록한다. [Semantic Versioning](https://semver.org/lang/ko/)을 따른다.
 
+## v0.17.0 - 2026-07-21
+
+### Added
+- 문서 메타에 Abacus 기반 포스트별 조회수 표시(`생성일`/`업데이트` 뒤 `조회수 N`). pathname을 키로 사용한다.
+
+### Changed
+- 문서 메타에서 읽기 시간(`N분 소요`) 제거, 카테고리·태그는 날짜/조회수 다음 줄로 분리.
+- 카테고리 섹션(os, server 등) 문서의 topic path를 `./os` → `./categories/os` 형식으로 변경. `posts`·about·env는 기존 표기 유지.
+- `posts` 섹션/문서 topic path를 `./posts`로 명시.
+- 홈 칩 라벨에서 `./` 제거 (`about` / `posts` / `tags`).
+- about 본문에 홈과 동일한 Inter 웹폰트 적용.
+
+## v0.16.1 - 2026-07-21
+
+### Fixed
+- Giscus Discussion 카테고리를 `Announcements`(관리자만 생성 가능)에서 `General`로 변경. 첫 댓글 시 Discussion 자동 생성이 막히던 문제를 해소한다.
+
 ## v0.16.0 - 2026-07-21
 
 ### Added

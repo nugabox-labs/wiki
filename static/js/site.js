@@ -296,21 +296,10 @@ var showCopyToast = (function () {
 
 (function () {
   "use strict";
-  var todayEl = document.getElementById("view-count-today");
-  var totalEl = document.getElementById("view-count-total");
-  if (!todayEl || !totalEl) return;
-
   var NAMESPACE = "wiki.nugabox.com";
-  var TOTAL_KEY = "home-views";
-
-  function pad(n) {
-    return n < 10 ? "0" + n : String(n);
-  }
-
-  var now = new Date();
-  var TODAY_KEY = "home-views-" + now.getFullYear() + "-" + pad(now.getMonth() + 1) + "-" + pad(now.getDate());
 
   function hit(key, el) {
+    if (!el) return;
     var url = "https://abacus.jasoncameron.dev/hit/" + encodeURIComponent(NAMESPACE) + "/" + encodeURIComponent(key);
     fetch(url)
       .then(function (res) { return res.json(); })
@@ -322,6 +311,21 @@ var showCopyToast = (function () {
       });
   }
 
-  hit(TOTAL_KEY, totalEl);
-  hit(TODAY_KEY, todayEl);
+  var todayEl = document.getElementById("view-count-today");
+  var totalEl = document.getElementById("view-count-total");
+  if (todayEl && totalEl) {
+    function pad(n) {
+      return n < 10 ? "0" + n : String(n);
+    }
+    var now = new Date();
+    var todayKey = "home-views-" + now.getFullYear() + "-" + pad(now.getMonth() + 1) + "-" + pad(now.getDate());
+    hit("home-views", totalEl);
+    hit(todayKey, todayEl);
+  }
+
+  var pageEl = document.getElementById("page-view-count");
+  if (pageEl) {
+    var path = location.pathname.replace(/\/+$/, "") || "/";
+    hit("page" + path, pageEl);
+  }
 })();

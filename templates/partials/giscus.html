@@ -1,14 +1,17 @@
 {# Giscus — GitHub Discussions 기반 댓글.
    저장소: nugabox-labs/nugawiki
    사전 조건: Discussions 활성화 + giscus GitHub App 설치
-   https://github.com/apps/giscus #}
+   https://github.com/apps/giscus
+
+   카테고리는 반드시 Open-ended(General 등)여야 함.
+   Announcements는 관리자만 스레드 생성 가능해 첫 댓글 자동 생성이 실패한다. #}
 <section class="giscus-wrap" aria-label="댓글">
   <p class="giscus-label">./comments</p>
   <script src="https://giscus.app/client.js"
           data-repo="nugabox-labs/nugawiki"
           data-repo-id="R_kgDOTarlbw"
-          data-category="Announcements"
-          data-category-id="DIC_kwDOTarlb84DBoMv"
+          data-category="General"
+          data-category-id="DIC_kwDOTarlb84DBoMw"
           data-mapping="pathname"
           data-strict="1"
           data-reactions-enabled="1"
