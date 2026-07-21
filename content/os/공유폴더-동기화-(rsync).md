@@ -1,7 +1,7 @@
 +++
 title = "공유폴더 동기화 (rsync)"
 date = "2021-10-14T05:45:00.000Z"
-updated = "2022-06-25T18:56:00.000Z"
+updated = "2026-07-21T02:37:00.000Z"
 categories = ["OS"]
 tags = ["SYNOLOGY"]
 toc = true

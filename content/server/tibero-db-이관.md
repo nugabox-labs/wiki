@@ -1,7 +1,7 @@
 +++
 title = "Tibero DB 이관"
 date = "2021-05-06T01:12:00.000Z"
-updated = "2024-01-09T02:54:00.000Z"
+updated = "2026-07-21T02:37:00.000Z"
 categories = ["SERVER"]
 tags = ["DB", "Tibero"]
 toc = true

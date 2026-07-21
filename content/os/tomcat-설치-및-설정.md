@@ -1,7 +1,7 @@
 +++
 title = "Tomcat 설치 및 설정"
 date = "2020-10-27T00:21:00.000Z"
-updated = "2025-02-24T02:36:00.000Z"
+updated = "2026-07-21T02:37:00.000Z"
 categories = ["OS", "SERVER"]
 tags = ["WAS", "LINUX"]
 toc = true
@@ -10,14 +10,13 @@ toc = true
 source = "notion"
 notion_id = "9c150547-502d-4055-b1d8-68bc7c786798"
 notion_url = "https://app.notion.com/p/Tomcat-9c150547502d4055b1d868bc7c786798"
-version = "Apache Tomcat 7 ~ 8"
 external_url = "http://tomcat.apache.org/"
 +++
 
 - CONTENTS
 
 
-![image](/notion-assets/9c150547-502d-4055-b1d8-68bc7c786798/12.png)
+![image](/notion-assets/9c150547-502d-4055-b1d8-68bc7c786798/14.png)
 
 # 설치
 

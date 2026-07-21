@@ -1,7 +1,7 @@
 +++
 title = "시놀로지 MariaDB 설정"
 date = "2021-04-08T07:42:00.000Z"
-updated = "2024-01-09T02:20:00.000Z"
+updated = "2026-07-21T02:37:00.000Z"
 categories = ["OS", "SERVER"]
 tags = ["SYNOLOGY", "DB", "MySQL"]
 toc = true

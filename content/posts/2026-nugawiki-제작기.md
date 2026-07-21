@@ -1,7 +1,7 @@
 +++
 title = "2026 NUGAWIKI 제작기"
-date = "2026-07-18T09:00:00.000+09:00"
-updated = "2026-07-17T23:51:00.000Z"
+date = "2026-07-17T23:51:00.000Z"
+updated = "2026-07-20T01:05:00.000Z"
 categories = ["posts"]
 tags = []
 toc = true

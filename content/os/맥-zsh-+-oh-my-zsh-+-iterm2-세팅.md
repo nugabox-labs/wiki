@@ -1,7 +1,7 @@
 +++
 title = "맥 zsh + Oh My Zsh + iTerm2 세팅"
 date = "2021-01-22T01:57:00.000Z"
-updated = "2022-06-25T18:56:00.000Z"
+updated = "2026-07-21T02:37:00.000Z"
 categories = ["OS"]
 tags = ["MACOS"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "macOS 초기 설정"
 date = "2021-01-21T15:59:00.000Z"
-updated = "2025-06-12T02:03:00.000Z"
+updated = "2026-07-21T02:37:00.000Z"
 categories = ["OS"]
 tags = ["MACOS"]
 toc = true
@@ -166,7 +166,7 @@ brew install --cask google-chrome \
 
 - ‘[DOWNLOAD FUSION OR WORKSTATION](https://support.broadcom.com/group/ecx/downloads)’ 클릭하여 Broadcom 회원가입 / 로그인
 - My Downloads에서 “Free Software Downloads available HERE” 클릭
-  ![image](/notion-assets/5b1cc5e5-5b46-4245-b992-55d8b380def4/9.png)
+  ![image](/notion-assets/5b1cc5e5-5b46-4245-b992-55d8b380def4/10.png)
 - ‘VMware Fusion’ 클릭 후 원하는 버전 클릭하여 다운로드
 
 - Oracle VM Virtual Box (무료) /  [`다운로드`](https://download.virtualbox.org/virtualbox/6.1.18/VirtualBox-6.1.18-142142-OSX.dmg)  / `brew install --cask virtualbox`
@@ -229,8 +229,3 @@ MACs hmac-md5,hmac-sha1,umac-64@openssh.com
     KexAlgorithms +diffie-hellman-group1-sha1
     ```
   - 적용 안 되면 `~/.ssh/known_hosts` 파일제거
-
-- 텍스트 편집기 메모장처럼 바로 열기
-  ```bash
-defaults write -g NSShowAppCentricOpenPanelInsteadOfUntitledFile -bool false
-  ```

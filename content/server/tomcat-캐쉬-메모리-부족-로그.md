@@ -1,7 +1,7 @@
 +++
 title = "Tomcat 캐쉬 메모리 부족 로그"
 date = "2021-04-28T01:08:00.000Z"
-updated = "2022-06-25T18:56:00.000Z"
+updated = "2026-07-21T02:37:00.000Z"
 categories = ["SERVER"]
 tags = ["WAS"]
 toc = true

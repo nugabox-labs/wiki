@@ -1,7 +1,7 @@
 +++
 title = "MariaDB/MySQL 설치"
 date = "2020-10-27T00:47:00.000Z"
-updated = "2025-02-24T02:45:00.000Z"
+updated = "2026-07-21T02:37:00.000Z"
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true
@@ -12,7 +12,7 @@ notion_id = "8acac988-28d8-4cf5-919e-4895d77b5da5"
 notion_url = "https://app.notion.com/p/MariaDB-MySQL-8acac98828d84cf5919e4895d77b5da5"
 +++
 
-![image](/notion-assets/8acac988-28d8-4cf5-919e-4895d77b5da5/11.png)
+![image](/notion-assets/8acac988-28d8-4cf5-919e-4895d77b5da5/13.png)
 
 > 테스트 OS : CentOS 6.x / 7.x
 > DB Ver : MariaDB 10.0, 10.2 / MySQL 5.1, 5.7, 8.0
@@ -316,7 +316,7 @@ ln -s /usr/local/mysql/bin/mysql /usr/bin
 
 - 용량 혹은 관리상의 문제로 Data 및 Log 등의 파일을 저장할 별도의 디렉토리가 필요한 경우, 아래와 같이 구성한다.
 
-![image](/notion-assets/8acac988-28d8-4cf5-919e-4895d77b5da5/12.png)
+![image](/notion-assets/8acac988-28d8-4cf5-919e-4895d77b5da5/14.png)
 
 - logs : 로그 파일
 - mysql-data : 데이터 폴더

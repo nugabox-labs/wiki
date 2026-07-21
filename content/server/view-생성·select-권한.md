@@ -1,0 +1,46 @@
++++
+title = "VIEW 생성·SELECT 권한"
+date = "2020-02-10T07:22:00.000Z"
+updated = "2026-07-21T02:37:00.000Z"
+categories = ["SERVER"]
+tags = ["DB", "MySQL"]
+toc = true
+
+[extra]
+source = "notion"
+notion_id = "6820f5e6-5cb8-47a3-8626-f1cc583ec086"
+notion_url = "https://app.notion.com/p/VIEW-SELECT-6820f5e65cb847a38626f1cc583ec086"
++++
+
+## VIEW + SELECT 권한
+
+```sql
+CREATE VIEW db.user_v AS SELECT * FROM db.sy_user;
+CREATE USER 'appuser'@'localhost' IDENTIFIED BY 'PASSWORD';
+GRANT SELECT ON db.user_v TO 'appuser'@'localhost';
+FLUSH PRIVILEGES;  -- GRANT만 쓰면 보통 불필요
+```
+
+### 예: 유저·부서 조인 뷰용 SELECT
+
+```sql
+SELECT U.USER_ID, U.USER_NM, U.AUTH, D.DEPT_ID, D.DEPT_NM
+FROM SY_USER U
+LEFT JOIN SY_DEPT D ON D.DEPT_ID = U.DEPT_ID AND D.USE_AT = 'Y'
+WHERE U.DEL_DT IS NULL AND U.AUTH < '9';
+```
+
+### 예: 부서 계층 (WITH RECURSIVE)
+
+```sql
+WITH RECURSIVE DEPT AS (
+  SELECT DEPT_ID, DEPT_NM, DEPT_ALL_PATH, UPPER_DEPT_ID, DEPT_STEP, DEPT_ORDR
+  FROM SY_DEPT WHERE DEPT_STEP = 1 AND USE_AT = 'Y'
+  UNION ALL
+  SELECT D.DEPT_ID, D.DEPT_NM, D.DEPT_ALL_PATH, D.UPPER_DEPT_ID, D.DEPT_STEP, D.DEPT_ORDR
+  FROM SY_DEPT D
+  JOIN DEPT RD ON RD.DEPT_ID = D.UPPER_DEPT_ID
+  WHERE D.USE_AT = 'Y'
+)
+SELECT * FROM DEPT ORDER BY DEPT_ORDR;
+```

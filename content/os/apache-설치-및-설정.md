@@ -1,7 +1,7 @@
 +++
 title = "Apache 설치 및 설정"
 date = "2020-10-23T07:34:00.000Z"
-updated = "2022-06-25T18:56:00.000Z"
+updated = "2026-07-21T02:37:00.000Z"
 categories = ["OS", "SERVER"]
 tags = ["WEB", "LINUX"]
 toc = true
@@ -17,7 +17,7 @@ notion_url = "https://app.notion.com/p/Apache-8b443d1211c0449fb66da9d63f34d96f"
 
 # 1. 설치
 
-![image](/notion-assets/8b443d12-11c0-449f-b66d-a9d63f34d96f/13.png)
+![image](/notion-assets/8b443d12-11c0-449f-b66d-a9d63f34d96f/15.png)
 
 ## 패키지 설치인 경우
 

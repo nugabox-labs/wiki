@@ -1,7 +1,7 @@
 +++
 title = "Tibero 원격 링크 연결"
 date = "2021-03-22T01:02:00.000Z"
-updated = "2024-01-09T02:54:00.000Z"
+updated = "2026-07-21T02:37:00.000Z"
 categories = ["SERVER"]
 tags = ["DB", "Tibero"]
 toc = true

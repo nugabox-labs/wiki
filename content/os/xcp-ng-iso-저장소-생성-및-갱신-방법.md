@@ -1,7 +1,7 @@
 +++
 title = "xcp-ng ISO 저장소 생성 및 갱신 방법"
 date = "2021-05-06T05:01:00.000Z"
-updated = "2024-04-24T07:01:00.000Z"
+updated = "2026-07-21T02:37:00.000Z"
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

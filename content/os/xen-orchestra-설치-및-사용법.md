@@ -1,7 +1,7 @@
 +++
 title = "Xen Orchestra 설치 및 사용법"
 date = "2025-01-11T09:39:00.000Z"
-updated = "2025-05-19T00:28:00.000Z"
+updated = "2026-07-21T02:37:00.000Z"
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

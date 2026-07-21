@@ -1,7 +1,7 @@
 +++
 title = "Portainer 설치 (Web GUI)"
 date = "2022-05-19T02:06:00.000Z"
-updated = "2024-10-08T01:43:00.000Z"
+updated = "2026-07-21T02:37:00.000Z"
 categories = ["SERVER", "DEV-OPS"]
 tags = ["NETWORK", "MSA"]
 toc = true

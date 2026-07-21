@@ -1,7 +1,7 @@
 +++
 title = "Tomcat 버전 정보 노출 숨김"
 date = "2021-03-18T02:07:00.000Z"
-updated = "2023-11-22T01:19:00.000Z"
+updated = "2026-07-21T02:37:00.000Z"
 categories = ["SERVER"]
 tags = ["WAS"]
 toc = true
@@ -31,4 +31,4 @@ vim org/apache/catalina/util/ServerInfo.properties
 jar cvf catalina.jar META-INF org
    ```
 
-![image](/notion-assets/e5eee143-8ba1-476b-bbf9-e94767735f95/7.png)
+![image](/notion-assets/e5eee143-8ba1-476b-bbf9-e94767735f95/8.png)

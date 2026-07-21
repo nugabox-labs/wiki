@@ -1,7 +1,7 @@
 +++
 title = "Alpine Linux curl 설치"
 date = "2022-05-18T06:32:00.000Z"
-updated = "2025-05-13T12:53:00.000Z"
+updated = "2026-07-21T02:37:00.000Z"
 categories = ["OS", "DEV-OPS"]
 tags = ["LINUX", "MSA"]
 toc = true

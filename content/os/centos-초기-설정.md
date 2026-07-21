@@ -1,7 +1,7 @@
 +++
 title = "CentOS 초기 설정"
 date = "2020-10-23T05:29:00.000Z"
-updated = "2024-09-26T06:10:00.000Z"
+updated = "2026-07-21T02:37:00.000Z"
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true
@@ -10,7 +10,6 @@ toc = true
 source = "notion"
 notion_id = "d69770b8-d16d-4bb7-ab31-d560da6eb8ee"
 notion_url = "https://app.notion.com/p/CentOS-d69770b8d16d4bb7ab31d560da6eb8ee"
-version = "CentOS 6.x / CentOS 7.x"
 external_url = "https://wiki.centos.org/kr/Download"
 +++
 

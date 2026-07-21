@@ -1,7 +1,7 @@
 +++
 title = "ChatGPT 맞춤 설정 프롬프트"
 date = "2025-07-04T00:28:00.000Z"
-updated = "2025-07-04T00:33:00.000Z"
+updated = "2026-07-21T02:37:00.000Z"
 categories = ["TECH"]
 tags = ["ISSUE"]
 toc = true

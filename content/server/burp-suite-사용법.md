@@ -1,7 +1,7 @@
 +++
 title = "Burp Suite 사용법"
 date = "2021-03-18T01:55:00.000Z"
-updated = "2022-06-25T18:56:00.000Z"
+updated = "2026-07-21T02:37:00.000Z"
 categories = ["SERVER"]
 tags = ["NETWORK"]
 toc = true
@@ -26,6 +26,6 @@ Intercept 탭에서 보낸 Request를 복붙하여 Repeater 탭의 Request에 �
 
 Send → HTTP/1.1 403 403 Error
 
-![image](/notion-assets/b4d497db-5d54-4f2f-90f1-adbc8210017b/8.png)
-
 ![image](/notion-assets/b4d497db-5d54-4f2f-90f1-adbc8210017b/9.png)
+
+![image](/notion-assets/b4d497db-5d54-4f2f-90f1-adbc8210017b/10.png)

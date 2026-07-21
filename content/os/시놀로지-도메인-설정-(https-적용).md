@@ -1,7 +1,7 @@
 +++
 title = "시놀로지 도메인 설정 (https 적용)"
 date = "2021-07-07T06:15:00.000Z"
-updated = "2022-06-25T18:56:00.000Z"
+updated = "2026-07-21T02:37:00.000Z"
 categories = ["OS", "SERVER"]
 tags = ["SYNOLOGY", "WEB"]
 toc = true
@@ -10,7 +10,6 @@ toc = true
 source = "notion"
 notion_id = "8ce126f3-5c09-49e9-80ad-867c31541a66"
 notion_url = "https://app.notion.com/p/https-8ce126f35c0949e980ad867c31541a66"
-version = "DSM 7"
 +++
 
 # DSM 외부 액세스 설정

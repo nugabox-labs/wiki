@@ -1,7 +1,7 @@
 +++
 title = "SSL 발급 및 갱신 (acme.sh)"
 date = "2021-06-28T05:49:00.000Z"
-updated = "2025-05-31T11:58:00.000Z"
+updated = "2026-07-21T02:37:00.000Z"
 categories = ["OS", "SERVER"]
 tags = ["SYNOLOGY", "WEB"]
 toc = true
@@ -129,5 +129,3 @@ cp "/root/.acme.sh/*.nugabox.com/ca.cer" /volume1/web/
   - 중간 인증서 : ca.cer
 - 정상적으로 적용 시 '웹 서버 다시 시작' (자동)
 - 적용 후 방화벽 정책을 원복한다.
-
-### nugabox.com / newpeoplech.com 갱신 스크립트
