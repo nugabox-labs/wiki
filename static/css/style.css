@@ -58,6 +58,7 @@ body {
   font-family: var(--font-text);
   font-size: var(--text-base);
   line-height: 1.65;
+  letter-spacing: -0.02em;
   color: var(--fg);
   background: var(--bg);
   -webkit-font-smoothing: antialiased;
@@ -762,14 +763,25 @@ html.code-linenumbers-on .code-line-no { display: inline-block; }
 .doc-index-tags { display: flex; gap: .3rem; flex-wrap: wrap; justify-content: flex-start; order: 3; flex-basis: 100%; }
 .tag-chip-mini {
   font-family: var(--font-mono);
-  color: var(--muted);
+  color: var(--accent);
   font-size: var(--text-xs);
-  border: 1px dashed var(--border);
+  border: 1px dashed color-mix(in srgb, var(--accent) 40%, var(--border));
   border-radius: 999px;
   padding: 0 .45rem;
   white-space: nowrap;
 }
-.doc-index-watts { font-family: var(--font-mono); color: var(--muted); font-size: var(--text-xs); flex-shrink: 0; margin-left: auto; order: 2; }
+.doc-index-watts {
+  font-family: var(--font-mono);
+  color: var(--accent);
+  font-size: var(--text-xs);
+  border: 1px dashed color-mix(in srgb, var(--accent) 40%, var(--border));
+  border-radius: 999px;
+  padding: 0 .45rem;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-left: auto;
+  order: 2;
+}
 .doc-index-empty { color: var(--muted); font-size: var(--text-sm); margin: var(--space-4) .5rem; }
 
 .pager {
