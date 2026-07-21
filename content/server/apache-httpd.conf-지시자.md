@@ -1,7 +1,7 @@
 +++
 title = "Apache httpd.conf 지시자"
-date = "2019-03-14T07:38:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-03-14T07:38:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WEB"]
 toc = true

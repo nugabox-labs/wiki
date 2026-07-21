@@ -1,7 +1,7 @@
 +++
 title = "useradd 옵션·계정 관리"
-date = "2019-10-22T15:43:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-10-22T15:43:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

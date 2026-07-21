@@ -1,7 +1,7 @@
 +++
 title = "crontab으로 PHP/URL 실행"
-date = "2019-08-30T04:50:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-08-30T04:50:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "Apache Reverse Proxy ↔ Node.js"
-date = "2020-07-24T17:01:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-07-24T17:01:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER", "BACK-END"]
 tags = ["WEB", "Node.js"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "Apache X-Forwarded-For (mod_remoteip)"
-date = "2023-07-27T06:33:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2023-07-27T06:33:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WEB"]
 toc = true

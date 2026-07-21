@@ -1,7 +1,7 @@
 +++
 title = "Markdown 마크다운 작성법"
-date = "2021-05-07T00:35:00.000Z"
-updated = "2024-01-29T08:40:00.000Z"
+date = 2021-05-07T00:35:00Z
+updated = 2024-01-29T08:40:00Z
 categories = ["TECH"]
 tags = ["ISSUE"]
 toc = true

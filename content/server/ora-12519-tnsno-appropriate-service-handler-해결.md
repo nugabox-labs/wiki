@@ -1,7 +1,7 @@
 +++
 title = "ORA-12519 TNS:no appropriate service handler 해결"
-date = "2020-02-18T17:09:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-02-18T17:09:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "Oracle"]
 toc = true

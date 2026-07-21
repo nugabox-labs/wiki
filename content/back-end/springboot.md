@@ -1,7 +1,7 @@
 +++
 title = "SpringBoot"
-date = "2023-11-10T04:51:00.000Z"
-updated = "2023-11-10T04:53:00.000Z"
+date = 2023-11-10T04:51:00Z
+updated = 2023-11-10T04:53:00Z
 categories = ["BACK-END"]
 tags = ["JAVA"]
 toc = true

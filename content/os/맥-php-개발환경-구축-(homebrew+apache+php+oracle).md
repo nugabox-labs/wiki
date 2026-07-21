@@ -1,7 +1,7 @@
 +++
 title = "맥 PHP 개발환경 구축 (Homebrew+Apache+PHP+Oracle)"
-date = "2020-12-25T13:46:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-12-25T13:46:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "BACK-END"]
 tags = ["MACOS", "PHP"]
 toc = true

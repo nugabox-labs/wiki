@@ -1,7 +1,7 @@
 +++
 title = "Apache Timeout·KeepAliveTimeout"
-date = "2021-03-19T01:53:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-03-19T01:53:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WEB"]
 toc = true

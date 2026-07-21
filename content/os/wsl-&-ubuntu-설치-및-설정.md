@@ -1,7 +1,7 @@
 +++
 title = "WSL & Ubuntu 설치 및 설정"
-date = "2022-08-18T16:13:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2022-08-18T16:13:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["WINDOWS"]
 toc = true

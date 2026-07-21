@@ -1,7 +1,7 @@
 +++
 title = "Jeus 세션 무제한 설정"
-date = "2022-04-14T04:36:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2022-04-14T04:36:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WAS"]
 toc = true

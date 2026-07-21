@@ -1,7 +1,7 @@
 +++
 title = "CentOS 6.5에 Oracle 11gR2 설치"
-date = "2019-11-22T16:47:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-11-22T16:47:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "Oracle"]
 toc = true

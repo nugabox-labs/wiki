@@ -1,7 +1,7 @@
 +++
 title = "DNS 서버 구축 (Bind 설치)"
-date = "2021-04-30T00:11:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-04-30T00:11:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "SERVER"]
 tags = ["LINUX", "NETWORK"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "Docker Nginx 설치"
-date = "2022-05-15T16:27:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2022-05-15T16:27:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER", "DEV-OPS"]
 tags = ["WEB", "MSA"]
 toc = true

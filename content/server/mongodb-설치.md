@@ -1,7 +1,7 @@
 +++
 title = "MongoDB 설치"
-date = "2023-11-17T06:05:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2023-11-17T06:05:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "MongoDB"]
 toc = true

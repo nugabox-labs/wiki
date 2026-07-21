@@ -1,7 +1,7 @@
 +++
 title = "Favicon, OpenGraph Meta Tag"
-date = "2021-10-11T10:22:00.000Z"
-updated = "2022-06-25T18:56:00.000Z"
+date = 2021-10-11T10:22:00Z
+updated = 2022-06-25T18:56:00Z
 categories = ["FRONT-END"]
 tags = ["HTML"]
 toc = true

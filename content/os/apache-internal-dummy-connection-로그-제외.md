@@ -1,7 +1,7 @@
 +++
 title = "Apache internal dummy connection 로그 제외"
-date = "2019-12-24T18:31:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-12-24T18:31:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "SERVER"]
 tags = ["WEB", "LINUX"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "JavaScript/jQuery Ajax 정리"
-date = "2019-10-28T11:33:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-10-28T11:33:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["FRONT-END"]
 tags = ["JS"]
 toc = true

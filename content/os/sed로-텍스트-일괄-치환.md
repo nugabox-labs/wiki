@@ -1,7 +1,7 @@
 +++
 title = "sed로 텍스트 일괄 치환"
-date = "2021-02-09T09:56:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-02-09T09:56:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "HTTP 헤더 종류 및 항목 정리"
-date = "2019-10-30T18:15:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-10-30T18:15:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["NETWORK"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "CentOS 7 MariaDB 10.2 yum 설치"
-date = "2020-08-25T18:31:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-08-25T18:31:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "SERVER"]
 tags = ["DB", "MySQL", "LINUX"]
 toc = true

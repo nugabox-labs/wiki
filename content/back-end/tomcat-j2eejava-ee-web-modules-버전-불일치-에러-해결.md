@@ -1,7 +1,7 @@
 +++
 title = "Tomcat J2EE/Java EE Web modules 버전 불일치 에러 해결"
-date = "2021-02-02T17:13:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-02-02T17:13:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["JAVA"]
 toc = true

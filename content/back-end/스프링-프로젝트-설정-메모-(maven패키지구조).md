@@ -1,7 +1,7 @@
 +++
 title = "스프링 프로젝트 설정 메모 (Maven/패키지구조)"
-date = "2019-09-26T08:55:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-09-26T08:55:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["JAVA"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "맥 명령어 모음 (root 접근/폴더 숨기기/정렬기본값)"
-date = "2021-08-10T07:04:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-08-10T07:04:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["MACOS"]
 toc = true

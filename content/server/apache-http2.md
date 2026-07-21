@@ -1,7 +1,7 @@
 +++
 title = "Apache HTTP/2"
-date = "2021-07-07T01:04:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-07-07T01:04:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WEB"]
 toc = true

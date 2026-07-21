@@ -1,7 +1,7 @@
 +++
 title = "CentOS Docker 설치"
-date = "2022-05-16T04:56:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2022-05-16T04:56:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER", "DEV-OPS"]
 tags = ["NETWORK", "MSA"]
 toc = true

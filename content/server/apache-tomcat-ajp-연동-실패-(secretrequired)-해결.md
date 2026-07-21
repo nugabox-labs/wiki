@@ -1,7 +1,7 @@
 +++
 title = "Apache-Tomcat AJP 연동 실패 (secretRequired) 해결"
-date = "2020-03-31T19:54:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-03-31T19:54:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WAS"]
 toc = true

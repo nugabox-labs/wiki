@@ -1,7 +1,7 @@
 +++
 title = "Go 설치 (CentOS7)"
-date = "2019-10-22T18:13:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-10-22T18:13:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["GO"]
 toc = true

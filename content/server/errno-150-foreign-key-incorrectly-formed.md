@@ -1,7 +1,7 @@
 +++
 title = "errno 150 foreign key incorrectly formed"
-date = "2020-09-24T00:18:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-09-24T00:18:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

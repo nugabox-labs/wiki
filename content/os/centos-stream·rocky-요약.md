@@ -1,7 +1,7 @@
 +++
 title = "CentOS Stream·Rocky 요약"
-date = "2021-03-31T00:39:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-03-31T00:39:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "TECH"]
 tags = ["LINUX", "ISSUE"]
 toc = true

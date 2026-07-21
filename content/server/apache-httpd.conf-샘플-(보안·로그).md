@@ -1,7 +1,7 @@
 +++
 title = "Apache httpd.conf 샘플 (보안·로그)"
-date = "2021-07-23T00:00:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-07-23T00:00:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WEB"]
 toc = true

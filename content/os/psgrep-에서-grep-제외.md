@@ -1,7 +1,7 @@
 +++
 title = "ps|grep 에서 grep 제외"
-date = "2019-11-20T14:27:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-11-20T14:27:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

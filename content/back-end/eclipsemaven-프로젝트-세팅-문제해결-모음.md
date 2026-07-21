@@ -1,7 +1,7 @@
 +++
 title = "Eclipse/Maven 프로젝트 세팅 문제해결 모음"
-date = "2021-01-22T07:53:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-01-22T07:53:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["JAVA"]
 toc = true

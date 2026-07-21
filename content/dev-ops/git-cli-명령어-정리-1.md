@@ -1,7 +1,7 @@
 +++
 title = "Git CLI 명령어 정리 #1"
-date = "2021-04-08T01:42:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-04-08T01:42:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["DEV-OPS"]
 tags = ["GIT/SVN"]
 toc = true

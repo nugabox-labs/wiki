@@ -1,7 +1,7 @@
 +++
 title = "CentOS 6 Tomcat chkconfig"
-date = "2020-08-31T16:33:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-08-31T16:33:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

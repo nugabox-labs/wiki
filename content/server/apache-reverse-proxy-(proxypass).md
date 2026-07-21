@@ -1,7 +1,7 @@
 +++
 title = "Apache Reverse Proxy (ProxyPass)"
-date = "2020-09-02T02:18:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-09-02T02:18:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WEB"]
 toc = true

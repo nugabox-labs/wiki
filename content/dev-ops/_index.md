@@ -1,8 +1,9 @@
 +++
 title = "DEV-OPS"
-description = "데브옵스/배포 관련 문서"
+description = "개발 배포 및 운영 관련"
 sort_by = "date"
 weight = 5
+paginate = 20
 
 [extra]
 source = "fixed-category"

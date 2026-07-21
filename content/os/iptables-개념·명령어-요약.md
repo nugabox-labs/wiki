@@ -1,7 +1,7 @@
 +++
 title = "iptables 개념·명령어 요약"
-date = "2021-05-10T02:49:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-05-10T02:49:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "SERVER"]
 tags = ["LINUX", "NETWORK"]
 toc = true

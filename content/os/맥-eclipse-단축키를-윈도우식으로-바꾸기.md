@@ -1,7 +1,7 @@
 +++
 title = "맥 Eclipse 단축키를 윈도우식으로 바꾸기"
-date = "2023-03-11T14:08:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2023-03-11T14:08:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["MACOS"]
 toc = true

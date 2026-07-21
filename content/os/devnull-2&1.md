@@ -1,7 +1,7 @@
 +++
 title = "/dev/null 2>&1"
-date = "2020-08-03T10:21:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-08-03T10:21:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

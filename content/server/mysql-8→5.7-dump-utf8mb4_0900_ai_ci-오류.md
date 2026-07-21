@@ -1,7 +1,7 @@
 +++
 title = "MySQL 8→5.7 dump: utf8mb4_0900_ai_ci 오류"
-date = "2020-09-07T15:21:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-09-07T15:21:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

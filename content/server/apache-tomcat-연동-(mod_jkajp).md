@@ -1,7 +1,7 @@
 +++
 title = "Apache-Tomcat 연동 (mod_jk/AJP)"
-date = "2019-05-14T09:23:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-05-14T09:23:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WEB", "WAS"]
 toc = true

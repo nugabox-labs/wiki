@@ -1,7 +1,7 @@
 +++
 title = "MySQL 서버 에러 코드 참고"
-date = "2019-11-20T16:50:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-11-20T16:50:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

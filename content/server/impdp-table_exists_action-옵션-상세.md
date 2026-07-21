@@ -1,7 +1,7 @@
 +++
 title = "impdp TABLE_EXISTS_ACTION 옵션 상세"
-date = "2020-02-18T16:58:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-02-18T16:58:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "Oracle"]
 toc = true

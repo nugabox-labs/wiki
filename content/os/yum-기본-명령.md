@@ -1,7 +1,7 @@
 +++
 title = "yum 기본 명령"
-date = "2020-11-18T09:12:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-11-18T09:12:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

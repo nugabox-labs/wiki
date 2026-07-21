@@ -1,7 +1,7 @@
 +++
 title = "Apache 2.4 소스 설치 (apr·pcre)"
-date = "2020-12-21T17:56:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-12-21T17:56:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "SERVER"]
 tags = ["WEB", "LINUX"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "MariaDB/MySQL 설정 파일 경로"
-date = "2021-04-28T02:46:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-04-28T02:46:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "SERVER"]
 tags = ["DB", "MySQL", "SYNOLOGY"]
 toc = true

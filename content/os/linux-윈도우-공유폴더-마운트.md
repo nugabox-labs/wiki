@@ -1,7 +1,7 @@
 +++
 title = "Linux 윈도우 공유폴더 마운트"
-date = "2021-02-01T01:58:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-02-01T01:58:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

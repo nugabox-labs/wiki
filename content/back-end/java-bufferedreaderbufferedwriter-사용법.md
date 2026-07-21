@@ -1,7 +1,7 @@
 +++
 title = "Java BufferedReader/BufferedWriter 사용법"
-date = "2019-10-31T09:57:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-10-31T09:57:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["JAVA"]
 toc = true

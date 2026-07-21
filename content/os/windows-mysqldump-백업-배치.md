@@ -1,7 +1,7 @@
 +++
 title = "Windows mysqldump 백업 배치"
-date = "2021-06-18T02:22:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-06-18T02:22:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "SERVER"]
 tags = ["DB", "MySQL", "WINDOWS"]
 toc = true

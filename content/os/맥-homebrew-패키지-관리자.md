@@ -1,7 +1,7 @@
 +++
 title = "맥 Homebrew 패키지 관리자"
-date = "2021-04-06T07:32:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-04-06T07:32:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["MACOS"]
 toc = true

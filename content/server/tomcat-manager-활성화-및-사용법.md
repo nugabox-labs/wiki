@@ -1,7 +1,7 @@
 +++
 title = "Tomcat Manager 활성화 및 사용법"
-date = "2020-09-18T11:28:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-09-18T11:28:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WAS"]
 toc = true

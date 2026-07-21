@@ -1,7 +1,7 @@
 +++
 title = "Go언어 웹 프레임워크"
-date = "2019-10-29T01:54:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-10-29T01:54:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["GO"]
 toc = true

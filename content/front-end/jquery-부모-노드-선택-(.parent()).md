@@ -1,7 +1,7 @@
 +++
 title = "jQuery 부모 노드 선택 (.parent())"
-date = "2019-09-26T09:05:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-09-26T09:05:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["FRONT-END"]
 tags = ["JS"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "AWS-EC2 + 그누보드5 세팅"
-date = "2023-04-16T15:20:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2023-04-16T15:20:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "BACK-END"]
 tags = ["LINUX", "PHP"]
 toc = true

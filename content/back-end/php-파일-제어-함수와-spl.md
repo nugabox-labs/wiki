@@ -1,7 +1,7 @@
 +++
 title = "PHP 파일 제어 함수와 SPL"
-date = "2019-03-14T08:25:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-03-14T08:25:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["PHP"]
 toc = true

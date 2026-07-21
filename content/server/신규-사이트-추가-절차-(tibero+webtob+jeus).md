@@ -1,7 +1,7 @@
 +++
 title = "신규 사이트 추가 절차 (Tibero+WebtoB+Jeus)"
-date = "2020-07-09T00:03:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-07-09T00:03:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WEB", "WAS"]
 toc = true

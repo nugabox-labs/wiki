@@ -1,7 +1,7 @@
 +++
 title = "Go 언어 Hello World로 시작하기"
-date = "2019-10-22T18:16:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-10-22T18:16:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["GO"]
 toc = true

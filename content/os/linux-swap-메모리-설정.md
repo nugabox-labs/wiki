@@ -1,7 +1,7 @@
 +++
 title = "Linux Swap 메모리 설정"
-date = "2024-01-15T05:47:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2024-01-15T05:47:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

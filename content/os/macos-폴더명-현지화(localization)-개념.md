@@ -1,7 +1,7 @@
 +++
 title = "macOS 폴더명 현지화(Localization) 개념"
-date = "2023-01-14T17:36:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2023-01-14T17:36:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["MACOS"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "SQL 정규식으로 숫자/문자 구별"
-date = "2019-06-24T14:58:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-06-24T14:58:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "Oracle"]
 toc = true

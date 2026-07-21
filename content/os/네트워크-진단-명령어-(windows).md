@@ -1,7 +1,7 @@
 +++
 title = "네트워크 진단 명령어 (Windows)"
-date = "2021-04-12T01:11:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-04-12T01:11:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "SERVER"]
 tags = ["WINDOWS", "NETWORK"]
 toc = true

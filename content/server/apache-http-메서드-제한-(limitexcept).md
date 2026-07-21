@@ -1,7 +1,7 @@
 +++
 title = "Apache HTTP 메서드 제한 (LimitExcept)"
-date = "2019-12-31T09:54:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-12-31T09:54:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WEB"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "Apache mod_proxy vs mod_jk"
-date = "2020-11-19T12:52:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-11-19T12:52:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WEB", "WAS"]
 toc = true

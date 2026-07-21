@@ -1,7 +1,7 @@
 +++
 title = "Apache+Tomcat 홈페이지 속도 최적화 설정"
-date = "2019-03-26T06:08:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-03-26T06:08:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WEB", "WAS"]
 toc = true

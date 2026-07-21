@@ -1,7 +1,7 @@
 +++
 title = "Go MySQL 드라이버 (go-sql-driver)"
-date = "2020-10-20T01:59:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-10-20T01:59:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER", "BACK-END"]
 tags = ["DB", "MySQL", "GO"]
 toc = true

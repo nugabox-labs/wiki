@@ -1,7 +1,7 @@
 +++
 title = "Tomcat catalina.out 로그 제어/날짜별 분리"
-date = "2020-11-18T18:36:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-11-18T18:36:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WAS"]
 toc = true

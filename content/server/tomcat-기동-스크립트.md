@@ -1,7 +1,7 @@
 +++
 title = "Tomcat 기동 스크립트"
-date = "2021-07-28T04:54:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-07-28T04:54:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER", "DEV-OPS"]
 tags = ["WAS", "BASH"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "Tomcat classloader ._* 스캔 실패 해결 (macOS ExFAT)"
-date = "2019-09-30T17:48:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-09-30T17:48:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WAS"]
 toc = true

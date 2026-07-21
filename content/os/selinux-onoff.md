@@ -1,7 +1,7 @@
 +++
 title = "SELinux on/off"
-date = "2019-04-11T08:25:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-04-11T08:25:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "FormData console.log 출력"
-date = "2021-04-26T08:32:00.000Z"
-updated = "2022-06-25T18:56:00.000Z"
+date = 2021-04-26T08:32:00Z
+updated = 2022-06-25T18:56:00Z
 categories = ["FRONT-END"]
 tags = ["HTML", "JS"]
 toc = true

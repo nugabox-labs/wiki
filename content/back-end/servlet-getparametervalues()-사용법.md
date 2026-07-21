@@ -1,7 +1,7 @@
 +++
 title = "Servlet getParameterValues() 사용법"
-date = "2019-12-24T02:43:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-12-24T02:43:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["JAVA"]
 toc = true

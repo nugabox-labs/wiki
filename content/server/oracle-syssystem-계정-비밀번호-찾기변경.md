@@ -1,7 +1,7 @@
 +++
 title = "Oracle sys/system 계정 비밀번호 찾기/변경"
-date = "2020-02-18T16:57:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-02-18T16:57:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "Oracle"]
 toc = true

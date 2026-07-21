@@ -1,7 +1,7 @@
 +++
 title = "Apache SSL 인증서 파일 매핑"
-date = "2021-08-04T04:51:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-08-04T04:51:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WEB"]
 toc = true

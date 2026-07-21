@@ -1,7 +1,7 @@
 +++
 title = "Oracle 홉따옴표(') 포함 문자열 입력"
-date = "2020-05-18T15:41:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-05-18T15:41:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "Oracle"]
 toc = true

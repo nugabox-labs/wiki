@@ -1,7 +1,7 @@
 +++
 title = "SQL Developer Locale not recognized 해결 (macOS)"
-date = "2020-02-18T23:26:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-02-18T23:26:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "Oracle"]
 toc = true

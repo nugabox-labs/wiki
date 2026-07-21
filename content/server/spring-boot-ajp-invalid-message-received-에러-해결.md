@@ -1,7 +1,7 @@
 +++
 title = "Spring Boot AJP Invalid message received 에러 해결"
-date = "2020-06-08T16:10:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-06-08T16:10:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WAS"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "Linux 구축 체크리스트"
-date = "2019-03-14T06:25:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-03-14T06:25:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

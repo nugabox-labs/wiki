@@ -1,7 +1,7 @@
 +++
 title = "CentOS 6 MariaDB 10.2 컴파일 설치"
-date = "2020-05-12T06:45:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-05-12T06:45:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "SERVER"]
 tags = ["DB", "MySQL", "LINUX"]
 toc = true

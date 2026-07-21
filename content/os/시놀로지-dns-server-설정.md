@@ -1,7 +1,7 @@
 +++
 title = "시놀로지 DNS Server 설정"
-date = "2021-01-14T14:15:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-01-14T14:15:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "SERVER"]
 tags = ["SYNOLOGY", "NETWORK"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "Oracle Tablespace 생성/확인/이동"
-date = "2020-06-04T11:32:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-06-04T11:32:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "Oracle"]
 toc = true

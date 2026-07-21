@@ -41,12 +41,12 @@ const notion = new Client({ auth: NOTION_TOKEN });
 // weight는 홈/사이드바에 노출되는 순서.
 
 const FIXED_CATEGORIES = [
-  { name: "OS", slug: "os", description: "운영체제 관련 문서", weight: 1 },
-  { name: "SERVER", slug: "server", description: "서버 인프라 관련 문서", weight: 2 },
-  { name: "BACK-END", slug: "back-end", description: "백엔드 개발 관련 문서", weight: 3 },
-  { name: "FRONT-END", slug: "front-end", description: "프론트엔드 개발 관련 문서", weight: 4 },
-  { name: "DEV-OPS", slug: "dev-ops", description: "데브옵스/배포 관련 문서", weight: 5 },
-  { name: "TECH", slug: "tech", description: "기술 전반에 대한 문서", weight: 6 },
+  { name: "OS", slug: "os", description: "운영체제 관련", weight: 1 },
+  { name: "SERVER", slug: "server", description: "서버 인프라 관련", weight: 2 },
+  { name: "BACK-END", slug: "back-end", description: "백엔드 개발 관련", weight: 3 },
+  { name: "FRONT-END", slug: "front-end", description: "프론트엔드 개발 관련", weight: 4 },
+  { name: "DEV-OPS", slug: "dev-ops", description: "개발 배포 및 운영 관련", weight: 5 },
+  { name: "TECH", slug: "tech", description: "기술 전반", weight: 6 },
 ];
 // POSTS는 사이드바 "./categories" 목록에는 노출되지 않는 별도 대분류.
 // Notion "카테고리" 속성 값이 "Post"인 페이지만 태그와 무관하게 여기로 분류된다.
@@ -96,6 +96,15 @@ function tomlString(value) {
 
 function tomlStringArray(values) {
   return `[${values.map(tomlString).join(", ")}]`;
+}
+
+// TOML의 offset date-time은 따옴표 없이 써야 네이티브 datetime으로 인식되어
+// hwaro의 sort_by = "date" 정렬 대상이 된다. 따옴표를 씌우면 일반 문자열로
+// 취급되어 날짜순 정렬이 되지 않는다. hwaro의 TOML 파서가 밀리초 단위
+// 소수부(.000)를 받아들이지 못해 초 단위로 잘라서 쓴다.
+function tomlDatetime(value) {
+  const m = /^(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2})(?:\.\d+)?(Z|[+-]\d{2}:\d{2})$/.exec(value);
+  return m ? `${m[1]}${m[2]}` : tomlString(value);
 }
 
 async function pathExists(p) {
@@ -346,8 +355,8 @@ async function renderChildren(blocks, pageId, indent = "") {
 function buildFrontMatter(page) {
   const lines = ["+++"];
   lines.push(`title = ${tomlString(page.title)}`);
-  if (page.date) lines.push(`date = ${tomlString(page.date)}`);
-  if (page.updated) lines.push(`updated = ${tomlString(page.updated)}`);
+  if (page.date) lines.push(`date = ${tomlDatetime(page.date)}`);
+  if (page.updated) lines.push(`updated = ${tomlDatetime(page.updated)}`);
   lines.push(`categories = ${tomlStringArray(page.categories)}`);
   lines.push(`tags = ${tomlStringArray(page.tags)}`);
   lines.push(`toc = true`);
@@ -407,7 +416,7 @@ async function main() {
   for (const cat of ALL_CATEGORIES) {
     const indexPath = path.join(CONTENT_DIR, cat.slug, "_index.md");
     await mkdir(path.dirname(indexPath), { recursive: true });
-    const indexMd = `+++\ntitle = ${tomlString(cat.name)}\ndescription = ${tomlString(cat.description)}\nsort_by = "date"\nweight = ${cat.weight}\n\n[extra]\nsource = "fixed-category"\n+++\n`;
+    const indexMd = `+++\ntitle = ${tomlString(cat.name)}\ndescription = ${tomlString(cat.description)}\nsort_by = "date"\nweight = ${cat.weight}\npaginate = 20\n\n[extra]\nsource = "fixed-category"\n+++\n`;
     await writeFile(indexPath, indexMd, "utf8");
   }
 

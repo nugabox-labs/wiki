@@ -1,7 +1,7 @@
 +++
 title = "yum vault·lock·timeout"
-date = "2021-02-19T06:11:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-02-19T06:11:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

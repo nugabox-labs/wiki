@@ -1,7 +1,7 @@
 +++
 title = "Go로 RESTful JSON API 만들기"
-date = "2019-10-28T10:55:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-10-28T10:55:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["GO"]
 toc = true

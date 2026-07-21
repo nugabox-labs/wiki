@@ -1,7 +1,7 @@
 +++
 title = "WebtoB(WEB)-Jeus(WAS) 연동 설정"
-date = "2019-10-07T18:11:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-10-07T18:11:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WEB", "WAS"]
 toc = true

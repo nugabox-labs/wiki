@@ -1,7 +1,7 @@
 +++
 title = "Socket·open files 한도 (ulimit/limits.conf)"
-date = "2021-03-04T14:13:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-03-04T14:13:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

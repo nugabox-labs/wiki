@@ -1,7 +1,7 @@
 +++
 title = "쉘 LANG 영어"
-date = "2020-05-11T18:08:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-05-11T18:08:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "Tomcat 버전 정보 노출 숨김"
-date = "2021-03-18T02:07:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-03-18T02:07:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WAS"]
 toc = true

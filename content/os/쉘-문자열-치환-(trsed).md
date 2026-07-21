@@ -1,7 +1,7 @@
 +++
 title = "쉘 문자열 치환 (tr/sed)"
-date = "2021-02-09T09:45:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-02-09T09:45:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

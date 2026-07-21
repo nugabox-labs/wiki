@@ -1,7 +1,7 @@
 +++
 title = "JBoss EAP 설치 및 설정"
-date = "2021-04-06T00:18:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-04-06T00:18:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WAS"]
 toc = true

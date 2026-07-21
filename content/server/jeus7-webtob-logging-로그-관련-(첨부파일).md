@@ -1,7 +1,7 @@
 +++
 title = "Jeus7 WebtoB Logging 로그 관련 (첨부파일)"
-date = "2020-04-03T08:02:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-04-03T08:02:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WEB", "WAS"]
 toc = true

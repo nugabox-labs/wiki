@@ -1,7 +1,7 @@
 +++
 title = "ApacheBench (ab)"
-date = "2021-08-02T06:56:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-08-02T06:56:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WEB"]
 toc = true

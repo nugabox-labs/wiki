@@ -1,7 +1,7 @@
 +++
 title = "Oracle 계정 권한 부여 예시"
-date = "2020-09-24T02:54:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-09-24T02:54:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "Oracle"]
 toc = true

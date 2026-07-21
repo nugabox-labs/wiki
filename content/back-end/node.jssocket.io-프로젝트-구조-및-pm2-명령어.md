@@ -1,7 +1,7 @@
 +++
 title = "Node.js/Socket.io 프로젝트 구조 및 PM2 명령어"
-date = "2020-07-16T10:51:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-07-16T10:51:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["Node.js"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "CentOS 네트워크 확인 및 설정"
-date = "2022-03-14T04:57:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2022-03-14T04:57:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "SERVER"]
 tags = ["LINUX", "NETWORK"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "맥 Python 개발환경 구축 (Homebrew)"
-date = "2021-04-05T05:49:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-04-05T05:49:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "BACK-END"]
 tags = ["MACOS", "PYTHON"]
 toc = true

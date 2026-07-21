@@ -1,7 +1,7 @@
 +++
 title = "CentOS 방화벽 (iptables/firewalld)"
-date = "2019-04-03T01:02:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-04-03T01:02:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

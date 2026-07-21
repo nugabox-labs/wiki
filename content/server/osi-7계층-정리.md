@@ -1,7 +1,7 @@
 +++
 title = "OSI 7계층 정리"
-date = "2025-01-09T02:33:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2025-01-09T02:33:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["NETWORK"]
 toc = true

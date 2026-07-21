@@ -1,7 +1,7 @@
 +++
 title = "php-xml 설치"
-date = "2020-09-10T13:33:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-09-10T13:33:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "BACK-END"]
 tags = ["LINUX", "PHP"]
 toc = true

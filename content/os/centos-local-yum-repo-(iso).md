@@ -1,7 +1,7 @@
 +++
 title = "CentOS Local Yum Repo (ISO)"
-date = "2021-07-28T02:23:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-07-28T02:23:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

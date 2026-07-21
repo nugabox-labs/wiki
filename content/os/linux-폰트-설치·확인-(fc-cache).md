@@ -1,7 +1,7 @@
 +++
 title = "Linux 폰트 설치·확인 (fc-cache)"
-date = "2019-11-13T17:45:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-11-13T17:45:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

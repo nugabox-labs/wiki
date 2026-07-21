@@ -1,7 +1,7 @@
 +++
 title = "bash-4.2$ → skel 복사"
-date = "2020-03-10T05:17:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-03-10T05:17:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

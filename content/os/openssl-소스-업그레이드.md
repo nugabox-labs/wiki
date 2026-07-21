@@ -1,7 +1,7 @@
 +++
 title = "OpenSSL 소스 업그레이드"
-date = "2020-12-21T17:35:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-12-21T17:35:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "GitLab 이관"
-date = "2025-06-12T01:54:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2025-06-12T01:54:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["DEV-OPS"]
 tags = ["GIT/SVN"]
 toc = true

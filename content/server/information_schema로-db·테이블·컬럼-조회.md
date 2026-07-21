@@ -1,7 +1,7 @@
 +++
 title = "INFORMATION_SCHEMA로 DB·테이블·컬럼 조회"
-date = "2019-11-21T05:57:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-11-21T05:57:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

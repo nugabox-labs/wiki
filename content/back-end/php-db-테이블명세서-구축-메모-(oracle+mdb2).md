@@ -1,7 +1,7 @@
 +++
 title = "PHP DB 테이블명세서 구축 메모 (Oracle+MDB2)"
-date = "2020-09-10T02:41:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-09-10T02:41:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["PHP"]
 toc = true

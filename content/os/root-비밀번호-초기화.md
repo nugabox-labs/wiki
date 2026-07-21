@@ -1,7 +1,7 @@
 +++
 title = "root 비밀번호 초기화"
-date = "2019-03-18T01:12:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-03-18T01:12:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

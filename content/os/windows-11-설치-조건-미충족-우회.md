@@ -1,7 +1,7 @@
 +++
 title = "Windows 11 설치 조건 미충족 우회"
-date = "2025-06-27T01:05:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2025-06-27T01:05:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["WINDOWS"]
 toc = true

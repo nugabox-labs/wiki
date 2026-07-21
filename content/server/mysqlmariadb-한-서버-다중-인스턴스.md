@@ -1,7 +1,7 @@
 +++
 title = "MySQL/MariaDB 한 서버 다중 인스턴스"
-date = "2019-11-18T06:24:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-11-18T06:24:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

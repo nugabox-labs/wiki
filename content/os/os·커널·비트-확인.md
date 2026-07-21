@@ -1,7 +1,7 @@
 +++
 title = "OS·커널·비트 확인"
-date = "2019-09-16T04:25:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-09-16T04:25:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

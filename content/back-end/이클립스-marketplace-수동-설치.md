@@ -1,7 +1,7 @@
 +++
 title = "이클립스 Marketplace 수동 설치"
-date = "2019-10-04T09:05:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-10-04T09:05:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["JAVA"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "맥 Java 개발환경 구축 (Homebrew, 여러 버전 관리)"
-date = "2021-04-06T01:02:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-04-06T01:02:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "BACK-END"]
 tags = ["MACOS", "JAVA"]
 toc = true

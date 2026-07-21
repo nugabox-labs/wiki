@@ -1,7 +1,7 @@
 +++
 title = "macOS APM(Apache+PHP+MySQL) 가상호스트 구성"
-date = "2023-03-11T14:02:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2023-03-11T14:02:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["MACOS"]
 toc = true

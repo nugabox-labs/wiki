@@ -1,7 +1,7 @@
 +++
 title = "MySQL pid-file 경로 변경"
-date = "2020-06-25T09:08:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-06-25T09:08:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

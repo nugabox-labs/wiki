@@ -1,7 +1,7 @@
 +++
 title = "Node.js 설치 및 시작"
-date = "2019-11-01T06:19:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-11-01T06:19:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["Node.js"]
 toc = true

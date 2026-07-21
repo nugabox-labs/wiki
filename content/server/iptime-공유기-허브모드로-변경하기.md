@@ -1,7 +1,7 @@
 +++
 title = "IPTIME 공유기 허브모드로 변경하기"
-date = "2019-09-26T18:08:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-09-26T18:08:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["NETWORK"]
 toc = true

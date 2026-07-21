@@ -1,7 +1,7 @@
 +++
 title = "Go time 패키지"
-date = "2019-11-28T16:25:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-11-28T16:25:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["GO"]
 toc = true

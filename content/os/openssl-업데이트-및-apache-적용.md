@@ -1,7 +1,7 @@
 +++
 title = "OpenSSL 업데이트 및 Apache 적용"
-date = "2020-12-22T00:16:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-12-22T00:16:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "SERVER"]
 tags = ["WEB", "NETWORK", "LINUX"]
 toc = true

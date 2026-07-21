@@ -1,7 +1,7 @@
 +++
 title = "mysqldump DEFINER 사용자 없음 오류"
-date = "2020-09-21T11:01:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-09-21T11:01:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

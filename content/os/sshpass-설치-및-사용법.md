@@ -1,7 +1,7 @@
 +++
 title = "sshpass 설치 및 사용법"
-date = "2022-05-27T10:58:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2022-05-27T10:58:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["MACOS"]
 toc = true

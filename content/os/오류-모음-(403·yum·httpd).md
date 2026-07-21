@@ -1,7 +1,7 @@
 +++
 title = "오류 모음 (403·yum·httpd)"
-date = "2019-03-29T00:57:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-03-29T00:57:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

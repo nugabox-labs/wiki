@@ -1,7 +1,7 @@
 +++
 title = "gcc RPM 수동 설치"
-date = "2020-03-02T17:25:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-03-02T17:25:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

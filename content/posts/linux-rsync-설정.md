@@ -1,7 +1,7 @@
 +++
 title = "Linux Rsync 설정"
-date = "2021-01-28T01:56:00.000Z"
-updated = "2026-07-20T01:06:00.000Z"
+date = 2021-01-28T01:56:00Z
+updated = 2026-07-20T01:06:00Z
 categories = ["posts"]
 tags = ["LINUX"]
 toc = true

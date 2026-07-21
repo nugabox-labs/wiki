@@ -1,7 +1,7 @@
 +++
 title = "ON DUPLICATE KEY UPDATE (upsert)"
-date = "2019-10-07T10:31:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-10-07T10:31:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

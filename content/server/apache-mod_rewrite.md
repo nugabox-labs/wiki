@@ -1,7 +1,7 @@
 +++
 title = "Apache mod_rewrite"
-date = "2020-06-23T13:33:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-06-23T13:33:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WEB"]
 toc = true

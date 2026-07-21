@@ -1,7 +1,7 @@
 +++
 title = "SSH 접속을 위한 방화벽 포트(22) 허용"
-date = "2019-03-26T07:16:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-03-26T07:16:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["NETWORK"]
 toc = true

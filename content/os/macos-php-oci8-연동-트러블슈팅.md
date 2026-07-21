@@ -1,7 +1,7 @@
 +++
 title = "macOS PHP-OCI8 연동 트러블슈팅"
-date = "2023-03-11T14:06:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2023-03-11T14:06:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["MACOS"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "Apache 악성 봇·IP 차단 (bad_bot.conf)"
-date = "2021-03-13T05:46:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-03-13T05:46:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WEB"]
 toc = true

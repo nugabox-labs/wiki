@@ -1,7 +1,7 @@
 +++
 title = "Spring robots.txt"
-date = "2021-09-07T05:46:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-09-07T05:46:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["JAVA"]
 toc = true

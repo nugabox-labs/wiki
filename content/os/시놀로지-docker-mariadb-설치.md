@@ -1,7 +1,7 @@
 +++
 title = "시놀로지 Docker MariaDB 설치"
-date = "2024-05-24T02:35:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2024-05-24T02:35:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "SERVER"]
 tags = ["DB", "MySQL", "SYNOLOGY"]
 toc = true

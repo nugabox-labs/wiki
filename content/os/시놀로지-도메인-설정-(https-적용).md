@@ -1,7 +1,7 @@
 +++
 title = "시놀로지 도메인 설정 (https 적용)"
-date = "2021-07-07T06:15:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-07-07T06:15:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "SERVER"]
 tags = ["SYNOLOGY", "WEB"]
 toc = true

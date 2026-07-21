@@ -1,7 +1,7 @@
 +++
 title = "Tibero/Oracle 세션 조회 및 종료"
-date = "2020-07-31T01:30:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-07-31T01:30:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "Oracle"]
 toc = true

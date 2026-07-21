@@ -1,7 +1,7 @@
 +++
 title = "PHP 소스 컴파일 configure 옵션 모음"
-date = "2020-01-10T04:31:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-01-10T04:31:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["PHP"]
 toc = true

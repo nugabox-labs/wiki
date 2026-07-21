@@ -1,7 +1,7 @@
 +++
 title = "Go HTTP 서버/라우팅 단계별 예제"
-date = "2019-10-29T15:01:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-10-29T15:01:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["NETWORK"]
 toc = true

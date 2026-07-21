@@ -1,7 +1,7 @@
 +++
 title = "yum/wget DNS (resolv.conf)"
-date = "2019-05-14T07:10:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-05-14T07:10:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

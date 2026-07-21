@@ -1,7 +1,7 @@
 +++
 title = "서비스 구동 확인 및 iptables 방화벽 규칙"
-date = "2019-09-26T08:55:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-09-26T08:55:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["NETWORK"]
 toc = true

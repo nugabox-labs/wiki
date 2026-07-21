@@ -1,7 +1,7 @@
 +++
 title = "Java에서 OS 명령어 실행 (ProcessBuilder/Runtime.exec)"
-date = "2019-11-20T11:53:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-11-20T11:53:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["JAVA"]
 toc = true

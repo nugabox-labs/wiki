@@ -1,7 +1,7 @@
 +++
 title = "kjbank 프로젝트 구동 정리 (restapi/socket.io/blockchain)"
-date = "2020-07-16T10:47:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-07-16T10:47:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["GO", "Node.js"]
 toc = true

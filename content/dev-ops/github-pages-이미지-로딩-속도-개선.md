@@ -1,7 +1,7 @@
 +++
 title = "GitHub Pages 이미지 로딩 속도 개선"
-date = "2021-04-08T02:31:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-04-08T02:31:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["DEV-OPS"]
 tags = ["GIT/SVN"]
 toc = true

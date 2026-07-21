@@ -1,7 +1,7 @@
 +++
 title = "MyISAM → InnoDB 엔진 변경"
-date = "2019-11-21T15:41:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-11-21T15:41:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

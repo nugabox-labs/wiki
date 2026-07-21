@@ -1,7 +1,7 @@
 +++
 title = "APR, Tomcat Native Library"
-date = "2020-01-23T09:57:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-01-23T09:57:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WAS"]
 toc = true

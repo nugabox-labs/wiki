@@ -1,7 +1,7 @@
 +++
 title = "NFS 서버·클라이언트 설정"
-date = "2023-03-20T06:24:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2023-03-20T06:24:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "SERVER"]
 tags = ["LINUX", "NETWORK"]
 toc = true

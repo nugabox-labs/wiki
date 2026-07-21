@@ -1,7 +1,7 @@
 +++
 title = "macOS Homebrew MySQL 설치"
-date = "2019-10-31T16:51:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-10-31T16:51:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "SERVER"]
 tags = ["DB", "MySQL", "MACOS"]
 toc = true

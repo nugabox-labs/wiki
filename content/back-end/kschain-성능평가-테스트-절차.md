@@ -1,7 +1,7 @@
 +++
 title = "KSCHAIN 성능평가 테스트 절차"
-date = "2020-07-15T02:08:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-07-15T02:08:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END", "TECH"]
 tags = ["GO", "BLOCKCHAIN"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "Oracle 개인정보(전화번호) 마스킹"
-date = "2019-09-26T08:53:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-09-26T08:53:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "Oracle"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "PHP ssh2 확장 설치"
-date = "2019-03-26T01:19:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-03-26T01:19:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "BACK-END"]
 tags = ["LINUX", "PHP"]
 toc = true

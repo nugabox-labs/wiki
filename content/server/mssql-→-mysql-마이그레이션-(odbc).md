@@ -1,7 +1,7 @@
 +++
 title = "MSSQL → MySQL 마이그레이션 (ODBC)"
-date = "2020-05-19T06:46:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-05-19T06:46:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

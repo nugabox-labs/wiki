@@ -1,7 +1,7 @@
 +++
 title = "맥 Ruby 개발환경 구축 (rbenv)"
-date = "2021-10-18T01:26:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-10-18T01:26:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["MACOS"]
 toc = true

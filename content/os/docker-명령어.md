@@ -1,7 +1,7 @@
 +++
 title = "Docker 명령어"
-date = "2022-03-23T07:42:00.000Z"
-updated = "2026-07-17T06:17:00.000Z"
+date = 2022-03-23T07:42:00Z
+updated = 2026-07-17T06:17:00Z
 categories = ["OS", "DEV-OPS"]
 tags = ["LINUX", "MSA"]
 toc = true

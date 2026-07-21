@@ -1,7 +1,7 @@
 +++
 title = "SHOW CREATE FUNCTION 권한 (mysql.proc)"
-date = "2021-05-28T02:12:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-05-28T02:12:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "SERVER"]
 tags = ["DB", "MySQL", "SYNOLOGY"]
 toc = true

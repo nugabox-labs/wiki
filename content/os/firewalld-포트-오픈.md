@@ -1,7 +1,7 @@
 +++
 title = "firewalld 포트 오픈"
-date = "2019-04-11T07:39:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-04-11T07:39:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

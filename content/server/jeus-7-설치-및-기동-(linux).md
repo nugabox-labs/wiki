@@ -1,7 +1,7 @@
 +++
 title = "Jeus 7 설치 및 기동 (Linux)"
-date = "2019-09-16T04:49:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-09-16T04:49:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WAS"]
 toc = true

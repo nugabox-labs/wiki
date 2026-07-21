@@ -1,7 +1,7 @@
 +++
 title = "GitHub Repository 사용"
-date = "2022-06-25T17:45:00.000Z"
-updated = "2023-03-11T13:18:00.000Z"
+date = 2022-06-25T17:45:00Z
+updated = 2023-03-11T13:18:00Z
 categories = ["DEV-OPS"]
 tags = ["GIT/SVN"]
 toc = true

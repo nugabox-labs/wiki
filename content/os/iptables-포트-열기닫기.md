@@ -1,7 +1,7 @@
 +++
 title = "iptables 포트 열기/닫기"
-date = "2019-11-18T11:03:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-11-18T11:03:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

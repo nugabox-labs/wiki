@@ -1,7 +1,7 @@
 +++
 title = "Oracle Character Set 변경"
-date = "2020-02-27T11:12:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-02-27T11:12:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "Oracle"]
 toc = true

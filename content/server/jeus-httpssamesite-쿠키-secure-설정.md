@@ -1,7 +1,7 @@
 +++
 title = "Jeus HTTPS/SameSite 쿠키 Secure 설정"
-date = "2021-01-26T06:31:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-01-26T06:31:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WAS"]
 toc = true

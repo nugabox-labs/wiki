@@ -1,7 +1,7 @@
 +++
 title = "Jeus 7 Administrator 교육자료 (첨부파일)"
-date = "2019-09-18T06:45:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-09-18T06:45:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WAS"]
 toc = true

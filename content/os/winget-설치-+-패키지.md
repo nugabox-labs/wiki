@@ -1,7 +1,7 @@
 +++
 title = "Winget 설치 + 패키지"
-date = "2023-06-29T09:27:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2023-06-29T09:27:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["WINDOWS"]
 toc = true

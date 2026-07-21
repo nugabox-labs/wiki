@@ -1,7 +1,7 @@
 +++
 title = "root 초기화 (rd.break)"
-date = "2020-12-18T09:51:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-12-18T09:51:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "mysqldump 백업·복구 (routines/triggers)"
-date = "2020-05-11T08:53:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-05-11T08:53:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

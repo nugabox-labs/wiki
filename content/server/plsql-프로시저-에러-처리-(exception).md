@@ -1,7 +1,7 @@
 +++
 title = "PL/SQL 프로시저 에러 처리 (EXCEPTION)"
-date = "2020-11-17T04:29:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-11-17T04:29:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "Oracle"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "맥 Git 환경 구축"
-date = "2021-01-22T02:13:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-01-22T02:13:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["MACOS"]
 toc = true

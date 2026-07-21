@@ -1,7 +1,7 @@
 +++
 title = "INT overflow → 2147483647"
-date = "2019-10-17T16:27:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-10-17T16:27:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

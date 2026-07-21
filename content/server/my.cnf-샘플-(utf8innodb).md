@@ -1,7 +1,7 @@
 +++
 title = "my.cnf 샘플 (utf8/InnoDB)"
-date = "2019-11-18T06:58:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-11-18T06:58:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

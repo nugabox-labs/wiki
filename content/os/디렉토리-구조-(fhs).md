@@ -1,7 +1,7 @@
 +++
 title = "디렉토리 구조 (FHS)"
-date = "2019-04-04T08:46:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-04-04T08:46:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

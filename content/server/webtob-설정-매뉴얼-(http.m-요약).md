@@ -1,7 +1,7 @@
 +++
 title = "WebtoB 설정 매뉴얼 (http.m 요약)"
-date = "2020-10-23T17:42:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-10-23T17:42:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WEB"]
 toc = true

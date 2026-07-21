@@ -124,6 +124,12 @@ h4 {
   text-transform: uppercase; letter-spacing: .08em; color: var(--muted);
 }
 
+/* 본문(.prose) 안의 # ~ ### 는 문서 제목(h1)과 별개로, 위계는 유지하되
+   한 단계씩 작게 — 안 그러면 본문 소제목이 문서 제목과 같은 크기로 보인다. */
+.prose h1 { font-size: var(--text-xl); }
+.prose h2 { font-size: var(--text-lg); }
+.prose h3 { font-size: var(--text-base); }
+
 /* ---- Heading anchor links (copy-link buttons) --------------------------------- */
 
 .heading-anchor {
@@ -296,11 +302,17 @@ html.code-linenumbers-on .code-line-no { display: inline-block; }
 
 .topbar {
   position: sticky; top: 0; z-index: 40;
-  display: flex; align-items: center; gap: var(--space-3);
   height: var(--topbar-h);
-  padding: 0 var(--space-4);
   background: var(--bg);
   border-bottom: 1px dashed var(--border-strong);
+}
+
+.topbar-inner {
+  display: flex; align-items: center; gap: var(--space-3);
+  height: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-4);
 }
 
 .brand {
@@ -382,6 +394,11 @@ html.code-linenumbers-on .code-line-no { display: inline-block; }
   width: auto; min-width: 148px; margin-bottom: 0;
 }
 
+@media (min-width: 901px) {
+  /* Desktop sidebar already exposes its own search trigger; avoid duplicating it in the header. */
+  .palette-trigger--top { display: none; }
+}
+
 .sidebar-home-link {
   display: block;
   text-decoration: none;
@@ -459,7 +476,7 @@ html.code-linenumbers-on .code-line-no { display: inline-block; }
 
 .doc-dek {
   font-family: var(--font-display);
-  font-size: var(--text-lg);
+  font-size: var(--text-sm);
   color: var(--muted);
   margin-bottom: var(--space-3);
   max-width: 62ch;
@@ -605,7 +622,8 @@ html.code-linenumbers-on .code-line-no { display: inline-block; }
 .doc-index li { border-top: 1px dotted var(--border-strong); }
 .doc-index li:last-child { border-bottom: 1px dotted var(--border-strong); }
 .doc-index a {
-  display: flex; align-items: baseline; gap: var(--space-3);
+  display: flex; flex-wrap: wrap; align-items: baseline;
+  column-gap: var(--space-3); row-gap: .3rem;
   text-decoration: none; padding: var(--space-3) .5rem;
   border-radius: var(--radius-sm);
   transition: background-color .15s ease-out;
@@ -615,11 +633,10 @@ html.code-linenumbers-on .code-line-no { display: inline-block; }
   font-family: var(--font-mono); color: var(--accent); font-size: var(--text-sm);
   flex-shrink: 0; width: 7em;
 }
-.doc-index-body { display: flex; flex-direction: column; gap: .2rem; flex: 1; }
+.doc-index-main { display: flex; flex-direction: column; gap: .2rem; flex: 1 1 auto; min-width: 0; order: 1; }
 .doc-index-title { font-family: var(--font-display); color: var(--fg); font-size: var(--text-base); font-weight: 600; }
 .doc-index-desc { color: var(--muted); font-size: var(--text-sm); }
-.doc-index-meta { display: flex; align-items: center; gap: var(--space-2); flex-shrink: 0; }
-.doc-index-tags { display: flex; gap: .3rem; flex-wrap: wrap; justify-content: flex-end; }
+.doc-index-tags { display: flex; gap: .3rem; flex-wrap: wrap; justify-content: flex-start; order: 3; flex-basis: 100%; }
 .tag-chip-mini {
   font-family: var(--font-mono);
   color: var(--muted);
@@ -629,8 +646,27 @@ html.code-linenumbers-on .code-line-no { display: inline-block; }
   padding: 0 .45rem;
   white-space: nowrap;
 }
-.doc-index-watts { font-family: var(--font-mono); color: var(--muted); font-size: var(--text-xs); flex-shrink: 0; }
+.doc-index-watts { font-family: var(--font-mono); color: var(--muted); font-size: var(--text-xs); flex-shrink: 0; margin-left: auto; order: 2; }
 .doc-index-empty { color: var(--muted); font-size: var(--text-sm); margin: var(--space-4) .5rem; }
+
+.pager {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--space-3);
+  margin: var(--space-5) 0 var(--space-3);
+  font-family: var(--font-mono); font-size: var(--text-sm);
+}
+.pager-link {
+  color: var(--fg);
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-md);
+  padding: .4rem .9rem;
+  transition: border-color .15s ease-out, color .15s ease-out;
+}
+.pager-link:hover { border-color: var(--accent); color: var(--accent); }
+.pager-link--disabled { color: var(--muted); opacity: .4; }
+.pager-status { flex: 1; min-width: 0; color: var(--muted); text-align: center; }
 
 /* ---- Section tag filter bar ------------------------------------------------------------ */
 
@@ -730,6 +766,7 @@ html.code-linenumbers-on .code-line-no { display: inline-block; }
   max-width: 58ch;
   margin-bottom: var(--space-5);
 }
+.lede-break { display: none; }
 .prose--home { max-width: 68ch; }
 
 /* ---- Home: inventory cards ----------------------------------------------------------------- */
@@ -758,11 +795,12 @@ html.code-linenumbers-on .code-line-no { display: inline-block; }
   transition: border-color .15s ease-out, border-style .15s ease-out;
 }
 .inv-card:hover { border-color: var(--accent); border-style: solid; }
-.inv-card-top { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-2); }
-.inv-card-host { font-family: var(--font-display); font-weight: 600; color: var(--fg); font-size: var(--text-base); }
-.inv-card-kind { font-family: var(--font-mono); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: .06em; color: var(--accent); }
+.inv-card-top { display: flex; justify-content: space-between; align-items: center; gap: var(--space-2); }
+.inv-card-host { display: inline-flex; align-items: center; gap: .55rem; font-family: var(--font-display); font-weight: 600; color: var(--fg); font-size: var(--text-base); }
+.inv-card-icon { width: 1.1em; height: 1.1em; flex-shrink: 0; color: var(--accent); }
+.inv-card-kind { position: relative; top: -0.1em; font-family: var(--font-mono); font-size: var(--text-xs); text-transform: uppercase; letter-spacing: .06em; color: var(--accent); }
 .inv-card-role { color: var(--muted); font-size: var(--text-sm); }
-.inv-card-desc { color: var(--muted); font-size: var(--text-sm); }
+.inv-card-desc { color: var(--muted); font-size: var(--text-xs); }
 /* ---- Admonitions — GitHub-style > [!NOTE] blocks (notion-sync callouts) --------------------- */
 
 .admonition {
@@ -943,14 +981,16 @@ html.code-linenumbers-on .code-line-no { display: inline-block; }
 }
 
 @media (max-width: 600px) {
-  .topbar { padding: 0 var(--space-3); }
+  .topbar-inner { padding: 0 var(--space-3); }
   .doc-pager { flex-direction: column; }
   .doc-pager-link { max-width: 100%; }
   .doc-pager-next { margin-left: 0; text-align: left; align-items: flex-start; }
   .inv-cards { grid-template-columns: 1fr; }
-  .doc-index a { flex-direction: column; gap: .2rem; }
+  .doc-index a { flex-direction: column; align-items: stretch; gap: .3rem; }
   .doc-index-host { width: auto; }
+  .doc-index-watts { margin-left: 0; }
   .spec-row { grid-template-columns: 6ch 1fr; }
+  .lede-break { display: block; }
 }
 
 /* ---- Motion ------------------------------------------------------------------------------------------- */

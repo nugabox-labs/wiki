@@ -1,7 +1,7 @@
 +++
 title = "PowerShell 스크립트 실행 오류"
-date = "2022-08-18T14:10:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2022-08-18T14:10:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["WINDOWS"]
 toc = true

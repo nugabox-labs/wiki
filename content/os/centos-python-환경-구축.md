@@ -1,7 +1,7 @@
 +++
 title = "CentOS Python 환경 구축"
-date = "2021-05-20T07:31:00.000Z"
-updated = "2026-07-20T01:06:00.000Z"
+date = 2021-05-20T07:31:00Z
+updated = 2026-07-20T01:06:00Z
 categories = ["OS", "BACK-END"]
 tags = ["LINUX", "PYTHON"]
 toc = true

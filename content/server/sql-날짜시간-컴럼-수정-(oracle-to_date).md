@@ -1,7 +1,7 @@
 +++
 title = "SQL 날짜/시간 컴럼 수정 (Oracle TO_DATE)"
-date = "2019-09-26T09:20:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-09-26T09:20:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "Oracle"]
 toc = true

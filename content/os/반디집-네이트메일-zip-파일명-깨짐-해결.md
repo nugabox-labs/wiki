@@ -1,7 +1,7 @@
 +++
 title = "반디집 네이트메일 ZIP 파일명 깨짐 해결"
-date = "2023-03-11T13:58:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2023-03-11T13:58:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["WINDOWS"]
 toc = true

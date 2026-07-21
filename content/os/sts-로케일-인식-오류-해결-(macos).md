@@ -1,7 +1,7 @@
 +++
 title = "STS 로케일 인식 오류 해결 (macOS)"
-date = "2023-03-11T14:04:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2023-03-11T14:04:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["MACOS"]
 toc = true

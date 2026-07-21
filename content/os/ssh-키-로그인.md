@@ -1,7 +1,7 @@
 +++
 title = "SSH 키 로그인"
-date = "2022-07-10T15:28:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2022-07-10T15:28:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

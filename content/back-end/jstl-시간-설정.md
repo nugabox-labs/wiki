@@ -1,7 +1,7 @@
 +++
 title = "JSTL 시간 설정"
-date = "2019-09-26T08:54:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-09-26T08:54:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["JAVA"]
 toc = true

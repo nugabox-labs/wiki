@@ -1,7 +1,7 @@
 +++
 title = "WebtoB wsadmin 모니터링"
-date = "2019-09-18T06:20:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-09-18T06:20:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WEB"]
 toc = true

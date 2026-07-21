@@ -1,7 +1,7 @@
 +++
 title = "Backspace가 ^?로 입력될 때 (stty erase)"
-date = "2021-02-18T18:05:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-02-18T18:05:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

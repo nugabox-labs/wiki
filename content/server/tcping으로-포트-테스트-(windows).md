@@ -1,7 +1,7 @@
 +++
 title = "Tcping으로 포트 테스트 (Windows)"
-date = "2019-04-04T01:30:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-04-04T01:30:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["NETWORK"]
 toc = true

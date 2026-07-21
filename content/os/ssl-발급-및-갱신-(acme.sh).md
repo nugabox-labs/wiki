@@ -1,7 +1,7 @@
 +++
 title = "SSL 발급 및 갱신 (acme.sh)"
-date = "2021-06-28T05:49:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-06-28T05:49:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "SERVER"]
 tags = ["SYNOLOGY", "WEB"]
 toc = true

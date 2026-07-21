@@ -1,7 +1,7 @@
 +++
 title = "DNS 개발서버 세팅"
-date = "2021-09-14T08:21:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-09-14T08:21:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["NETWORK"]
 toc = true

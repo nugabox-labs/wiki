@@ -1,7 +1,7 @@
 +++
 title = "cURL로 HTTP GET/POST 호출하기"
-date = "2019-11-21T17:20:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-11-21T17:20:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["NETWORK"]
 toc = true

@@ -21,7 +21,8 @@ fields = ["title", "content"]
 filename = "search.json"
 
 [pagination]
-enabled = false
+enabled = true
+per_page = 20
 
 [[taxonomies]]
 name = "categories"

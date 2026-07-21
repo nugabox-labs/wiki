@@ -1,7 +1,7 @@
 +++
 title = "MariaDB/MySQL root 패스워드 분실 재설정"
-date = "2023-02-21T02:29:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2023-02-21T02:29:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

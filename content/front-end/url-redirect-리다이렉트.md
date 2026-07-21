@@ -1,7 +1,7 @@
 +++
 title = "URL Redirect 리다이렉트"
-date = "2021-04-14T07:28:00.000Z"
-updated = "2022-06-25T18:56:00.000Z"
+date = 2021-04-14T07:28:00Z
+updated = 2022-06-25T18:56:00Z
 categories = ["FRONT-END"]
 tags = ["HTML", "JS"]
 toc = true

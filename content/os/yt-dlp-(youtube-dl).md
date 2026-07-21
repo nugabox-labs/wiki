@@ -1,7 +1,7 @@
 +++
 title = "yt-dlp (youtube-dl)"
-date = "2021-04-14T08:03:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-04-14T08:03:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "TECH"]
 tags = ["MACOS", "LINUX", "TIP"]
 toc = true

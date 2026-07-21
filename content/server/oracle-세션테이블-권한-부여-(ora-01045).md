@@ -1,7 +1,7 @@
 +++
 title = "Oracle 세션/테이블 권한 부여 (ORA-01045)"
-date = "2020-04-06T09:16:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-04-06T09:16:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "Oracle"]
 toc = true

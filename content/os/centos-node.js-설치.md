@@ -1,7 +1,7 @@
 +++
 title = "CentOS Node.js 설치"
-date = "2022-05-11T07:03:00.000Z"
-updated = "2022-06-25T18:56:00.000Z"
+date = 2022-05-11T07:03:00Z
+updated = 2022-06-25T18:56:00Z
 categories = ["OS", "BACK-END"]
 tags = ["LINUX", "Node.js"]
 toc = true

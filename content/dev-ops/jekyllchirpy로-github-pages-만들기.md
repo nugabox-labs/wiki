@@ -1,7 +1,7 @@
 +++
 title = "Jekyll/Chirpy로 GitHub Pages 만들기"
-date = "2026-07-17T23:51:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2026-07-17T23:51:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["DEV-OPS"]
 tags = ["GIT/SVN"]
 toc = true

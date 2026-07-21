@@ -1,7 +1,7 @@
 +++
 title = "HTTP Code"
-date = "2021-01-12T06:25:00.000Z"
-updated = "2022-06-25T18:56:00.000Z"
+date = 2021-01-12T06:25:00Z
+updated = 2022-06-25T18:56:00Z
 categories = ["SERVER"]
 tags = ["WEB"]
 toc = true

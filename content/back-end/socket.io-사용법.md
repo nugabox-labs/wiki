@@ -1,7 +1,7 @@
 +++
 title = "Socket.io 사용법"
-date = "2019-11-05T10:13:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-11-05T10:13:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["Node.js"]
 toc = true

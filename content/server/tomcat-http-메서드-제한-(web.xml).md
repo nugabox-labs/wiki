@@ -1,7 +1,7 @@
 +++
 title = "Tomcat HTTP 메서드 제한 (web.xml)"
-date = "2019-05-17T00:36:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-05-17T00:36:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WEB", "WAS"]
 toc = true

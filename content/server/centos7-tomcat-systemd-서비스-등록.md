@@ -1,7 +1,7 @@
 +++
 title = "CentOS7 Tomcat systemd 서비스 등록"
-date = "2020-12-02T18:39:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-12-02T18:39:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WAS"]
 toc = true

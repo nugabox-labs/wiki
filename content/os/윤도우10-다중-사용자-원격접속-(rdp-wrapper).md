@@ -1,7 +1,7 @@
 +++
 title = "윤도우10 다중 사용자 원격접속 (RDP Wrapper)"
-date = "2023-03-11T13:57:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2023-03-11T13:57:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["WINDOWS"]
 toc = true

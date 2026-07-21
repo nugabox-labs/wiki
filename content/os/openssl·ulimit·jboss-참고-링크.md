@@ -1,7 +1,7 @@
 +++
 title = "OpenSSL·ulimit·JBoss 참고 링크"
-date = "2021-02-23T06:46:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-02-23T06:46:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "SERVER"]
 tags = ["WEB", "LINUX"]
 toc = true

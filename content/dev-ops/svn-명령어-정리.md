@@ -1,7 +1,7 @@
 +++
 title = "SVN 명령어 정리"
-date = "2023-03-11T13:27:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2023-03-11T13:27:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["DEV-OPS"]
 tags = ["GIT/SVN"]
 toc = true

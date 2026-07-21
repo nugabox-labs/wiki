@@ -1,7 +1,7 @@
 +++
 title = "macOS에서 SVN와 Git 함께 사용 시 ignore 설정"
-date = "2023-12-05T00:27:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2023-12-05T00:27:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "DEV-OPS"]
 tags = ["MACOS", "GIT/SVN"]
 toc = true

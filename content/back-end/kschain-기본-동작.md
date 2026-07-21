@@ -1,7 +1,7 @@
 +++
 title = "KSCHAIN 기본 동작"
-date = "2019-11-12T08:15:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-11-12T08:15:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END", "TECH"]
 tags = ["GO", "BLOCKCHAIN"]
 toc = true

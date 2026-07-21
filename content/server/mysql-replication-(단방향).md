@@ -1,7 +1,7 @@
 +++
 title = "MySQL Replication (단방향)"
-date = "2021-05-04T09:26:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-05-04T09:26:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "Go defer와 panic, recover"
-date = "2019-11-26T18:34:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-11-26T18:34:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["GO"]
 toc = true

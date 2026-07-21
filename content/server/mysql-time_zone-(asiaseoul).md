@@ -1,7 +1,7 @@
 +++
 title = "MySQL time_zone (Asia/Seoul)"
-date = "2020-02-17T01:11:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-02-17T01:11:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

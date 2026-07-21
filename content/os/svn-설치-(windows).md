@@ -1,7 +1,7 @@
 +++
 title = "SVN 설치 (Windows)"
-date = "2023-03-11T13:27:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2023-03-11T13:27:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "DEV-OPS"]
 tags = ["GIT/SVN", "WINDOWS"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "Oracle Data Pump (expdp/impdp) 종합 가이드"
-date = "2020-02-18T23:24:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-02-18T23:24:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "Oracle"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "Git 서브모듈, 서브트리"
-date = "2025-01-07T07:38:00.000Z"
-updated = "2025-01-07T07:48:00.000Z"
+date = 2025-01-07T07:38:00Z
+updated = 2025-01-07T07:48:00Z
 categories = ["DEV-OPS"]
 tags = ["GIT/SVN"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "Windows JDK 설치 및 환경변수 설정"
-date = "2020-02-27T10:47:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-02-27T10:47:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["JAVA"]
 toc = true

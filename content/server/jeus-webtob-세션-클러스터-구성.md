@@ -1,7 +1,7 @@
 +++
 title = "Jeus-WebtoB 세션 클러스터 구성"
-date = "2019-09-16T01:01:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-09-16T01:01:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WAS"]
 toc = true

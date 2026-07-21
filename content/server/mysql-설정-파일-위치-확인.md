@@ -1,7 +1,7 @@
 +++
 title = "MySQL 설정 파일 위치 확인"
-date = "2022-03-29T18:59:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2022-03-29T18:59:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

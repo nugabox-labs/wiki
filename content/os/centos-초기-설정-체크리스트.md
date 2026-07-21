@@ -1,7 +1,7 @@
 +++
 title = "CentOS 초기 설정 체크리스트"
-date = "2023-03-11T15:39:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2023-03-11T15:39:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

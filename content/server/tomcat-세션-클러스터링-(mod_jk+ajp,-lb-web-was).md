@@ -1,7 +1,7 @@
 +++
 title = "Tomcat 세션 클러스터링 (mod_jk+AJP, LB-WEB-WAS)"
-date = "2023-09-25T09:56:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2023-09-25T09:56:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WEB", "WAS"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "OpenOffice RPM 설치"
-date = "2019-10-23T16:13:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-10-23T16:13:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["LINUX"]
 toc = true

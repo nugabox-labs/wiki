@@ -1,7 +1,7 @@
 +++
 title = "GitHub Private Repository 사용 방법"
-date = "2021-04-09T04:14:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-04-09T04:14:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["DEV-OPS"]
 tags = ["GIT/SVN"]
 toc = true

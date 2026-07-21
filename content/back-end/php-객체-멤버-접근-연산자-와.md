@@ -1,7 +1,7 @@
 +++
 title = "PHP 객체 멤버 접근 연산자 -> 와 ::"
-date = "2019-03-20T09:11:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-03-20T09:11:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["PHP"]
 toc = true

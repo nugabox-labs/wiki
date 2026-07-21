@@ -1,7 +1,7 @@
 +++
 title = "이클립스 프로젝트 빨간 X표시 해결 (Java compiler level 불일치)"
-date = "2019-09-26T07:15:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-09-26T07:15:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["JAVA"]
 toc = true

@@ -1,7 +1,7 @@
 +++
 title = "Apache www·HTTPS 리다이렉트 (vhosts)"
-date = "2019-12-23T08:34:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-12-23T08:34:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WEB"]
 toc = true

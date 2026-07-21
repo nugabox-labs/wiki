@@ -11,26 +11,49 @@
             {{ content | safe }}
           </div>
 
-          {% set pages = section.pages | sort_by("date") | reverse %}
+          {% set path_parts = paginator.first | split(pat="/") %}
+          {% set section_slug = path_parts.1 %}
+          {% set full_section = get_section(path=section_slug) %}
+          {% set sorted_pages = full_section.pages | sort(attribute="date") | reverse %}
+          {% set page_start = (paginator.current_index - 1) * paginator.paginate_by %}
+          {% set page_end = page_start + paginator.paginate_by %}
           <ol class="doc-index" id="doc-index-list">
-            {% for p in pages %}
+            {% for p in sorted_pages %}
+            {% if loop.index0 >= page_start and loop.index0 < page_end %}
             <li data-tags="{% for t in p.tags %}{{ t }}{% if not loop.last %},{% endif %}{% endfor %}">
               <a href="{{ base_url }}{{ p.url }}">
-                <span class="doc-index-body">
+                <span class="doc-index-main">
                   <span class="doc-index-title">{{ p.title }}</span>
                   {% if p.description %}<span class="doc-index-desc">{{ p.description | truncate_words(20) }}</span>{% endif %}
                 </span>
-                <span class="doc-index-meta">
-                  {% if p.tags | length > 0 %}
-                  <span class="doc-index-tags">{% for t in p.tags %}<span class="tag-chip-mini">#{{ t }}</span>{% endfor %}</span>
-                  {% endif %}
-                  <span class="doc-index-watts">{% if p.date %}{{ p.date | date('%Y-%m-%d') }}{% endif %}</span>
-                </span>
+                <span class="doc-index-watts">{% if p.date %}{{ p.date | date('%Y-%m-%d') }}{% endif %}</span>
+                {% if p.tags | length > 0 %}
+                <span class="doc-index-tags">{% for t in p.tags %}<span class="tag-chip-mini">#{{ t }}</span>{% endfor %}</span>
+                {% endif %}
               </a>
             </li>
+            {% endif %}
             {% endfor %}
           </ol>
           <p class="doc-index-empty" id="doc-index-empty" hidden>일치하는 문서가 없습니다.</p>
+
+          {% if paginator and paginator.number_pagers > 1 %}
+          {% set percent = (paginator.current_index / paginator.number_pagers * 100) | round | int %}
+          <nav class="pager" aria-label="페이지 이동">
+            {% if paginator.previous %}
+            <a class="pager-link pager-prev" href="{{ paginator.previous }}">&larr; prev</a>
+            {% else %}
+            <span class="pager-link pager-link--disabled">&larr; prev</span>
+            {% endif %}
+            <span class="pager-status">page {{ paginator.current_index }}/{{ paginator.number_pagers }} ({{ percent }}%)</span>
+            {% if paginator.next %}
+            <a class="pager-link pager-next" href="{{ paginator.next }}">next &rarr;</a>
+            {% else %}
+            <span class="pager-link pager-link--disabled">next &rarr;</span>
+            {% endif %}
+          </nav>
+          {% endif %}
+
           {% include "partials/ad-slot.html" %}
         </article>
       </main>

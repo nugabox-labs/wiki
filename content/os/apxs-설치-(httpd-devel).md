@@ -1,7 +1,7 @@
 +++
 title = "apxs 설치 (httpd-devel)"
-date = "2020-03-02T19:29:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-03-02T19:29:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS", "SERVER"]
 tags = ["LINUX", "WEB"]
 toc = true

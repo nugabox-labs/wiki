@@ -1,7 +1,7 @@
 +++
 title = "AUTO_INCREMENT 초기화"
-date = "2020-06-01T18:34:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-06-01T18:34:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true

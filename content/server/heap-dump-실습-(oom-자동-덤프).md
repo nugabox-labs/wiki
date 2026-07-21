@@ -1,7 +1,7 @@
 +++
 title = "Heap Dump 실습 (OOM 자동 덤프)"
-date = "2019-09-19T01:30:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-09-19T01:30:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["WAS"]
 toc = true

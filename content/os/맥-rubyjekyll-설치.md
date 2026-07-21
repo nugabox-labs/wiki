@@ -1,7 +1,7 @@
 +++
 title = "맥 Ruby/Jekyll 설치"
-date = "2021-10-18T01:31:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2021-10-18T01:31:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["OS"]
 tags = ["MACOS"]
 toc = true

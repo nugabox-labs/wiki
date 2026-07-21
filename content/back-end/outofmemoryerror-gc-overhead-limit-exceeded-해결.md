@@ -1,7 +1,7 @@
 +++
 title = "OutOfMemoryError: GC overhead limit exceeded 해결"
-date = "2020-06-08T10:34:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2020-06-08T10:34:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["BACK-END"]
 tags = ["JAVA"]
 toc = true

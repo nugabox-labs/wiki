@@ -1,7 +1,7 @@
 +++
 title = "MySQL Access denied 로그인 실패"
-date = "2019-11-18T17:21:00.000Z"
-updated = "2026-07-21T02:37:00.000Z"
+date = 2019-11-18T17:21:00Z
+updated = 2026-07-21T02:37:00Z
 categories = ["SERVER"]
 tags = ["DB", "MySQL"]
 toc = true
