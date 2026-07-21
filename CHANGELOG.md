@@ -2,6 +2,13 @@
 
 모든 주목할 만한 변경사항을 이 파일에 기록한다. [Semantic Versioning](https://semver.org/lang/ko/)을 따른다.
 
+## v0.17.2 - 2026-07-21
+
+### Fixed
+- 홈 `SINCE`/`TODAY`/`TOTAL`이 세로로 깨지던 문제 — `doc-meta-row`로 다시 한 줄 정렬.
+- Abacus 조회수 키가 한글 경로·슬래시를 포함해 CORS(308)로 실패하던 문제. Notion ID 또는 pathname SHA 해시(`^[A-Za-z0-9_\-.]{3,64}$`)만 사용.
+- about 본문 영문을 홈과 동일한 JetBrains Mono(`--font-display`)로 표시.
+
 ## v0.17.1 - 2026-07-21
 
 ### Changed

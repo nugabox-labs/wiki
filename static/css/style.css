@@ -489,12 +489,13 @@ html.code-linenumbers-on .code-line-no { display: inline-block; }
 
 .chip-row { display: flex; flex-wrap: wrap; gap: .5rem; margin: var(--space-3) 0; }
 
-/* about: match homepage webfonts (Inter / JetBrains Mono) */
+/* about: homepage English UI uses JetBrains Mono */
 .doc-article--about .prose,
 .doc-article--about .prose p,
 .doc-article--about .prose blockquote,
-.doc-article--about .prose strong {
-  font-family: var(--font-text);
+.doc-article--about .prose strong,
+.doc-article--about .prose a {
+  font-family: var(--font-display);
 }
 .doc-article--about .prose blockquote {
   color: var(--fg);

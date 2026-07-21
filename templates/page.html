@@ -15,7 +15,7 @@
               <div class="doc-meta-row">
                 {% if page.date %}<time datetime="{{ page.date | date('%Y-%m-%d') }}">{{ page.date | date('%Y-%m-%d') }}</time>{% endif %}
                 {% if page.updated and page.updated != page.date %}<span>업데이트 {{ page.updated | date('%Y-%m-%d') }}</span>{% endif %}
-                <span>조회수 <span id="page-view-count">&mdash;</span></span>
+                <span>조회수 <span id="page-view-count" data-view-key="{% if page.extra.notion_id %}{{ page.extra.notion_id }}{% endif %}">&mdash;</span></span>
               </div>
               {% if page.taxonomies.categories | length > 0 or page.tags | length > 0 %}
               <div class="doc-tags">

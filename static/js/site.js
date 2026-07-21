@@ -296,19 +296,35 @@ var showCopyToast = (function () {
 
 (function () {
   "use strict";
+  // Abacus keys: ^[A-Za-z0-9_\-.]{3,64}$ — no slashes/unicode (Korean paths break CORS via 308).
   var NAMESPACE = "wiki.nugabox.com";
+  var KEY_RE = /^[A-Za-z0-9_\-.]{3,64}$/;
 
   function hit(key, el) {
-    if (!el) return;
+    if (!el || !KEY_RE.test(key)) return;
     var url = "https://abacus.jasoncameron.dev/hit/" + encodeURIComponent(NAMESPACE) + "/" + encodeURIComponent(key);
     fetch(url)
-      .then(function (res) { return res.json(); })
+      .then(function (res) {
+        if (!res.ok) throw new Error("abacus " + res.status);
+        return res.json();
+      })
       .then(function (data) {
         el.textContent = Number(data.value).toLocaleString();
       })
       .catch(function () {
         el.textContent = "-";
       });
+  }
+
+  function pathToKey(path) {
+    return crypto.subtle.digest("SHA-256", new TextEncoder().encode(path)).then(function (buf) {
+      var bytes = new Uint8Array(buf);
+      var hex = "";
+      for (var i = 0; i < 16; i++) {
+        hex += bytes[i].toString(16).padStart(2, "0");
+      }
+      return "p." + hex;
+    });
   }
 
   var todayEl = document.getElementById("view-count-today");
@@ -325,7 +341,20 @@ var showCopyToast = (function () {
 
   var pageEl = document.getElementById("page-view-count");
   if (pageEl) {
-    var path = location.pathname.replace(/\/+$/, "") || "/";
-    hit("page" + path, pageEl);
+    var explicit = pageEl.getAttribute("data-view-key") || "";
+    if (KEY_RE.test(explicit)) {
+      hit(explicit, pageEl);
+    } else {
+      var path = location.pathname;
+      try {
+        path = decodeURIComponent(path);
+      } catch (e) { /* keep raw */ }
+      path = path.replace(/\/+$/, "") || "/";
+      pathToKey(path).then(function (key) {
+        hit(key, pageEl);
+      }).catch(function () {
+        pageEl.textContent = "-";
+      });
+    }
   }
 })();
