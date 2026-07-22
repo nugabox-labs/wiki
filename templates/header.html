@@ -9,7 +9,7 @@
   <link rel="apple-touch-icon" href="{{ base_url }}/app-icon.png">
   <meta name="apple-mobile-web-app-title" content="{{ site.title | e }}">
   <link rel="stylesheet" href="{{ base_url }}/fonts/jetendard/jetendard.css">
-  <link rel="stylesheet" href="{{ base_url }}/css/style.css?v=9">
+  <link rel="stylesheet" href="{{ base_url }}/css/style.css?v=20">
   {# Social preview always reads as a clean brand tagline, independent of each
      page's own title/description. These override tags precede og_all_tags's
      own og:title/og:description so link-preview parsers (which use the first
@@ -62,7 +62,7 @@
           </svg>
           <span class="brand-name">nugawiki<span class="brand-cursor" aria-hidden="true">_</span></span>
         </a>
-        <span class="topbar-desc">Archive of experience and knowledge</span>
+        <span class="topbar-desc"># archive of experience and knowledge</span>
         <button type="button" id="search-trigger-top" class="palette-trigger palette-trigger--top" aria-haspopup="dialog" aria-controls="search-modal">
           <svg class="palette-trigger-icon" viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="13.2" y1="13.2" x2="18" y2="18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
           <span>Search</span>
@@ -93,8 +93,9 @@
           <div class="sidebar-group">
             <ul class="sidebar-links">
               {% for sec in site.sections | sort_by("weight") %}
-              {% if sec.name != "" and sec.name != "posts" %}
-              <li><a href="{{ base_url }}{{ sec.url }}"{% if page.url == sec.url %} aria-current="page"{% endif %}><span class="sidebar-dot" aria-hidden="true"></span>{{ sec.title }}</a></li>
+              {% if sec.name != "" and sec.name != "posts" and sec.name != "docs" %}
+              {% set cat_url = get_taxonomy_url(kind="categories", term=sec.title) %}
+              <li><a href="{{ cat_url }}"{% if page.url == "/categories/" ~ sec.name ~ "/" %} aria-current="page"{% endif %}><span class="sidebar-dot" aria-hidden="true"></span>{{ sec.title }}</a></li>
               {% endif %}
               {% endfor %}
             </ul>

@@ -2,6 +2,130 @@
 
 모든 주목할 만한 변경사항을 이 파일에 기록한다. [Semantic Versioning](https://semver.org/lang/ko/)을 따른다.
 
+## v0.26.6 - 2026-07-22
+
+### Changed
+- 푸터 Hwaro 링크를 `https://hwaro.hahwul.com/` + `target="_blank"`로 변경.
+- 홈 카테고리 메타 문구 `N docs` → `N posts`.
+
+## v0.26.5 - 2026-07-22
+
+### Fixed
+- 모바일 홈: `docs-layout--short`가 본문을 ~68ch로 줄이던 문제 — 레이아웃을 block으로 바꿔 전체 너비 복구.
+
+### Changed
+- 홈 `$ ls pages_` / `$ ls ./categories_`: `_`를 accent·bold로.
+- `6 entries · N docs`를 `$ ls ./categories_`와 같은 줄 우측 정렬.
+
+## v0.26.4 - 2026-07-22
+
+### Changed
+- 홈 카테고리: `$ ls ./categories` 바로 아래에 `6 entries · N docs`만 표시(중복 `./categories —` 제거).
+
+## v0.26.3 - 2026-07-22
+
+### Fixed
+- docs 이전 후 `aliases`가 카테고리 `redirect_to`와 충돌해 `hwaro serve` 빌드가 실패하던 문제. alias 제거, 구 URL은 nginx 301(`/os/…` → `/docs/…`)로 처리.
+
+### Changed
+- 홈: about/posts/tags 위에 `$ ls pages_`, 카테고리 위에 `$ ls ./categories` 프롬프트 추가(`$` accent).
+
+## v0.26.2 - 2026-07-22
+
+### Changed
+- 홈 화면 태그라인(`기록되지 않은 것은…`) 아래 여백 축소.
+
+## v0.26.1 - 2026-07-22
+
+### Changed
+- 태그별 페이지 프롬프트를 `ls -al ./tags/{TERM}` → `ls ./tags/{TERM}`로 변경.
+
+## v0.26.0 - 2026-07-22
+
+### Changed
+- 위키 본문 URL을 `/docs/{slug}/`로 통일. 프롬프트는 `cat ./docs/$1` (`~/posts`는 기존 유지).
+- notion-sync가 Post가 아닌 글을 `content/docs/`에 저장하고, 구 카테고리 경로(`/os/…` 등)는 `aliases`로 리다이렉트.
+- 사이드바·홈 카테고리 목록에서 `docs` 섹션은 제외(카테고리는 계속 `/categories/…`).
+
+## v0.25.0 - 2026-07-22
+
+### Changed
+- 카테고리 정본 URL을 `/categories/{slug}/`(taxonomy)로 통일. 사이드바·홈 카드가 글 칩(`/BACK-END`)과 같은 경로로 진입.
+- 섹션 목록(`/back-end/` 등)은 taxonomy로 `redirect_to`; notion-sync가 고정 카테고리 `_index`에 redirect를 유지.
+- 카테고리 taxonomy 페이지: 섹션 설명·태그 필터·`paginate_by = 20` 페이징을 섹션 목록과 맞춤.
+
+## v0.24.1 - 2026-07-22
+
+### Changed
+- 태그별 페이지 필터: `전체` 대신 현재 태그(`#DID` 등)를 활성 칩으로 두고, 나머지 칩에서 현재 태그는 중복 표시하지 않음.
+
+## v0.24.0 - 2026-07-22
+
+### Added
+- 태그별 페이지에 카테고리와 동일한 태그 필터 바 — 현재 목록(해당 페이지)에 나온 글들의 태그만 칩으로 표시·필터.
+
+## v0.23.0 - 2026-07-22
+
+### Changed
+- tags 전체/태그별 프롬프트를 `ls -al ./tags`, `ls -al ./tags/{TERM}`로 변경.
+- 태그별 페이지: 타이틀 커서(`_`), 설명 `"TERM" 태그가 붙은 문서` + 포스트 수, 카테고리와 동일한 페이징(`paginate_by = 20`).
+
+## v0.22.1 - 2026-07-22
+
+### Changed
+- posts·categories·태그별 목록 프롬프트를 `find` → `ls`로 되돌림.
+
+## v0.22.0 - 2026-07-22
+
+### Changed
+- about: `made by` 아래 중간 너비 구분선, 소개 블록을 `$ whoami` / `printenv` / `cat` 셸 출력 톤으로 변경(링크 유지).
+
+## v0.21.10 - 2026-07-22
+
+### Changed
+- posts·categories·태그별 목록 프롬프트를 `find …`로 변경(`-type f` 없음). tags 전체 목록만 `ls -al` 유지.
+
+## v0.21.9 - 2026-07-22
+
+### Fixed
+- 본문 `#`/`##`/`###` 제목 위 여백 확대 — 앞 단락·목록과 붙지 않도록 padding으로 확보.
+
+## v0.21.8 - 2026-07-22
+
+### Changed
+- 태그별·posts 목록 프롬프트를 `ls -al …`로 통일, 태그별 글 목록 마크업을 카테고리와 동일하게 맞춤.
+
+## v0.21.7 - 2026-07-22
+
+### Changed
+- tags 목록을 `ls -al` 스타일(권한·owner·size·날짜·`#tag`)로 표시.
+
+## v0.21.6 - 2026-07-22
+
+### Changed
+- `~/…` 메뉴 프롬프트를 `cd ~/main|about|posts`·`cat ~/.env`로 변경.
+- 카테고리 목록은 `ls -al ./categories/{name}`, 글은 `cat ./categories/{name}/$1` (제목 대신 `$1`).
+
+## v0.21.5 - 2026-07-22
+
+### Fixed
+- home·about·env에서 main 컬럼이 사이드바보다 짧아지던 문제 — 레이아웃 높이를 사이드바에 맞춰 stretch.
+
+## v0.21.4 - 2026-07-22
+
+### Changed
+- 상단 프롬프트를 사이드바 메뉴에 맞춤: `cat ~/about`·`~/posts`·`~/.env`, 태그는 `./categories --tags`.
+
+## v0.21.3 - 2026-07-22
+
+### Changed
+- 헤더 설명을 `# archive of experience and knowledge` 소문자 주석 톤으로 변경.
+
+## v0.21.2 - 2026-07-22
+
+### Added
+- 홈 타이틀 위에 `nuga@nugawiki: $ cat ~/main` 프롬프트 표시.
+
 ## v0.21.1 - 2026-07-22
 
 ### Added

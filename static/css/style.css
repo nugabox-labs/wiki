@@ -128,10 +128,31 @@ h4 {
 }
 
 /* 본문(.prose) 안의 # ~ ### 는 문서 제목(h1)과 별개로, 위계는 유지하되
-   한 단계씩 작게 — 안 그러면 본문 소제목이 문서 제목과 같은 크기로 보인다. */
-.prose h1 { font-size: var(--text-xl); }
-.prose h2 { font-size: var(--text-lg); }
-.prose h3 { font-size: var(--text-base); }
+   한 단계씩 작게 — 안 그러면 본문 소제목이 문서 제목과 같은 크기로 보인다.
+   위쪽 여백은 padding으로 확보해 앞 단락·목록과 margin collapse되지 않게 한다. */
+.prose h1 {
+  font-size: var(--text-xl);
+  margin: var(--space-5) 0 var(--space-3);
+  padding-top: var(--space-5);
+}
+.prose h2 {
+  font-size: var(--text-lg);
+  margin: var(--space-5) 0 var(--space-3);
+  padding-top: var(--space-5);
+}
+.prose h3 {
+  font-size: var(--text-base);
+  margin: var(--space-4) 0 var(--space-2);
+  padding-top: var(--space-4);
+}
+.prose h4 {
+  margin: var(--space-3) 0 var(--space-2);
+  padding-top: var(--space-3);
+}
+.prose > :is(h1, h2, h3, h4):first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
 
 /* 글 포스트 본문(단락·목록)만 한 단계 축소 — 제목·사이드바·./on-this-page·about 제외 */
 .doc-article:not(.doc-article--about):not(.doc-article--section) .prose p,
@@ -342,6 +363,7 @@ html.code-linenumbers-on .code-line-no { display: inline-block; }
   font-size: var(--text-xs);
   color: var(--muted);
   white-space: nowrap;
+  opacity: .85;
 }
 
 .nav-toggle {
@@ -367,38 +389,31 @@ html.code-linenumbers-on .code-line-no { display: inline-block; }
   width: 100%;
   min-width: 0;
 }
-/* Short pages (home / about / env): layout height follows main content.
-   Sidebar is taken out of flow so it cannot inflate the page, then the
-   inner rail sticks while scrolling. Dashed divider spans full content. */
+/* Short pages (home / about / env): keep footer after content, but stretch
+   the main column to at least the sidebar height so the rail/divider never
+   outruns the page body (env used to end mid-sidebar). */
 .docs-layout--short {
-  position: relative;
-  display: block;
   flex: 0 1 auto;
-  padding-left: var(--sidebar-w);
+  align-items: stretch;
 }
 .docs-layout--short .sidebar {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: var(--sidebar-w);
-  height: auto;
-  max-height: none;
-  margin-bottom: 0;
-  overflow: visible;
-  border-right: 1px dashed var(--border-strong);
-}
-.docs-layout--short .sidebar-inner {
   position: sticky;
   top: var(--topbar-h);
-  max-height: calc(100vh - var(--topbar-h));
-  overflow-y: auto;
+  height: auto;
+  max-height: none;
+  overflow: visible;
   scrollbar-width: none;
 }
-.docs-layout--short .sidebar-inner::-webkit-scrollbar { display: none; }
+.docs-layout--short .sidebar::-webkit-scrollbar { display: none; }
 .docs-layout--short .docs-main {
-  width: 100%;
-  box-sizing: border-box;
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+.docs-layout--short .doc-columns,
+.docs-layout--short .doc-article {
+  flex: 1 1 auto;
 }
 
 .sidebar {
@@ -586,12 +601,34 @@ html.code-linenumbers-on .code-line-no { display: inline-block; }
   font-family: var(--font-mono);
   font-weight: 600;
 }
+.doc-article--about .about-divider {
+  border: none;
+  border-top: 1px dashed var(--border-strong);
+  width: min(28ch, 55%);
+  margin: var(--space-3) 0 var(--space-4);
+}
+.doc-article--about .about-shell {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  margin: 0 0 var(--space-2);
+}
+.doc-article--about .about-shell-cmd {
+  color: var(--muted);
+  margin: var(--space-3) 0 .2rem;
+}
+.doc-article--about .about-shell-cmd:first-child { margin-top: 0; }
+.doc-article--about .about-shell-out {
+  color: var(--fg);
+  margin: 0 0 0 1.1em;
+}
 .doc-article--about .about-ls-cmd {
   font-family: var(--font-mono);
   font-size: var(--text-sm);
   color: var(--muted);
-  margin: var(--space-3) 0 var(--space-2);
+  margin: var(--space-4) 0 var(--space-2);
 }
+.doc-article--about .about-shell-cmd .about-key { color: var(--muted); }
+.doc-article--about .about-shell-cmd .about-key-us { color: var(--accent); }
 .doc-article--about .about-ascii {
   font-family: var(--font-mono);
   font-size: clamp(.55rem, 1.55vw, .82rem);
@@ -613,14 +650,6 @@ html.code-linenumbers-on .code-line-no { display: inline-block; }
 }
 .doc-article--about .about-key-us {
   color: var(--accent);
-}
-.doc-article--about .about-intro {
-  list-style: disc;
-  padding-left: 1.25rem;
-  margin: var(--space-2) 0 var(--space-3);
-}
-.doc-article--about .about-intro li + li {
-  margin-top: .25rem;
 }
 
 /* ---- ~/.env settings page ------------------------------------------------------------- */
@@ -804,6 +833,44 @@ html.code-linenumbers-on .code-line-no { display: inline-block; }
 .term-back a { color: var(--muted); text-decoration: none; }
 .term-back a:hover { color: var(--accent); }
 
+.ls-listing {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: 1.55;
+  margin: var(--space-3) 0 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.ls-total {
+  color: var(--muted);
+  margin: 0 0 var(--space-2);
+}
+.ls-row {
+  display: grid;
+  grid-template-columns: 10ch 2ch 5ch 5ch 4ch 12ch minmax(8ch, 1fr);
+  column-gap: .85ch;
+  align-items: baseline;
+  white-space: nowrap;
+  color: var(--muted);
+  padding: .05rem 0;
+}
+.ls-row--meta .ls-name { color: var(--muted); }
+.ls-mode { color: var(--fg); }
+.ls-size {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  font-weight: 600;
+}
+.ls-date { color: var(--muted); }
+.ls-name {
+  color: var(--accent);
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+a.ls-name:hover { text-decoration: underline; }
+
 /* ---- Home: terminal hero (signature-adjacent, sets up the spec strip) ------------------ */
 
 .terminal-block {
@@ -859,18 +926,58 @@ html.code-linenumbers-on .code-line-no { display: inline-block; }
   font-weight: 600;
   color: var(--muted);
   max-width: 58ch;
-  margin-bottom: var(--space-5);
+  margin-bottom: 0;
 }
 .lede-break { display: none; }
 .prose--home { max-width: 68ch; }
 
 /* ---- Home: inventory cards ----------------------------------------------------------------- */
 
-.inventory-grid { margin-top: var(--space-6); margin-bottom: var(--space-5); }
+.inventory-grid { margin-top: var(--space-6); margin-bottom: var(--space-5); width: 100%; max-width: none; }
+.home-ls-cmd {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--muted);
+  margin: var(--space-4) 0 var(--space-2);
+  max-width: none;
+}
+.home-ls-us {
+  color: var(--accent);
+  font-weight: 700;
+}
+.home-ls-cmd--bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+.home-ls-cmd-main { min-width: 0; }
+.home-ls-cmd-meta {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.inventory-grid > .home-ls-cmd {
+  margin-top: 0;
+}
+.docs-main--short > .topic-path,
+.docs-main--short > .hero-lede,
+.docs-main--short > .doc-meta,
+.docs-main--short > .chip-row,
+.docs-main--short > .inventory-grid {
+  max-width: none;
+  width: 100%;
+}
 .hero-divider {
   border: none;
   border-top: 1px dashed var(--border-strong);
-  margin: var(--space-4) 0;
+  margin: var(--space-2) 0 var(--space-4);
+  max-width: none;
+  width: 100%;
 }
 
 .section-kicker {
@@ -1061,8 +1168,10 @@ html.code-linenumbers-on .code-line-no { display: inline-block; }
     z-index: 25;
   }
   .sidebar-backdrop[hidden] { display: none; }
+  .docs-layout,
   .docs-layout--short {
-    padding-left: 0;
+    display: block;
+    align-items: stretch;
   }
   .sidebar,
   .docs-layout--short .sidebar {
@@ -1080,11 +1189,12 @@ html.code-linenumbers-on .code-line-no { display: inline-block; }
     border-right: 1px solid var(--border-strong);
     overflow-y: auto;
   }
-  .docs-layout--short .sidebar-inner {
-    position: static;
-    max-height: none;
-    overflow: visible;
-    scrollbar-width: thin;
+  .docs-layout--short .docs-main,
+  .docs-layout--short .doc-columns,
+  .docs-layout--short .doc-article {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: none;
   }
   .sidebar.is-open { transform: translateX(0); }
   .docs-main { padding: var(--space-5) var(--space-4) var(--space-6); }

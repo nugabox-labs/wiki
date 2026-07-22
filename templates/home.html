@@ -1,11 +1,11 @@
 {% include "header.html" %}
       <main id="main" class="docs-main docs-main--short">
+        <p class="topic-path"><span class="topic-path-user">nuga@nugawiki</span><span class="topic-path-colon">:</span> <span class="topic-path-prompt">$</span> cd ~/main</p>
         <h1 class="hero-title hero-title--home">{{ page.title }}<span class="brand-cursor" aria-hidden="true">_</span></h1>
         {% if page.description %}<p class="hero-lede">{{ page.description }}</p>{% endif %}
         <hr class="hero-divider" aria-hidden="true">
 
-        {% set post_pages_count = get_section(path="posts").pages_count %}
-        {% set total_docs = (site.sections | sum(attribute="pages_count")) - post_pages_count %}
+        {% set total_docs = get_section(path="docs").pages_count %}
         <div class="doc-meta">
           <div class="doc-meta-row">
             <span>SINCE 2019</span>
@@ -16,6 +16,7 @@
           </div>
         </div>
 
+        <p class="home-ls-cmd"><span class="prompt-glyph" aria-hidden="true">$</span> ls pages<span class="home-ls-us" aria-hidden="true">_</span></p>
         <div class="chip-row">
           <a class="tag-chip" href="{{ base_url }}/about/">about</a>
           <a class="tag-chip" href="{{ base_url }}/posts/">posts</a>
@@ -23,12 +24,16 @@
         </div>
 
         {% if site.sections | length > 0 %}
+        {% set cats_tax = get_taxonomy(kind="categories") %}
         <section class="inventory-grid" aria-label="카테고리">
-          <p class="section-kicker">./categories &mdash; {{ (site.sections | length) - 1 }} entries &middot; {{ total_docs }} posts</p>
+          <p class="home-ls-cmd home-ls-cmd--bar">
+            <span class="home-ls-cmd-main"><span class="prompt-glyph" aria-hidden="true">$</span> ls ./categories<span class="home-ls-us" aria-hidden="true">_</span></span>
+            <span class="home-ls-cmd-meta">6 entries &middot; {{ total_docs }} posts</span>
+          </p>
           <div class="inv-cards">
             {% for sec in site.sections | sort_by("weight") %}
-            {% if sec.name != "" and sec.name != "posts" %}
-            <a class="inv-card" href="{{ base_url }}{{ sec.url }}">
+            {% if sec.name != "" and sec.name != "posts" and sec.name != "docs" %}
+            <a class="inv-card" href="{{ get_taxonomy_url(kind='categories', term=sec.title) }}">
               <span class="inv-card-top">
                 <span class="inv-card-host">
                   {% if sec.name == "os" %}
@@ -46,7 +51,7 @@
                   {% endif %}
                   {{ sec.title }}
                 </span>
-                <span class="inv-card-kind">{{ sec.pages_count }} posts</span>
+                <span class="inv-card-kind">{% for term in cats_tax.items %}{% if term.name == sec.title %}{{ term.count }} posts{% endif %}{% endfor %}</span>
               </span>
               {% if sec.description %}<span class="inv-card-desc">{{ sec.description | truncate_words(16) }}</span>{% endif %}
             </a>

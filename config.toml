@@ -27,10 +27,12 @@ per_page = 20
 [[taxonomies]]
 name = "categories"
 feed = true
+paginate_by = 20
 
 [[taxonomies]]
 name = "tags"
 feed = true
+paginate_by = 20
 
 [sitemap]
 enabled = true

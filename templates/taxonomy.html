@@ -1,21 +1,59 @@
 {% include "header.html" %}
       <main id="main" class="docs-main">
         <article class="doc-article">
-          <p class="topic-path"><span class="topic-path-user">nuga@nugawiki</span><span class="topic-path-colon">:</span> <span class="topic-path-prompt">$</span> cat ./{{ taxonomy_name }}</p>
+          <p class="topic-path"><span class="topic-path-user">nuga@nugawiki</span><span class="topic-path-colon">:</span> <span class="topic-path-prompt">$</span> {% if taxonomy_name == "tags" %}ls -al ./tags{% else %}ls ./categories{% endif %}</p>
           <h1>{% if taxonomy_name == "tags" %}tags{% else %}카테고리{% endif %}<span class="brand-cursor" aria-hidden="true">_</span></h1>
           <p class="doc-dek">{% if taxonomy_name == "tags" %}문서에 사용된 태그 목록입니다.{% else %}문서를 분류하는 카테고리 목록입니다.{% endif %}</p>
           <hr class="doc-divider" aria-hidden="true">
           {% set tax = get_taxonomy(kind=taxonomy_name) %}
+          {% if taxonomy_name == "tags" %}
+          {% set tag_items = tax.items | sort_by("name") %}
+          <div class="ls-listing" role="table" aria-label="태그 목록">
+            <p class="ls-total">total {{ tag_items | length }}</p>
+            <div class="ls-row ls-row--meta" role="row">
+              <span class="ls-mode">drwxr-xr-x</span>
+              <span class="ls-nlink">{{ tag_items | length }}</span>
+              <span class="ls-owner">nuga</span>
+              <span class="ls-group">staff</span>
+              <span class="ls-size">{{ tag_items | length }}</span>
+              <span class="ls-date">—</span>
+              <span class="ls-name">.</span>
+            </div>
+            <div class="ls-row ls-row--meta" role="row">
+              <span class="ls-mode">drwxr-xr-x</span>
+              <span class="ls-nlink">1</span>
+              <span class="ls-owner">nuga</span>
+              <span class="ls-group">staff</span>
+              <span class="ls-size">—</span>
+              <span class="ls-date">—</span>
+              <a class="ls-name" href="{{ base_url }}/">..</a>
+            </div>
+            {% for term in tag_items %}
+              {% set n = term.pages | length %}
+              {% set latest_pages = term.pages | sort_by("date") | reverse %}
+              <div class="ls-row" role="row">
+                <span class="ls-mode">-rw-r--r--</span>
+                <span class="ls-nlink">1</span>
+                <span class="ls-owner">nuga</span>
+                <span class="ls-group">staff</span>
+                <span class="ls-size">{{ n }}</span>
+                <span class="ls-date">{% if latest_pages | length > 0 %}{{ latest_pages[0].date | date('%b %d %H:%M') }}{% else %}—{% endif %}</span>
+                <a class="ls-name" href="{{ get_taxonomy_url(kind=taxonomy_name, term=term.name) }}">#{{ term.name }}</a>
+              </div>
+            {% endfor %}
+          </div>
+          {% else %}
           <ul class="term-list">
             {% for term in tax.items | sort_by("name") %}
               {% set n = term.pages | length %}
               <li class="term-row">
-                <a class="term-link" href="{{ get_taxonomy_url(kind=taxonomy_name, term=term.name) }}">{% if taxonomy_name == "tags" %}#{% else %}/{% endif %}{{ term.name }}</a>
+                <a class="term-link" href="{{ get_taxonomy_url(kind=taxonomy_name, term=term.name) }}">/{{ term.name }}</a>
                 <span class="term-rule" aria-hidden="true"></span>
                 <span class="term-count">{{ n }}개 문서</span>
               </li>
             {% endfor %}
           </ul>
+          {% endif %}
           {% include "partials/ad-slot.html" %}
         </article>
       </main>

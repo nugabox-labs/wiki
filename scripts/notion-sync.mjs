@@ -39,6 +39,8 @@ const notion = new Client({ auth: NOTION_TOKEN });
 // 카테고리는 Notion의 "카테고리" 속성이 아니라, 태그를 이 고정된
 // 6개 카테고리로 분류해서 결정한다(사이트 구조를 고정하기 위함).
 // weight는 홈/사이드바에 노출되는 순서.
+// 실제 Markdown 파일은 docs/(또는 posts/)에 두고, 카테고리 폴더는
+// taxonomy 목록(/categories/{slug}/)으로의 redirect _index만 유지한다.
 
 const FIXED_CATEGORIES = [
   { name: "OS", slug: "os", description: "운영체제 관련", weight: 1 },
@@ -51,6 +53,14 @@ const FIXED_CATEGORIES = [
 // POSTS는 사이드바 "./categories" 목록에는 노출되지 않는 별도 대분류.
 // Notion "카테고리" 속성 값이 "Post"인 페이지만 태그와 무관하게 여기로 분류된다.
 const POST_CATEGORY = { name: "posts", slug: "posts", description: "", weight: 100 };
+// 위키 본문은 카테고리 폴더가 아니라 공통 docs/ 아래에 둔다.
+// (다중 카테고리여도 URL·프롬프트가 ./docs/$1 로 통일됨)
+const DOCS_SECTION = {
+  name: "docs",
+  slug: "docs",
+  description: "위키 문서",
+  weight: 50,
+};
 const ALL_CATEGORIES = [...FIXED_CATEGORIES, POST_CATEGORY];
 const CATEGORY_BY_NAME = new Map(ALL_CATEGORIES.map((c) => [c.name, c]));
 const CATEGORY_ORDER = FIXED_CATEGORIES.map((c) => c.name);
@@ -412,11 +422,21 @@ async function main() {
     process.exit(1);
   }
 
-  console.log("[notion-sync] 고정 카테고리 섹션을 갱신합니다...");
+  console.log("[notion-sync] 고정 카테고리·docs 섹션을 갱신합니다...");
   for (const cat of ALL_CATEGORIES) {
     const indexPath = path.join(CONTENT_DIR, cat.slug, "_index.md");
     await mkdir(path.dirname(indexPath), { recursive: true });
-    const indexMd = `+++\ntitle = ${tomlString(cat.name)}\ndescription = ${tomlString(cat.description)}\nsort_by = "date"\nweight = ${cat.weight}\npaginate = 20\n\n[extra]\nsource = "fixed-category"\n+++\n`;
+    const redirectLine =
+      cat.slug === POST_CATEGORY.slug
+        ? ""
+        : `redirect_to = ${tomlString(`/categories/${cat.slug}/`)}\n`;
+    const indexMd = `+++\ntitle = ${tomlString(cat.name)}\ndescription = ${tomlString(cat.description)}\nsort_by = "date"\nweight = ${cat.weight}\npaginate = 20\n${redirectLine}\n[extra]\nsource = "fixed-category"\n+++\n`;
+    await writeFile(indexPath, indexMd, "utf8");
+  }
+  {
+    const indexPath = path.join(CONTENT_DIR, DOCS_SECTION.slug, "_index.md");
+    await mkdir(path.dirname(indexPath), { recursive: true });
+    const indexMd = `+++\ntitle = ${tomlString(DOCS_SECTION.name)}\ndescription = ${tomlString(DOCS_SECTION.description)}\nsort_by = "date"\nweight = ${DOCS_SECTION.weight}\npaginate = 20\n\n[extra]\nsource = "docs-section"\n+++\n`;
     await writeFile(indexPath, indexMd, "utf8");
   }
 
@@ -451,12 +471,13 @@ async function main() {
     const version = getPlainText(props, PROP.version);
     const externalUrl = getUrl(props, PROP.externalUrl);
 
-    const categoryDir = CATEGORY_BY_NAME.get(categories[0]).slug;
+    const isPost = categories[0] === POST_CATEGORY.name;
+    const contentDir = isPost ? POST_CATEGORY.slug : DOCS_SECTION.slug;
     let slug = slugify(title, page.id.slice(0, 8));
-    let relPath = path.join(categoryDir, `${slug}.md`);
+    let relPath = path.join(contentDir, `${slug}.md`);
     if (usedPaths.has(relPath)) {
       slug = `${slug}-${page.id.slice(0, 8)}`;
-      relPath = path.join(categoryDir, `${slug}.md`);
+      relPath = path.join(contentDir, `${slug}.md`);
     }
     usedPaths.add(relPath);
 
@@ -470,7 +491,8 @@ async function main() {
       updated,
       version,
       externalUrl,
-      categoryDir,
+      contentDir,
+      slug,
       relPath,
     });
   }

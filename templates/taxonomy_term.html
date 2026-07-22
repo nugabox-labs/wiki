@@ -1,33 +1,93 @@
 {% include "header.html" %}
       <main id="main" class="docs-main">
         <article class="doc-article">
-          <p class="topic-path"><span class="topic-path-user">nuga@nugawiki</span><span class="topic-path-colon">:</span> <span class="topic-path-prompt">$</span> cat ./{{ taxonomy_name }}/{{ taxonomy_term }}</p>
-          <h1>{% if taxonomy_name == "tags" %}#{% else %}/{% endif %}{{ taxonomy_term }}</h1>
-          <p class="doc-dek">&ldquo;{{ taxonomy_term }}&rdquo; {% if taxonomy_name == "tags" %}태그가 붙은{% else %}카테고리의{% endif %} 문서입니다.</p>
+          <p class="topic-path"><span class="topic-path-user">nuga@nugawiki</span><span class="topic-path-colon">:</span> <span class="topic-path-prompt">$</span> {% if taxonomy_name == "tags" %}ls ./tags/{{ taxonomy_term }}{% else %}ls ./categories/{{ taxonomy_term }}{% endif %}</p>
+          <h1>{% if taxonomy_name == "tags" %}#{% else %}/{% endif %}{{ taxonomy_term }}<span class="brand-cursor" aria-hidden="true">_</span></h1>
+          {% set tax = get_taxonomy(kind=taxonomy_name) %}
+          {% for term in tax.items %}
+          {% if term.name == taxonomy_term %}
+          {% if taxonomy_name == "categories" %}
+          {% set cat_sec = get_section(path=term.slug) %}
+          {% endif %}
+          <p class="doc-dek">
+            {% if taxonomy_name == "categories" and cat_sec and cat_sec.description %}
+            <span class="doc-dek-text">{{ cat_sec.description }}</span>
+            {% elif taxonomy_name == "tags" %}
+            <span class="doc-dek-text">&ldquo;{{ taxonomy_term }}&rdquo; 태그가 붙은 문서</span>
+            {% else %}
+            <span class="doc-dek-text">&ldquo;{{ taxonomy_term }}&rdquo; 카테고리의 문서</span>
+            {% endif %}
+            {% if term.count %}<span class="doc-dek-sep" aria-hidden="true">&middot;</span><span class="doc-dek-count">{{ term.count }} posts</span>{% endif %}
+          </p>
           <hr class="doc-divider" aria-hidden="true">
-          <ol class="doc-index">
-            {% set tax = get_taxonomy(kind=taxonomy_name) %}
-            {% for term in tax.items %}
-              {% if term.name == taxonomy_term %}
-                {% for p in term.pages | sort_by("date") | reverse %}
-                <li>
-                  <a href="{{ base_url }}{{ p.url }}">
-                    <span class="doc-index-body">
-                      <span class="doc-index-title">{{ p.title }}</span>
-                      {% if p.description %}<span class="doc-index-desc">{{ p.description | truncate_words(20) }}</span>{% endif %}
-                    </span>
-                    <span class="doc-index-meta">
-                      {% if p.tags | length > 0 %}
-                      <span class="doc-index-tags">{% for t in p.tags %}<span class="tag-chip-mini">#{{ t }}</span>{% endfor %}</span>
-                      {% endif %}
-                      <span class="doc-index-watts">{% if p.date %}{{ p.date | date('%Y-%m-%d') }}{% endif %}</span>
-                    </span>
-                  </a>
-                </li>
-                {% endfor %}
-              {% endif %}
+
+          {% if taxonomy_name == "tags" %}
+          <div class="tag-filter-bar" id="tag-filter-bar" role="group" aria-label="태그로 필터" data-current-tag="{{ taxonomy_term }}" hidden></div>
+          {% else %}
+          <div class="tag-filter-bar" id="tag-filter-bar" role="group" aria-label="태그로 필터" hidden></div>
+          {% endif %}
+
+          {% if paginator %}
+          {% set page_start = (paginator.current_index - 1) * paginator.paginate_by %}
+          {% set page_end = page_start + paginator.paginate_by %}
+          {% set sorted_pages = term.pages | sort_by("date") | reverse %}
+          <ol class="doc-index" id="doc-index-list">
+            {% for p in sorted_pages %}
+            {% if loop.index0 >= page_start and loop.index0 < page_end %}
+            <li data-tags="{% for t in p.tags %}{{ t }}{% if not loop.last %},{% endif %}{% endfor %}">
+              <a href="{{ base_url }}{{ p.url }}">
+                <span class="doc-index-main">
+                  <span class="doc-index-title">{{ p.title }}</span>
+                  {% if p.description %}<span class="doc-index-desc">{{ p.description | truncate_words(20) }}</span>{% endif %}
+                </span>
+                {% if p.tags | length > 0 %}
+                <span class="doc-index-tags">{% for t in p.tags %}<span class="tag-chip-mini">#{{ t }}</span>{% endfor %}</span>
+                {% endif %}
+                <span class="doc-index-watts">{% if p.date %}{{ p.date | date('%Y-%m-%d') }}{% endif %}</span>
+              </a>
+            </li>
+            {% endif %}
             {% endfor %}
           </ol>
+          {% else %}
+          <ol class="doc-index" id="doc-index-list">
+            {% for p in term.pages | sort_by("date") | reverse %}
+            <li data-tags="{% for t in p.tags %}{{ t }}{% if not loop.last %},{% endif %}{% endfor %}">
+              <a href="{{ base_url }}{{ p.url }}">
+                <span class="doc-index-main">
+                  <span class="doc-index-title">{{ p.title }}</span>
+                  {% if p.description %}<span class="doc-index-desc">{{ p.description | truncate_words(20) }}</span>{% endif %}
+                </span>
+                {% if p.tags | length > 0 %}
+                <span class="doc-index-tags">{% for t in p.tags %}<span class="tag-chip-mini">#{{ t }}</span>{% endfor %}</span>
+                {% endif %}
+                <span class="doc-index-watts">{% if p.date %}{{ p.date | date('%Y-%m-%d') }}{% endif %}</span>
+              </a>
+            </li>
+            {% endfor %}
+          </ol>
+          {% endif %}
+          <p class="doc-index-empty" id="doc-index-empty" hidden>일치하는 문서가 없습니다.</p>
+          {% endif %}
+          {% endfor %}
+
+          {% if paginator and paginator.number_pagers > 1 %}
+          {% set percent = (paginator.current_index / paginator.number_pagers * 100) | round | int %}
+          <nav class="pager" aria-label="페이지 이동">
+            {% if paginator.previous %}
+            <a class="pager-link pager-prev" href="{{ paginator.previous }}">&larr; prev</a>
+            {% else %}
+            <span class="pager-link pager-link--disabled">&larr; prev</span>
+            {% endif %}
+            <span class="pager-status">page {{ paginator.current_index }}/{{ paginator.number_pagers }} ({{ percent }}%)</span>
+            {% if paginator.next %}
+            <a class="pager-link pager-next" href="{{ paginator.next }}">next &rarr;</a>
+            {% else %}
+            <span class="pager-link pager-link--disabled">next &rarr;</span>
+            {% endif %}
+          </nav>
+          {% endif %}
+
           <p class="term-back"><a href="{{ base_url }}/{{ taxonomy_name }}/"><span aria-hidden="true">&larr;</span> 전체 {% if taxonomy_name == "tags" %}태그{% else %}카테고리{% endif %}</a></p>
         </article>
       </main>

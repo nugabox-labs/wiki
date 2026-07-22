@@ -3,9 +3,13 @@
         <div class="doc-columns">
           <article class="doc-article{% if page.extra.topic_path == 'about' %} doc-article--about{% endif %}">
             {% if page.section %}
-            <p class="topic-path"><span class="topic-path-user">nuga@nugawiki</span><span class="topic-path-colon">:</span> <span class="topic-path-prompt">$</span> cat ./{% if page.section == "posts" %}posts{% else %}categories/{{ page.section }}{% endif %}</p>
+            <p class="topic-path"><span class="topic-path-user">nuga@nugawiki</span><span class="topic-path-colon">:</span> <span class="topic-path-prompt">$</span> {% if page.section == "posts" %}cat ~/posts/$1{% elif page.section == "docs" %}cat ./docs/$1{% else %}cat ./{{ page.section }}/$1{% endif %}</p>
+            {% elif page.extra.topic_path == 'about' %}
+            <p class="topic-path"><span class="topic-path-user">nuga@nugawiki</span><span class="topic-path-colon">:</span> <span class="topic-path-prompt">$</span> cd ~/about</p>
+            {% elif page.extra.topic_path == 'env' %}
+            <p class="topic-path"><span class="topic-path-user">nuga@nugawiki</span><span class="topic-path-colon">:</span> <span class="topic-path-prompt">$</span> cat ~/.env</p>
             {% elif page.extra.topic_path %}
-            <p class="topic-path"><span class="topic-path-user">nuga@nugawiki</span><span class="topic-path-colon">:</span> <span class="topic-path-prompt">$</span> cat ./{{ page.extra.topic_path }}</p>
+            <p class="topic-path"><span class="topic-path-user">nuga@nugawiki</span><span class="topic-path-colon">:</span> <span class="topic-path-prompt">$</span> cd ./{{ page.extra.topic_path }}</p>
             {% endif %}
             <h1>{{ page.title }}{% if page.extra.title_cursor %}<span class="brand-cursor" aria-hidden="true">_</span>{% endif %}</h1>
             {% if page.description %}

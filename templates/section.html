@@ -4,7 +4,7 @@
       {% set full_section = get_section(path=section_slug) %}
       <main id="main" class="docs-main">
         <article class="doc-article doc-article--section">
-          <p class="topic-path"><span class="topic-path-user">nuga@nugawiki</span><span class="topic-path-colon">:</span> <span class="topic-path-prompt">$</span> cat ./{% if section.title == "posts" or page.url == "/posts/" or page.url == "/posts" %}posts{% else %}categories{% endif %}</p>
+          <p class="topic-path"><span class="topic-path-user">nuga@nugawiki</span><span class="topic-path-colon">:</span> <span class="topic-path-prompt">$</span> {% if section.title == "posts" or page.url == "/posts/" or page.url == "/posts" %}ls ~/posts{% elif section_slug == "docs" or page.url == "/docs/" or page.url == "/docs" %}ls ./docs{% else %}ls ./categories/{{ section_slug }}{% endif %}</p>
           <h1>{{ page.title }}<span class="brand-cursor" aria-hidden="true">_</span></h1>
           {% if page.description or full_section.pages_count %}
           <p class="doc-dek">

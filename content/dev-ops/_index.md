@@ -4,6 +4,7 @@ description = "개발 배포 및 운영 관련"
 sort_by = "date"
 weight = 5
 paginate = 20
+redirect_to = "/categories/dev-ops/"
 
 [extra]
 source = "fixed-category"

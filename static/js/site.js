@@ -41,6 +41,7 @@
   var empty = document.getElementById("doc-index-empty");
   if (!bar || !list) return;
 
+  var currentTag = (bar.getAttribute("data-current-tag") || "").trim();
   var items = Array.prototype.slice.call(list.querySelectorAll("li[data-tags]"));
   var tags = [];
   items.forEach(function (li) {
@@ -48,7 +49,11 @@
       if (t && tags.indexOf(t) === -1) tags.push(t);
     });
   });
-  if (tags.length === 0) return;
+  if (currentTag) {
+    tags = tags.filter(function (t) { return t !== currentTag; });
+  } else if (tags.length === 0) {
+    return;
+  }
   tags.sort(function (a, b) { return a.localeCompare(b); });
 
   function setActive(button) {
@@ -70,7 +75,7 @@
   var allBtn = document.createElement("button");
   allBtn.type = "button";
   allBtn.className = "tag-filter-chip is-active";
-  allBtn.textContent = "전체";
+  allBtn.textContent = currentTag ? "#" + currentTag : "전체";
   allBtn.addEventListener("click", function () {
     setActive(allBtn);
     applyFilter(null);
