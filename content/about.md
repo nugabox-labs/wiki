@@ -23,8 +23,8 @@ topic_path = "about"
 <hr class="about-divider" aria-hidden="true">
 
 <div class="about-shell">
-  <p class="about-shell-cmd"><span class="prompt-glyph" aria-hidden="true">$</span> whoami --<span class="about-key">jobs<span class="about-key-us">_</span></span></p>
-  <p class="about-shell-out">Web/Mobile Application Developer</p>
+  <p class="about-shell-cmd"><span class="prompt-glyph" aria-hidden="true">$</span> whoami --<span class="about-key">role<span class="about-key-us">_</span></span></p>
+  <p class="about-shell-out">Web/iOS Developer</p>
 
   <p class="about-shell-cmd"><span class="prompt-glyph" aria-hidden="true">$</span> printenv <span class="about-key">mbti<span class="about-key-us">_</span></span></p>
   <p class="about-shell-out"><code>INTJ</code></p>
