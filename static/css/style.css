@@ -933,7 +933,7 @@ a.ls-name:hover { text-decoration: underline; }
 
 /* ---- Home: inventory cards ----------------------------------------------------------------- */
 
-.inventory-grid { margin-top: var(--space-6); margin-bottom: var(--space-5); width: 100%; max-width: none; }
+.inventory-grid { margin-top: var(--space-3); margin-bottom: var(--space-5); width: 100%; max-width: none; }
 .home-ls-cmd {
   font-family: var(--font-mono);
   font-size: var(--text-sm);
@@ -1219,7 +1219,7 @@ a.ls-name:hover { text-decoration: underline; }
   .lede-break { display: block; }
   .home-ls-cmd { margin-top: var(--space-3); margin-bottom: var(--space-2); }
   .chip-row { margin: var(--space-2) 0; }
-  .inventory-grid { margin-top: var(--space-4); margin-bottom: var(--space-4); }
+  .inventory-grid { margin-top: var(--space-2); margin-bottom: var(--space-4); }
 }
 
 /* ---- Motion ------------------------------------------------------------------------------------------- */

@@ -2,6 +2,11 @@
 
 모든 주목할 만한 변경사항을 이 파일에 기록한다. [Semantic Versioning](https://semver.org/lang/ko/)을 따른다.
 
+## v0.26.7 - 2026-07-23
+
+### Changed
+- 홈 pages 칩과 카테고리 섹션 사이 여백 축소(데스크톱·모바일).
+
 ## v0.26.6 - 2026-07-22
 
 ### Changed
