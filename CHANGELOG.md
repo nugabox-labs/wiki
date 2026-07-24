@@ -2,6 +2,13 @@
 
 모든 주목할 만한 변경사항을 이 파일에 기록한다. [Semantic Versioning](https://semver.org/lang/ko/)을 따른다.
 
+## v0.26.9 - 2026-07-24
+
+### Changed
+- 홈: `$ ls pages_` → `$ cat pages_`.
+- 모바일 홈: pages↔categories 간격을 since↔pages와 맞춤.
+- 홈·about 프롬프트 끝 `_`를 제목 커서와 동일하게 깜빡이게 함.
+
 ## v0.26.8 - 2026-07-23
 
 ### Changed

@@ -628,7 +628,10 @@ html.code-linenumbers-on .code-line-no { display: inline-block; }
   margin: var(--space-4) 0 var(--space-2);
 }
 .doc-article--about .about-shell-cmd .about-key { color: var(--muted); }
-.doc-article--about .about-shell-cmd .about-key-us { color: var(--accent); }
+.doc-article--about .about-shell-cmd .about-key-us {
+  color: var(--accent);
+  animation: blink 1.1s steps(1) infinite;
+}
 .doc-article--about .about-ascii {
   font-family: var(--font-mono);
   font-size: clamp(.55rem, 1.55vw, .82rem);
@@ -650,6 +653,7 @@ html.code-linenumbers-on .code-line-no { display: inline-block; }
 }
 .doc-article--about .about-key-us {
   color: var(--accent);
+  animation: blink 1.1s steps(1) infinite;
 }
 
 /* ---- ~/.env settings page ------------------------------------------------------------- */
@@ -944,6 +948,7 @@ a.ls-name:hover { text-decoration: underline; }
 .home-ls-us {
   color: var(--accent);
   font-weight: 700;
+  animation: blink 1.1s steps(1) infinite;
 }
 .home-ls-cmd--bar {
   display: flex;
@@ -1219,7 +1224,8 @@ a.ls-name:hover { text-decoration: underline; }
   .lede-break { display: block; }
   .home-ls-cmd { margin-top: var(--space-3); margin-bottom: var(--space-2); }
   .chip-row { margin: var(--space-2) 0; }
-  .inventory-grid { margin-top: var(--space-2); margin-bottom: var(--space-4); }
+  /* pages↔categories ≈ since↔pages (doc-meta mb + home-ls-cmd mt → space-4) */
+  .inventory-grid { margin-top: var(--space-4); margin-bottom: var(--space-4); }
 }
 
 /* ---- Motion ------------------------------------------------------------------------------------------- */
